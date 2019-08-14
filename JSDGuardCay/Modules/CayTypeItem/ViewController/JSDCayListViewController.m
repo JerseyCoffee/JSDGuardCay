@@ -52,6 +52,7 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 - (void)setupNavBar {
     
     self.title = @"小水螅体硬珊瑚（SPS）";
+    
 }
 
 - (void)setupView {
@@ -60,8 +61,19 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"JSDCayItemViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kItemCellreuseIdentifier];
     
-    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
-    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+//    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;
+//    [layout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.mas_equalTo(0);
+        make.left.right.top.mas_offset(0);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        } else {
+            // Fallback on earlier versions
+            make.bottom.mas_equalTo(0);
+        }
+    }];
     
 }
 
@@ -95,7 +107,7 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    return CGSizeMake((ScreenWidth - 60) / 2, 150);
+    return CGSizeMake((ScreenWidth - 60) / 2, 155);
 }
 
 //设置每个item的UIEdgeInsets
@@ -107,13 +119,13 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 //设置每个item水平间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 20;
+    return 10;
 }
 
 //设置每个item垂直间距
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
-    return 20;
+    return 10;
 }
 
 

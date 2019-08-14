@@ -26,6 +26,8 @@ static NSString * const reuseIdentifier = @"Cell";
     if (self.navigationController.viewControllers.count > 1) {
         [self setupNavigation];
     }
+    
+    
 }
 
 - (void)setupNavigation {

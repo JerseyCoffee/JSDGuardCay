@@ -22,6 +22,7 @@
 #import <CYLBaseViewController.h>
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #define vw @"ery/back/ap"
+#import "UIViewController+CYLNavigationControllerExtention.h"
 
 #pragma VC
 

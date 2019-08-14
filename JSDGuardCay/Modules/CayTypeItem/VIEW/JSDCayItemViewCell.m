@@ -27,13 +27,15 @@
     self.itemImageView.layer.cornerRadius = 40;
     self.itemImageView.layer.masksToBounds = YES;
     self.itemImageView.image = [UIImage imageNamed:nil];
+    self.itemImageView.backgroundColor = [UIColor jsd_grayColor];
     
     self.titlelabel.font = [UIFont jsd_fontSize:16];
     self.titlelabel.textColor = [UIColor jsd_mainTextColor];
     self.titlelabel.text = @"鹿角珊瑚（紫色）";
+    self.titlelabel.textAlignment = NSTextAlignmentCenter;
     
-    self.contentView.layer.cornerRadius = 10;
-    self.contentView.layer.masksToBounds = YES;
+    self.layer.cornerRadius = 10;
+    self.layer.masksToBounds = YES;
     
 }
 
