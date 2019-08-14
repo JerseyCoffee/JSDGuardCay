@@ -1,0 +1,18 @@
+//
+//  JSDPrefixHeader.pch
+//  MaterialColor
+//
+//  Created by Jersey on 2019/7/8.
+//  Copyright © 2019 Jersey. All rights reserved.
+//
+
+#ifndef JSDPrefixHeader_pch
+#define JSDPrefixHeader_pch
+
+#import "JSDNormal.h"
+#import "JSDPublicMacro.h"
+#import <Masonry.h>
+#import <MJExtension.h>
+#import <AFNetworking.h>
+
+#endif /* JSDPrefixHeader_pch */

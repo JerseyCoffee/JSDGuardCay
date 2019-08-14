@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "JSDTabBarViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    JSDTabBarViewController* tabBarViewController = [[JSDTabBarViewController alloc] init];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = tabBarViewController;
+    [self.window makeKeyWindow];
+    
     return YES;
 }
 

@@ -604,7 +604,7 @@ PODS:
   - UMCCommon (2.1.1)
 
 DEPENDENCIES:
-  - AFNetworking (~> 3.0.0)
+  - AFNetworking (~> 3.0.4)
   - CYLTabBarController (~> 1.24.0)
   - FDFullscreenPopGesture (= 1.1)
   - JPush (= 3.1.0)
@@ -649,6 +649,6 @@ SPEC CHECKSUMS:
   UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
 
-PODFILE CHECKSUM: a0da3625f86498a2a27d70f671a4239fd725bd91
+PODFILE CHECKSUM: 8a54ca4d961c992675429398ad421b369271bebf
 
 COCOAPODS: 1.6.1

@@ -17,5 +17,6 @@ target 'JSDGuardCay' do
   	pod 'MaterialComponents', '~> 84.0.0'
     pod 'UMCAnalytics', '~> 6.0.5'
     pod 'UMCCommon', '~> 2.1.1'
+    inhibit_all_warnings!  #禁止掉三方库警告
 
 end

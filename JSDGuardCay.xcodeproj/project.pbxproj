@@ -7,8 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783762303FB1200D87BDD /* UIColor+JSDTool.m */; };
+		5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783792303FB3700D87BDD /* UIFont+JSDTool.m */; };
+		554783812303FC1F00D87BDD /* JSDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783802303FC1F00D87BDD /* JSDTabBarViewController.m */; };
+		554783842303FC9600D87BDD /* JSDBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783832303FC9600D87BDD /* JSDBaseNavigationController.m */; };
+		554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783862303FCA600D87BDD /* JSDBaseViewController.m */; };
+		5547838A2303FCBF00D87BDD /* JSDBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783892303FCBF00D87BDD /* JSDBaseCollectionViewController.m */; };
+		5547838D2303FD8300D87BDD /* JSDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547838C2303FD8300D87BDD /* JSDHomeViewController.m */; };
+		554783902304091300D87BDD /* JSDCayTypeViewTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547838F2304091300D87BDD /* JSDCayTypeViewTextCell.m */; };
+		554783922304092100D87BDD /* JSDCayTypeViewTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554783912304092100D87BDD /* JSDCayTypeViewTextCell.xib */; };
+		554783962304179400D87BDD /* JSDCayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783952304179400D87BDD /* JSDCayListViewController.m */; };
+		5547839D230417F300D87BDD /* JSDCayItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547839B230417F300D87BDD /* JSDCayItemViewCell.m */; };
+		5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547839C230417F300D87BDD /* JSDCayItemViewCell.xib */; };
 		557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */; };
-		557B2FA12303E34F00FFF0D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2F9F2303E34F00FFF0D3 /* Main.storyboard */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
 		557B2FA92303E35100FFF0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2FA82303E35100FFF0D3 /* main.m */; };
@@ -18,10 +29,34 @@
 /* Begin PBXFileReference section */
 		19F5B485915CA8EEFB4D60BE /* libPods-JSDGuardCay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSDGuardCay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFFF2822732B44C482ACD29 /* Pods-JSDGuardCay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDGuardCay.release.xcconfig"; path = "Target Support Files/Pods-JSDGuardCay/Pods-JSDGuardCay.release.xcconfig"; sourceTree = "<group>"; };
+		554783722303FA1800D87BDD /* JSDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPrefixHeader.pch; sourceTree = "<group>"; };
+		554783732303FA4100D87BDD /* JSDPublicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPublicMacro.h; sourceTree = "<group>"; };
+		554783742303FA8F00D87BDD /* JSDNormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDNormal.h; sourceTree = "<group>"; };
+		554783752303FB1200D87BDD /* UIColor+JSDTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+JSDTool.h"; sourceTree = "<group>"; };
+		554783762303FB1200D87BDD /* UIColor+JSDTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JSDTool.m"; sourceTree = "<group>"; };
+		554783782303FB3700D87BDD /* UIFont+JSDTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+JSDTool.h"; sourceTree = "<group>"; };
+		554783792303FB3700D87BDD /* UIFont+JSDTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+JSDTool.m"; sourceTree = "<group>"; };
+		5547837F2303FC1F00D87BDD /* JSDTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTabBarViewController.h; sourceTree = "<group>"; };
+		554783802303FC1F00D87BDD /* JSDTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTabBarViewController.m; sourceTree = "<group>"; };
+		554783822303FC9600D87BDD /* JSDBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseNavigationController.h; sourceTree = "<group>"; };
+		554783832303FC9600D87BDD /* JSDBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseNavigationController.m; sourceTree = "<group>"; };
+		554783852303FCA600D87BDD /* JSDBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseViewController.h; sourceTree = "<group>"; };
+		554783862303FCA600D87BDD /* JSDBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseViewController.m; sourceTree = "<group>"; };
+		554783882303FCBF00D87BDD /* JSDBaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseCollectionViewController.h; sourceTree = "<group>"; };
+		554783892303FCBF00D87BDD /* JSDBaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseCollectionViewController.m; sourceTree = "<group>"; };
+		5547838B2303FD8300D87BDD /* JSDHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeViewController.h; sourceTree = "<group>"; };
+		5547838C2303FD8300D87BDD /* JSDHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeViewController.m; sourceTree = "<group>"; };
+		5547838E2304091300D87BDD /* JSDCayTypeViewTextCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayTypeViewTextCell.h; sourceTree = "<group>"; };
+		5547838F2304091300D87BDD /* JSDCayTypeViewTextCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayTypeViewTextCell.m; sourceTree = "<group>"; };
+		554783912304092100D87BDD /* JSDCayTypeViewTextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCayTypeViewTextCell.xib; sourceTree = "<group>"; };
+		554783942304179400D87BDD /* JSDCayListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayListViewController.h; sourceTree = "<group>"; };
+		554783952304179400D87BDD /* JSDCayListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayListViewController.m; sourceTree = "<group>"; };
+		5547839A230417F300D87BDD /* JSDCayItemViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayItemViewCell.h; sourceTree = "<group>"; };
+		5547839B230417F300D87BDD /* JSDCayItemViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayItemViewCell.m; sourceTree = "<group>"; };
+		5547839C230417F300D87BDD /* JSDCayItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCayItemViewCell.xib; sourceTree = "<group>"; };
 		557B2F962303E34F00FFF0D3 /* JSDGuardCay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDGuardCay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		557B2FA02303E34F00FFF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		557B2FA22303E35100FFF0D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		557B2FA52303E35100FFF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		557B2FA72303E35100FFF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +76,190 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		554783632303F9D500D87BDD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				557B2FA22303E35100FFF0D3 /* Assets.xcassets */,
+				557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */,
+				557B2FA72303E35100FFF0D3 /* Info.plist */,
+				557B2FA82303E35100FFF0D3 /* main.m */,
+				557B2F992303E34F00FFF0D3 /* AppDelegate.h */,
+				557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		554783642303F9D500D87BDD /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				554783932304177600D87BDD /* CayTypeItem */,
+				554783652303F9D500D87BDD /* Home */,
+				554783692303F9D500D87BDD /* TabBar */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		554783652303F9D500D87BDD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				554783662303F9D500D87BDD /* Model */,
+				554783672303F9D500D87BDD /* View */,
+				554783682303F9D500D87BDD /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		554783662303F9D500D87BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		554783672303F9D500D87BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5547838E2304091300D87BDD /* JSDCayTypeViewTextCell.h */,
+				5547838F2304091300D87BDD /* JSDCayTypeViewTextCell.m */,
+				554783912304092100D87BDD /* JSDCayTypeViewTextCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		554783682303F9D500D87BDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5547838B2303FD8300D87BDD /* JSDHomeViewController.h */,
+				5547838C2303FD8300D87BDD /* JSDHomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		554783692303F9D500D87BDD /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		5547836A2303F9D500D87BDD /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				554783722303FA1800D87BDD /* JSDPrefixHeader.pch */,
+				554783732303FA4100D87BDD /* JSDPublicMacro.h */,
+				554783742303FA8F00D87BDD /* JSDNormal.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		5547836B2303F9D500D87BDD /* BaseKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BaseKit;
+			sourceTree = "<group>";
+		};
+		5547836C2303F9D500D87BDD /* CategoryTool */ = {
+			isa = PBXGroup;
+			children = (
+				554783752303FB1200D87BDD /* UIColor+JSDTool.h */,
+				554783762303FB1200D87BDD /* UIColor+JSDTool.m */,
+				554783782303FB3700D87BDD /* UIFont+JSDTool.h */,
+				554783792303FB3700D87BDD /* UIFont+JSDTool.m */,
+			);
+			path = CategoryTool;
+			sourceTree = "<group>";
+		};
+		5547836D2303F9D500D87BDD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5547836E2303F9D500D87BDD /* ImageResource */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5547836E2303F9D500D87BDD /* ImageResource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageResource;
+			sourceTree = "<group>";
+		};
+		5547837B2303FBE500D87BDD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5547837C2303FBE500D87BDD /* Model */,
+				5547837D2303FBE500D87BDD /* View */,
+				5547837E2303FBE500D87BDD /* ViewController */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5547837C2303FBE500D87BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5547837D2303FBE500D87BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5547837E2303FBE500D87BDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5547837F2303FC1F00D87BDD /* JSDTabBarViewController.h */,
+				554783802303FC1F00D87BDD /* JSDTabBarViewController.m */,
+				554783822303FC9600D87BDD /* JSDBaseNavigationController.h */,
+				554783832303FC9600D87BDD /* JSDBaseNavigationController.m */,
+				554783852303FCA600D87BDD /* JSDBaseViewController.h */,
+				554783862303FCA600D87BDD /* JSDBaseViewController.m */,
+				554783882303FCBF00D87BDD /* JSDBaseCollectionViewController.h */,
+				554783892303FCBF00D87BDD /* JSDBaseCollectionViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		554783932304177600D87BDD /* CayTypeItem */ = {
+			isa = PBXGroup;
+			children = (
+				55478399230417D100D87BDD /* ViewController */,
+				55478398230417C600D87BDD /* Model */,
+				55478397230417BF00D87BDD /* VIEW */,
+			);
+			path = CayTypeItem;
+			sourceTree = "<group>";
+		};
+		55478397230417BF00D87BDD /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				5547839A230417F300D87BDD /* JSDCayItemViewCell.h */,
+				5547839B230417F300D87BDD /* JSDCayItemViewCell.m */,
+				5547839C230417F300D87BDD /* JSDCayItemViewCell.xib */,
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		55478398230417C600D87BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55478399230417D100D87BDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				554783942304179400D87BDD /* JSDCayListViewController.h */,
+				554783952304179400D87BDD /* JSDCayListViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		557B2F8D2303E34F00FFF0D3 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +281,13 @@
 		557B2F982303E34F00FFF0D3 /* JSDGuardCay */ = {
 			isa = PBXGroup;
 			children = (
-				557B2F992303E34F00FFF0D3 /* AppDelegate.h */,
-				557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */,
-				557B2F9F2303E34F00FFF0D3 /* Main.storyboard */,
-				557B2FA22303E35100FFF0D3 /* Assets.xcassets */,
-				557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */,
-				557B2FA72303E35100FFF0D3 /* Info.plist */,
-				557B2FA82303E35100FFF0D3 /* main.m */,
+				5547837B2303FBE500D87BDD /* Base */,
+				554783632303F9D500D87BDD /* Application */,
+				5547836B2303F9D500D87BDD /* BaseKit */,
+				5547836C2303F9D500D87BDD /* CategoryTool */,
+				554783642303F9D500D87BDD /* Modules */,
+				5547836A2303F9D500D87BDD /* Public */,
+				5547836D2303F9D500D87BDD /* Supporting Files */,
 			);
 			path = JSDGuardCay;
 			sourceTree = "<group>";
@@ -87,7 +306,6 @@
 				864FFC80101621CA389B55CE /* Pods-JSDGuardCay.debug.xcconfig */,
 				2AFFF2822732B44C482ACD29 /* Pods-JSDGuardCay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,7 +370,8 @@
 			files = (
 				557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */,
 				557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */,
-				557B2FA12303E34F00FFF0D3 /* Main.storyboard in Resources */,
+				554783922304092100D87BDD /* JSDCayTypeViewTextCell.xib in Resources */,
+				5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,22 +469,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				554783842303FC9600D87BDD /* JSDBaseNavigationController.m in Sources */,
+				5547838A2303FCBF00D87BDD /* JSDBaseCollectionViewController.m in Sources */,
+				5547838D2303FD8300D87BDD /* JSDHomeViewController.m in Sources */,
+				5547839D230417F300D87BDD /* JSDCayItemViewCell.m in Sources */,
+				554783962304179400D87BDD /* JSDCayListViewController.m in Sources */,
+				554783812303FC1F00D87BDD /* JSDTabBarViewController.m in Sources */,
 				557B2FA92303E35100FFF0D3 /* main.m in Sources */,
 				557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */,
+				554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */,
+				5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */,
+				554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */,
+				554783902304091300D87BDD /* JSDCayTypeViewTextCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		557B2F9F2303E34F00FFF0D3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				557B2FA02303E34F00FFF0D3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -396,7 +617,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K6DTDY865;
-				INFOPLIST_FILE = JSDGuardCay/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JSDGuardCay/Public/JSDPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JSDGuardCay/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +637,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2K6DTDY865;
-				INFOPLIST_FILE = JSDGuardCay/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JSDGuardCay/Public/JSDPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/JSDGuardCay/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
