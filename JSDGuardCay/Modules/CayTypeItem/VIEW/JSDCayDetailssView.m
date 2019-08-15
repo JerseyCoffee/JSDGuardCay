@@ -56,6 +56,7 @@
 - (void)awakeFromNib {
     
     [super awakeFromNib];
+    self.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.scrollContentView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.scrollContentView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     
@@ -98,6 +99,34 @@
     self.infoTitleLabel.text = @"简介:";
     self.infoTitleLabel.textColor = [UIColor jsd_mainTextColor];
     
+    self.infoLabel.numberOfLines = 0;
+    
+}
+
+- (void)setDetailsModel:(JSDCayTypeDetailsModel *)detailsModel {
+    
+    self.cayImageView.image = [UIImage imageNamed:detailsModel.imageName];
+    self.cayCNLabel.text = detailsModel.cnName;
+    self.cayNameLabel.text = detailsModel.cnNameTitle;
+    self.cayENLabel.text = detailsModel.enName;
+    
+    self.siyangLabel.text = detailsModel.siyang;
+    self.guangzhaoLabel.text = detailsModel.guangzhao;
+    self.shuiliuLabel.text = detailsModel.shuiliu;
+    self.didianLabel.text = detailsModel.didian;
+    self.yaoqiuLabel.text = detailsModel.yaoqiu;
+    self.yanseLabel.text = detailsModel.yanse;
+    self.xingqingLabel.text = detailsModel.xingqing;
+    self.chandiLabel.text = detailsModel.chandi;
+    self.zhongshuLabel.text = detailsModel.zhongshu;
+    
+    NSString* info = detailsModel.info;
+    NSMutableParagraphStyle *paragraphStyle = [NSMutableParagraphStyle new];
+    paragraphStyle.lineSpacing = 6.5;
+    NSMutableAttributedString* attr = [[NSMutableAttributedString alloc] initWithString:info attributes:@{NSFontAttributeName: [UIFont jsd_fontSize:14], NSForegroundColorAttributeName: [UIColor jsd_mainTextColor], NSParagraphStyleAttributeName: paragraphStyle
+                                                                                                          
+                                                                                                          }];
+    self.infoLabel.attributedText = attr;
 }
 
 @end

@@ -32,6 +32,9 @@
 		5547841E2305390900D87BDD /* JSDTypeSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547841D2305390900D87BDD /* JSDTypeSelectedView.m */; };
 		554784212305391D00D87BDD /* JSDSelectedNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554784202305391D00D87BDD /* JSDSelectedNumberView.m */; };
 		55478424230545A300D87BDD /* JSDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478423230545A300D87BDD /* JSDHomeViewModel.m */; };
+		55478427230548B800D87BDD /* JSDCayTypeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478426230548B800D87BDD /* JSDCayTypeListModel.m */; };
+		5547842923054E9D00D87BDD /* cay1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5547842823054E9D00D87BDD /* cay1.json */; };
+		5547842C230568DF00D87BDD /* JSDCollectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547842B230568DF00D87BDD /* JSDCollectViewModel.m */; };
 		557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
@@ -90,6 +93,11 @@
 		554784202305391D00D87BDD /* JSDSelectedNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSelectedNumberView.m; sourceTree = "<group>"; };
 		55478422230545A300D87BDD /* JSDHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeViewModel.h; sourceTree = "<group>"; };
 		55478423230545A300D87BDD /* JSDHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeViewModel.m; sourceTree = "<group>"; };
+		55478425230548B800D87BDD /* JSDCayTypeListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayTypeListModel.h; sourceTree = "<group>"; };
+		55478426230548B800D87BDD /* JSDCayTypeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayTypeListModel.m; sourceTree = "<group>"; };
+		5547842823054E9D00D87BDD /* cay1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay1.json; sourceTree = "<group>"; };
+		5547842A230568DF00D87BDD /* JSDCollectViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCollectViewModel.h; sourceTree = "<group>"; };
+		5547842B230568DF00D87BDD /* JSDCollectViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCollectViewModel.m; sourceTree = "<group>"; };
 		557B2F962303E34F00FFF0D3 /* JSDGuardCay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDGuardCay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -292,6 +300,9 @@
 		55478398230417C600D87BDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5547842823054E9D00D87BDD /* cay1.json */,
+				55478425230548B800D87BDD /* JSDCayTypeListModel.h */,
+				55478426230548B800D87BDD /* JSDCayTypeListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -339,6 +350,8 @@
 		55478404230512BF00D87BDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5547842A230568DF00D87BDD /* JSDCollectViewModel.h */,
+				5547842B230568DF00D87BDD /* JSDCollectViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -492,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */,
+				5547842923054E9D00D87BDD /* cay1.json in Resources */,
 				5547840C230513B800D87BDD /* JSDCollectionCell.xib in Resources */,
 				557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */,
 				554783A62304F0E100D87BDD /* JSDCayDetailsView.xib in Resources */,
@@ -599,6 +613,7 @@
 				55478418230538C800D87BDD /* JSDBaseView.m in Sources */,
 				5547838A2303FCBF00D87BDD /* JSDBaseCollectionViewController.m in Sources */,
 				5547841E2305390900D87BDD /* JSDTypeSelectedView.m in Sources */,
+				55478427230548B800D87BDD /* JSDCayTypeListModel.m in Sources */,
 				5547838D2303FD8300D87BDD /* JSDHomeViewController.m in Sources */,
 				55478407230512EF00D87BDD /* JSDCollectVC.m in Sources */,
 				5547839D230417F300D87BDD /* JSDCayItemViewCell.m in Sources */,
@@ -613,6 +628,7 @@
 				5547840B230513B800D87BDD /* JSDCollectionCell.m in Sources */,
 				554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */,
 				5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */,
+				5547842C230568DF00D87BDD /* JSDCollectViewModel.m in Sources */,
 				554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */,
 				554783902304091300D87BDD /* JSDCayTypeViewTextCell.m in Sources */,
 				5547841B230538F400D87BDD /* JSDTextFieldView.m in Sources */,

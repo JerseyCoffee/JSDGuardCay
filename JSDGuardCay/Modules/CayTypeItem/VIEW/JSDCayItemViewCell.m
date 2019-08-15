@@ -26,7 +26,7 @@
     
     self.itemImageView.layer.cornerRadius = 40;
     self.itemImageView.layer.masksToBounds = YES;
-    self.itemImageView.image = [UIImage imageNamed:nil];
+//    self.itemImageView.image = [UIImage imageNamed:nil];
     self.itemImageView.backgroundColor = [UIColor jsd_grayColor];
     
     self.titlelabel.font = [UIFont jsd_fontSize:16];
@@ -37,6 +37,17 @@
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
     
+}
+
+- (void)setModel:(JSDCayTypeDetailsModel *)model {
+    
+    if (JSDIsString(model.imageName)) {
+        self.itemImageView.image = [UIImage imageNamed:model.imageName];
+    }
+    
+    if (JSDIsString(model.cnName)) {
+        self.titlelabel.text = model.cnName;
+    }
 }
 
 @end

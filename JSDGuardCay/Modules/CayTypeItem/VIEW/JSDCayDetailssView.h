@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSDCayTypeListModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDCayDetailssView : UIView
+
+@property (nonatomic, strong) JSDCayTypeDetailsModel* detailsModel;
 
 @end
 

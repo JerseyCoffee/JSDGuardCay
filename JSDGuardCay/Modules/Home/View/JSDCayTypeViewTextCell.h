@@ -7,10 +7,13 @@
 //
 
 #import "MDCCollectionViewTextCell.h"
+#import "JSDHomeViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDCayTypeViewTextCell : MDCCollectionViewCell
+
+@property (nonatomic, strong) JSDHomeModel* model;
 
 @end
 

@@ -57,6 +57,8 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:collectButton];
     [collectButton addTarget:self action:@selector(onTouchCollect:) forControlEvents:UIControlEventTouchUpInside];
+    collectButton.selected = self.detailsModel.collect;
+    
 }
 
 - (void)setupView {
@@ -77,11 +79,15 @@
 
 - (void)reloadView {
     
+    
 }
 
 #pragma mark - 3.Request Data
 
 - (void)setupData {
+    
+    //设置
+    [self.detailsView setDetailsModel:self.detailsModel];
     
 }
 
@@ -92,6 +98,8 @@
 - (void)onTouchCollect:(UIButton* )sender {
     
     sender.selected = !sender.isSelected;
+    //收藏
+    [self.viewModel collectModel:self.detailsModel];
 }
 
 #pragma mark - 6.Private Methods

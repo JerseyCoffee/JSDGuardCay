@@ -10,15 +10,17 @@
 
 #import "JSDCayItemViewCell.h"
 #import "JSDCayDetailswViewController.h"
+#import "JSDCayTypeListModel.h"
 
 static NSString * const kItemCellreuseIdentifier = @"Cell";
 @interface JSDCayListViewController ()
 
+@property (nonatomic, strong) JSDCayTypeListModel* viewModel;
+@property (nonatomic, strong) NSArray* titles;
+
 @end
 
 @implementation JSDCayListViewController
-
-
 
 #pragma mark - 1.View Controller Life Cycle
 
@@ -96,11 +98,14 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 10;
+    NSLog(@"数量:%ld",self.viewModel.dataSource.count);
+    return self.viewModel.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JSDCayItemViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kItemCellreuseIdentifier forIndexPath:indexPath];
+    JSDCayTypeDetailsModel* model = self.viewModel.dataSource[indexPath.item];
+    [cell setModel:model];
     
     return cell;
 }
@@ -130,9 +135,12 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    [super collectionView:collectionView didDeselectItemAtIndexPath:indexPath];
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
     
+    JSDCayTypeDetailsModel* model = self.viewModel.dataSource[indexPath.item];
     JSDCayDetailswViewController* cayDetailsVC = JSDCayDetailswViewController.new;
+    [cayDetailsVC setDetailsModel:model];
+    cayDetailsVC.viewModel = self.viewModel;
     
     [self.navigationController pushViewController:cayDetailsVC animated:YES];
 }
@@ -146,6 +154,15 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 }
 
 #pragma mark - 7.GET & SET
+
+- (JSDCayTypeListModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDCayTypeListModel alloc] init];
+        _viewModel.typeTitle = [NSString stringWithFormat:@"cay%ld", self.typeIndex];
+    }
+    return _viewModel;
+}
 
 @end
 

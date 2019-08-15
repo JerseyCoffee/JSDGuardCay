@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDCayListViewController : JSDBaseCollectionViewController
 
+@property (nonatomic, assign) NSInteger typeIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END

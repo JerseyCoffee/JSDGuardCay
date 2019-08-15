@@ -33,8 +33,14 @@
     self.cayImageView.contentMode = UIViewContentModeScaleAspectFill;
     self.cayImageView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     
-    self.layer.cornerRadius = 6;
+    self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
+}
+
+- (void)setModel:(JSDHomeModel *)model {
+    
+    self.titleLabel.text = model.title;
+    self.cayImageView.image = [UIImage imageNamed:model.imageName];
 }
 
 @end

@@ -8,12 +8,14 @@
 
 #import "JSDHomeViewController.h"
 #import "JSDCayTypeViewTextCell.h"
+#import "JSDHomeViewModel.h"
 
 static NSString * const kJSDreuseIdentifier = @"Cell";
 
 @interface JSDHomeViewController ()
 
 @property (nonatomic, strong) UIView* headerView;
+@property (nonatomic, strong) JSDHomeViewModel* viewModel;
 
 @end
 
@@ -114,13 +116,14 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 6;
+    return self.viewModel.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     JSDCayTypeViewTextCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJSDreuseIdentifier forIndexPath:indexPath];
-
+    JSDHomeModel* model = self.viewModel.dataSource[indexPath.item];
+    [cell setModel:model];
     
     return cell;
 }
@@ -153,6 +156,7 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
     [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
     
     JSDCayListViewController* cayListVC = [[JSDCayListViewController alloc] init];
+    cayListVC.typeIndex = indexPath.item + 1;
     [self.navigationController pushViewController:cayListVC animated:YES];
 }
 
@@ -182,6 +186,15 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
         }];
     }
     return _headerView;
+}
+
+- (JSDHomeViewModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDHomeViewModel alloc] init];
+    }
+    return _viewModel;
+    
 }
 
 @end

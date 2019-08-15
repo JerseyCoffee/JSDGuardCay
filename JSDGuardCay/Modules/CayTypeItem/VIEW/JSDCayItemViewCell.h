@@ -8,9 +8,13 @@
 
 #import "MDCCollectionViewCell.h"
 
+#import "JSDCayTypeListModel.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDCayItemViewCell : MDCCollectionViewCell
+
+@property (nonatomic, strong) JSDCayTypeDetailsModel* model;
 
 @end
 
