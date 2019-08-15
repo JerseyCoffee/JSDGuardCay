@@ -19,6 +19,9 @@
 		554783962304179400D87BDD /* JSDCayListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783952304179400D87BDD /* JSDCayListViewController.m */; };
 		5547839D230417F300D87BDD /* JSDCayItemViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547839B230417F300D87BDD /* JSDCayItemViewCell.m */; };
 		5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547839C230417F300D87BDD /* JSDCayItemViewCell.xib */; };
+		554783A12304EEFC00D87BDD /* JSDCayDetailswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783A02304EEFC00D87BDD /* JSDCayDetailswViewController.m */; };
+		554783A42304F0D900D87BDD /* JSDCayDetailssView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783A32304F0D900D87BDD /* JSDCayDetailssView.m */; };
+		554783A62304F0E100D87BDD /* JSDCayDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554783A52304F0E100D87BDD /* JSDCayDetailsView.xib */; };
 		557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
@@ -54,6 +57,11 @@
 		5547839A230417F300D87BDD /* JSDCayItemViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayItemViewCell.h; sourceTree = "<group>"; };
 		5547839B230417F300D87BDD /* JSDCayItemViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayItemViewCell.m; sourceTree = "<group>"; };
 		5547839C230417F300D87BDD /* JSDCayItemViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCayItemViewCell.xib; sourceTree = "<group>"; };
+		5547839F2304EEFC00D87BDD /* JSDCayDetailswViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayDetailswViewController.h; sourceTree = "<group>"; };
+		554783A02304EEFC00D87BDD /* JSDCayDetailswViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayDetailswViewController.m; sourceTree = "<group>"; };
+		554783A22304F0D900D87BDD /* JSDCayDetailssView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayDetailssView.h; sourceTree = "<group>"; };
+		554783A32304F0D900D87BDD /* JSDCayDetailssView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayDetailssView.m; sourceTree = "<group>"; };
+		554783A52304F0E100D87BDD /* JSDCayDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCayDetailsView.xib; sourceTree = "<group>"; };
 		557B2F962303E34F00FFF0D3 /* JSDGuardCay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDGuardCay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -240,6 +248,9 @@
 				5547839A230417F300D87BDD /* JSDCayItemViewCell.h */,
 				5547839B230417F300D87BDD /* JSDCayItemViewCell.m */,
 				5547839C230417F300D87BDD /* JSDCayItemViewCell.xib */,
+				554783A22304F0D900D87BDD /* JSDCayDetailssView.h */,
+				554783A32304F0D900D87BDD /* JSDCayDetailssView.m */,
+				554783A52304F0E100D87BDD /* JSDCayDetailsView.xib */,
 			);
 			path = VIEW;
 			sourceTree = "<group>";
@@ -256,6 +267,8 @@
 			children = (
 				554783942304179400D87BDD /* JSDCayListViewController.h */,
 				554783952304179400D87BDD /* JSDCayListViewController.m */,
+				5547839F2304EEFC00D87BDD /* JSDCayDetailswViewController.h */,
+				554783A02304EEFC00D87BDD /* JSDCayDetailswViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -370,6 +383,7 @@
 			files = (
 				557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */,
 				557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */,
+				554783A62304F0E100D87BDD /* JSDCayDetailsView.xib in Resources */,
 				554783922304092100D87BDD /* JSDCayTypeViewTextCell.xib in Resources */,
 				5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */,
 			);
@@ -473,10 +487,12 @@
 				5547838A2303FCBF00D87BDD /* JSDBaseCollectionViewController.m in Sources */,
 				5547838D2303FD8300D87BDD /* JSDHomeViewController.m in Sources */,
 				5547839D230417F300D87BDD /* JSDCayItemViewCell.m in Sources */,
+				554783A12304EEFC00D87BDD /* JSDCayDetailswViewController.m in Sources */,
 				554783962304179400D87BDD /* JSDCayListViewController.m in Sources */,
 				554783812303FC1F00D87BDD /* JSDTabBarViewController.m in Sources */,
 				557B2FA92303E35100FFF0D3 /* main.m in Sources */,
 				557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */,
+				554783A42304F0D900D87BDD /* JSDCayDetailssView.m in Sources */,
 				554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */,
 				5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */,
 				554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */,

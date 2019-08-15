@@ -44,7 +44,7 @@
 
 + (UIColor *)jsd_detailTextColor {
     
-    return [UIColor colorWithRed:113/255.0 green:120/255.0 blue:130/255.0 alpha:1.0];
+    return [UIColor jsd_colorWithHexString:@"#999999"];
 }
 
 //绘制渐变色颜色的方法

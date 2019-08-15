@@ -9,7 +9,7 @@
 #import "JSDCayListViewController.h"
 
 #import "JSDCayItemViewCell.h"
-
+#import "JSDCayDetailswViewController.h"
 
 static NSString * const kItemCellreuseIdentifier = @"Cell";
 @interface JSDCayListViewController ()
@@ -128,8 +128,14 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
     return 10;
 }
 
-
-
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didDeselectItemAtIndexPath:indexPath];
+    
+    JSDCayDetailswViewController* cayDetailsVC = JSDCayDetailswViewController.new;
+    
+    [self.navigationController pushViewController:cayDetailsVC animated:YES];
+}
 
 #pragma mark - 5.Event Response
 
