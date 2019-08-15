@@ -1,0 +1,134 @@
+//
+//  JSDCollectVC.m
+//  JSDGuardCay
+//
+//  Created by Jersey on 2019/8/15.
+//  Copyright © 2019 JerseyCafe. All rights reserved.
+//
+
+#import "JSDCollectVC.h"
+#import "JSDCollectionCell.h"
+
+static NSString* const kCell = @"cell";
+
+@interface JSDCollectVC ()
+
+@end
+
+@implementation JSDCollectVC
+
+#pragma mark - 1.View Controller Life Cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    //1.设置导航栏
+    [self setupNavBar];
+    //2.设置view
+    [self setupView];
+    //3.请求数据
+    [self setupData];
+    //4.设置通知
+    [self setupNotification];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+// TODO: 用通知回调刷新;
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+}
+
+#pragma mark - 2.SettingView and Style
+
+- (void)setupNavBar {
+    
+    self.title = @"我的收藏";
+}
+
+- (void)setupView {
+    
+    self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
+    
+    [self.collectionView registerNib:[UINib nibWithNibName:@"JSDCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kCell];
+    self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.top.mas_equalTo(0);
+        if (@available(iOS 11.0, *)) {
+            make.bottom.mas_equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+        } else {
+            make.bottom.mas_equalTo(0);
+        }
+    }];
+}
+
+- (void)reloadView {
+    
+}
+
+#pragma mark - 3.Request Data
+
+- (void)setupData {
+    
+}
+
+#pragma mark - 4.UITableViewDataSource and UITableViewDelegate
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return 5;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    JSDCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
+    
+    
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return CGSizeMake((ScreenWidth - 40), 140);
+}
+
+//设置每个item的UIEdgeInsets
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(15, 10, 15, 10);
+}
+
+//设置每个item水平间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+//设置每个item垂直间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return 10;
+}
+
+#pragma mark - 5.Event Response
+
+#pragma mark - 6.Private Methods
+
+- (void)setupNotification {
+    
+}
+
+#pragma mark - 7.GET & SET
+
+@end
+

@@ -22,6 +22,16 @@
 		554783A12304EEFC00D87BDD /* JSDCayDetailswViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783A02304EEFC00D87BDD /* JSDCayDetailswViewController.m */; };
 		554783A42304F0D900D87BDD /* JSDCayDetailssView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783A32304F0D900D87BDD /* JSDCayDetailssView.m */; };
 		554783A62304F0E100D87BDD /* JSDCayDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 554783A52304F0E100D87BDD /* JSDCayDetailsView.xib */; };
+		55478407230512EF00D87BDD /* JSDCollectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478406230512EF00D87BDD /* JSDCollectVC.m */; };
+		5547840B230513B800D87BDD /* JSDCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478409230513B800D87BDD /* JSDCollectionCell.m */; };
+		5547840C230513B800D87BDD /* JSDCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5547840A230513B800D87BDD /* JSDCollectionCell.xib */; };
+		55478414230525B000D87BDD /* JSDAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478412230525B000D87BDD /* JSDAddItemViewController.m */; };
+		55478415230525B000D87BDD /* JSDAddItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55478413230525B000D87BDD /* JSDAddItemViewController.xib */; };
+		55478418230538C800D87BDD /* JSDBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478417230538C700D87BDD /* JSDBaseView.m */; };
+		5547841B230538F400D87BDD /* JSDTextFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547841A230538F400D87BDD /* JSDTextFieldView.m */; };
+		5547841E2305390900D87BDD /* JSDTypeSelectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547841D2305390900D87BDD /* JSDTypeSelectedView.m */; };
+		554784212305391D00D87BDD /* JSDSelectedNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 554784202305391D00D87BDD /* JSDSelectedNumberView.m */; };
+		55478424230545A300D87BDD /* JSDHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478423230545A300D87BDD /* JSDHomeViewModel.m */; };
 		557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
@@ -62,6 +72,24 @@
 		554783A22304F0D900D87BDD /* JSDCayDetailssView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCayDetailssView.h; sourceTree = "<group>"; };
 		554783A32304F0D900D87BDD /* JSDCayDetailssView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCayDetailssView.m; sourceTree = "<group>"; };
 		554783A52304F0E100D87BDD /* JSDCayDetailsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCayDetailsView.xib; sourceTree = "<group>"; };
+		55478405230512EF00D87BDD /* JSDCollectVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCollectVC.h; sourceTree = "<group>"; };
+		55478406230512EF00D87BDD /* JSDCollectVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCollectVC.m; sourceTree = "<group>"; };
+		55478408230513B800D87BDD /* JSDCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCollectionCell.h; sourceTree = "<group>"; };
+		55478409230513B800D87BDD /* JSDCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCollectionCell.m; sourceTree = "<group>"; };
+		5547840A230513B800D87BDD /* JSDCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDCollectionCell.xib; sourceTree = "<group>"; };
+		55478411230525B000D87BDD /* JSDAddItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDAddItemViewController.h; sourceTree = "<group>"; };
+		55478412230525B000D87BDD /* JSDAddItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDAddItemViewController.m; sourceTree = "<group>"; };
+		55478413230525B000D87BDD /* JSDAddItemViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDAddItemViewController.xib; sourceTree = "<group>"; };
+		55478416230538C700D87BDD /* JSDBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseView.h; sourceTree = "<group>"; };
+		55478417230538C700D87BDD /* JSDBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseView.m; sourceTree = "<group>"; };
+		55478419230538F400D87BDD /* JSDTextFieldView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTextFieldView.h; sourceTree = "<group>"; };
+		5547841A230538F400D87BDD /* JSDTextFieldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTextFieldView.m; sourceTree = "<group>"; };
+		5547841C2305390900D87BDD /* JSDTypeSelectedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDTypeSelectedView.h; sourceTree = "<group>"; };
+		5547841D2305390900D87BDD /* JSDTypeSelectedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDTypeSelectedView.m; sourceTree = "<group>"; };
+		5547841F2305391D00D87BDD /* JSDSelectedNumberView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSelectedNumberView.h; sourceTree = "<group>"; };
+		554784202305391D00D87BDD /* JSDSelectedNumberView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSelectedNumberView.m; sourceTree = "<group>"; };
+		55478422230545A300D87BDD /* JSDHomeViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDHomeViewModel.h; sourceTree = "<group>"; };
+		55478423230545A300D87BDD /* JSDHomeViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDHomeViewModel.m; sourceTree = "<group>"; };
 		557B2F962303E34F00FFF0D3 /* JSDGuardCay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDGuardCay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -100,6 +128,8 @@
 		554783642303F9D500D87BDD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5547840D2305258200D87BDD /* AddCayItem */,
+				55478401230512A100D87BDD /* Collect */,
 				554783932304177600D87BDD /* CayTypeItem */,
 				554783652303F9D500D87BDD /* Home */,
 				554783692303F9D500D87BDD /* TabBar */,
@@ -120,6 +150,8 @@
 		554783662303F9D500D87BDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55478422230545A300D87BDD /* JSDHomeViewModel.h */,
+				55478423230545A300D87BDD /* JSDHomeViewModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -213,6 +245,8 @@
 		5547837D2303FBE500D87BDD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				55478416230538C700D87BDD /* JSDBaseView.h */,
+				55478417230538C700D87BDD /* JSDBaseView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -271,6 +305,82 @@
 				554783A02304EEFC00D87BDD /* JSDCayDetailswViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55478401230512A100D87BDD /* Collect */ = {
+			isa = PBXGroup;
+			children = (
+				55478404230512BF00D87BDD /* Model */,
+				55478403230512B600D87BDD /* View */,
+				55478402230512AD00D87BDD /* ViewController */,
+			);
+			path = Collect;
+			sourceTree = "<group>";
+		};
+		55478402230512AD00D87BDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55478405230512EF00D87BDD /* JSDCollectVC.h */,
+				55478406230512EF00D87BDD /* JSDCollectVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55478403230512B600D87BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55478408230513B800D87BDD /* JSDCollectionCell.h */,
+				55478409230513B800D87BDD /* JSDCollectionCell.m */,
+				5547840A230513B800D87BDD /* JSDCollectionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55478404230512BF00D87BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5547840D2305258200D87BDD /* AddCayItem */ = {
+			isa = PBXGroup;
+			children = (
+				554784102305259C00D87BDD /* Model */,
+				5547840F2305259700D87BDD /* View */,
+				5547840E2305258F00D87BDD /* ViewController */,
+			);
+			path = AddCayItem;
+			sourceTree = "<group>";
+		};
+		5547840E2305258F00D87BDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				55478411230525B000D87BDD /* JSDAddItemViewController.h */,
+				55478412230525B000D87BDD /* JSDAddItemViewController.m */,
+				55478413230525B000D87BDD /* JSDAddItemViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5547840F2305259700D87BDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55478419230538F400D87BDD /* JSDTextFieldView.h */,
+				5547841A230538F400D87BDD /* JSDTextFieldView.m */,
+				5547841C2305390900D87BDD /* JSDTypeSelectedView.h */,
+				5547841D2305390900D87BDD /* JSDTypeSelectedView.m */,
+				5547841F2305391D00D87BDD /* JSDSelectedNumberView.h */,
+				554784202305391D00D87BDD /* JSDSelectedNumberView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		554784102305259C00D87BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		557B2F8D2303E34F00FFF0D3 = {
@@ -382,8 +492,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */,
+				5547840C230513B800D87BDD /* JSDCollectionCell.xib in Resources */,
 				557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */,
 				554783A62304F0E100D87BDD /* JSDCayDetailsView.xib in Resources */,
+				55478415230525B000D87BDD /* JSDAddItemViewController.xib in Resources */,
 				554783922304092100D87BDD /* JSDCayTypeViewTextCell.xib in Resources */,
 				5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */,
 			);
@@ -484,19 +596,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				554783842303FC9600D87BDD /* JSDBaseNavigationController.m in Sources */,
+				55478418230538C800D87BDD /* JSDBaseView.m in Sources */,
 				5547838A2303FCBF00D87BDD /* JSDBaseCollectionViewController.m in Sources */,
+				5547841E2305390900D87BDD /* JSDTypeSelectedView.m in Sources */,
 				5547838D2303FD8300D87BDD /* JSDHomeViewController.m in Sources */,
+				55478407230512EF00D87BDD /* JSDCollectVC.m in Sources */,
 				5547839D230417F300D87BDD /* JSDCayItemViewCell.m in Sources */,
 				554783A12304EEFC00D87BDD /* JSDCayDetailswViewController.m in Sources */,
 				554783962304179400D87BDD /* JSDCayListViewController.m in Sources */,
+				55478414230525B000D87BDD /* JSDAddItemViewController.m in Sources */,
 				554783812303FC1F00D87BDD /* JSDTabBarViewController.m in Sources */,
 				557B2FA92303E35100FFF0D3 /* main.m in Sources */,
 				557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */,
 				554783A42304F0D900D87BDD /* JSDCayDetailssView.m in Sources */,
+				554784212305391D00D87BDD /* JSDSelectedNumberView.m in Sources */,
+				5547840B230513B800D87BDD /* JSDCollectionCell.m in Sources */,
 				554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */,
 				5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */,
 				554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */,
 				554783902304091300D87BDD /* JSDCayTypeViewTextCell.m in Sources */,
+				5547841B230538F400D87BDD /* JSDTextFieldView.m in Sources */,
+				55478424230545A300D87BDD /* JSDHomeViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

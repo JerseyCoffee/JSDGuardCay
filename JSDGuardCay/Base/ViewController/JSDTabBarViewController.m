@@ -75,20 +75,21 @@
     UIViewController *materialVC = [[JSDHomeViewController alloc] init];
     JSDBaseNavigationController *materialVCNaiVC = [[JSDBaseNavigationController alloc]
                                                     initWithRootViewController:materialVC];
-    UIViewController *kitTypeVC = [[JSDHomeViewController alloc] init];
-    JSDBaseNavigationController *kitTypeNaiVC = [[JSDBaseNavigationController alloc]
-                                                 initWithRootViewController:kitTypeVC];
-    [kitTypeNaiVC cyl_setHideNavigationBarSeparator:NO];
+    UIViewController *addItemVC = [[JSDAddItemViewController alloc] init];
+    JSDBaseNavigationController *addItemVCNaivVC = [[JSDBaseNavigationController alloc]
+                                                 initWithRootViewController:addItemVC];
+    [addItemVCNaivVC cyl_setHideNavigationBarSeparator:NO];
     
     [materialVCNaiVC cyl_setHideNavigationBarSeparator:NO];
-    UIViewController *myCenterVC = [[JSDHomeViewController alloc] init];
-    JSDBaseNavigationController *myCenterNaiVC = [[JSDBaseNavigationController alloc]
-                                                  initWithRootViewController:myCenterVC];
-    [myCenterNaiVC cyl_setHideNavigationBarSeparator:NO];
+    UIViewController *collectionVC = [[JSDCollectVC alloc] init];
+    JSDBaseNavigationController *collectionNaviVC = [[JSDBaseNavigationController alloc]
+                                                  initWithRootViewController:collectionVC];
+    [collectionNaviVC cyl_setHideNavigationBarSeparator:NO];
+    
     NSArray *viewControllers = @[
                                  homeNaviVC,
-                                 materialVCNaiVC,
-                                 kitTypeNaiVC,
+                                 addItemVCNaivVC,
+                                 collectionNaviVC,
                                  ];
     return viewControllers;
 }

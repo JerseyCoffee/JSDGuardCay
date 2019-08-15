@@ -37,6 +37,8 @@
 
 #import "JSDHomeViewController.h"
 #import "JSDCayListViewController.h"
+#import "JSDCollectVC.h"
+#import "JSDAddItemViewController.h"
 
 #pragma View
 
