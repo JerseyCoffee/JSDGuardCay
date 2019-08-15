@@ -32,8 +32,13 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
         if (data) {
             array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         }
-        _dataSource = [JSDCayTypeDetailsModel mj_objectArrayWithKeyValuesArray:array
-                       ];
+        if (array) {
+            _dataSource = [JSDCayTypeDetailsModel mj_objectArrayWithKeyValuesArray:array
+                           ];
+        } else {
+            _dataSource = [[NSMutableArray alloc] init];
+        }
+        
     }
     return _dataSource;
 }
@@ -70,6 +75,29 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
         NSLog(@"创建成功%d", status);
     }
     [data writeToFile:path atomically:YES];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kCollectionNotification object:nil];
+}
+
+- (void)update {
+    
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    //指向文件目录
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kCollectionFilePath];
+    NSString* dataPath = path;
+    if ([fileManager fileExistsAtPath:path]) {
+        
+    } else {
+        
+    }
+    NSData* data = [NSData dataWithContentsOfFile:dataPath];
+    NSArray* array;
+    if (data) {
+        array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    }
+    _dataSource = [JSDCayTypeDetailsModel mj_objectArrayWithKeyValuesArray:array
+                   ];
 }
 
 @end

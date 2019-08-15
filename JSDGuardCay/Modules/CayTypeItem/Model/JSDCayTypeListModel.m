@@ -17,7 +17,7 @@
         NSFileManager* fileManager = [NSFileManager defaultManager];
         //指向文件目录
         NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-        NSString* path = [NSString stringWithFormat:@"%@/Add_%@", documentsDirectory, self.typeTitle];
+        NSString* path = [NSString stringWithFormat:@"%@/Add_%@.json", documentsDirectory, self.typeTitle];
         NSString* dataPath = path;
         if ([fileManager fileExistsAtPath:path]) {
         } else {
@@ -60,7 +60,7 @@
     NSMutableArray* dataArray = [JSDCayTypeDetailsModel mj_keyValuesArrayWithObjectArray:self.dataSource];
     NSData* data = [dataArray mj_JSONData];
     NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
-    NSString* path = [NSString stringWithFormat:@"%@/Add_%@", documentsDirectory, self.typeTitle];
+    NSString* path = [NSString stringWithFormat:@"%@/Add_%@.json", documentsDirectory, self.typeTitle];
     if ([fileManager fileExistsAtPath:path]) {
     } else {
         BOOL status =  [fileManager createFileAtPath:path contents:nil attributes:nil];

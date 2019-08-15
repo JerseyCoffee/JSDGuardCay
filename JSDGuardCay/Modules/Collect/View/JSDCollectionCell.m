@@ -41,4 +41,13 @@
     
 }
 
+- (void)setModel:(JSDCayTypeDetailsModel *)model {
+    
+    self.cayImageView.image = [UIImage imageNamed:model.imageName];
+    self.cayCNLabel.text = model.cnName;
+    self.cayENLabel.text = model.enName;
+    self.cayNameLabel.text = model.cnNameTitle;
+    
+}
+
 @end

@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIView *parameterContenView;
 @property (weak, nonatomic) IBOutlet UIView *infoContentView;
 @property (weak, nonatomic) IBOutlet UITextView *infoTextView;
-
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @end

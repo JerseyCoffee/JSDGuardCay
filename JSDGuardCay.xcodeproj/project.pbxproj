@@ -39,6 +39,7 @@
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
 		557B2FA92303E35100FFF0D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2FA82303E35100FFF0D3 /* main.m */; };
+		606D69E1230595D600C06C39 /* JSDSnackbarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 606D69E0230595D600C06C39 /* JSDSnackbarManager.m */; };
 		BD1AE1579D02C3B860667596 /* libPods-JSDGuardCay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F5B485915CA8EEFB4D60BE /* libPods-JSDGuardCay.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,8 @@
 		557B2FA52303E35100FFF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		557B2FA72303E35100FFF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557B2FA82303E35100FFF0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		606D69DF230595D600C06C39 /* JSDSnackbarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDSnackbarManager.h; sourceTree = "<group>"; };
+		606D69E0230595D600C06C39 /* JSDSnackbarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDSnackbarManager.m; sourceTree = "<group>"; };
 		864FFC80101621CA389B55CE /* Pods-JSDGuardCay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDGuardCay.debug.xcconfig"; path = "Target Support Files/Pods-JSDGuardCay/Pods-JSDGuardCay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,13 +201,6 @@
 				554783742303FA8F00D87BDD /* JSDNormal.h */,
 			);
 			path = Public;
-			sourceTree = "<group>";
-		};
-		5547836B2303F9D500D87BDD /* BaseKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseKit;
 			sourceTree = "<group>";
 		};
 		5547836C2303F9D500D87BDD /* CategoryTool */ = {
@@ -417,9 +413,9 @@
 		557B2F982303E34F00FFF0D3 /* JSDGuardCay */ = {
 			isa = PBXGroup;
 			children = (
+				606D69DE230595CF00C06C39 /* BaseKit */,
 				5547837B2303FBE500D87BDD /* Base */,
 				554783632303F9D500D87BDD /* Application */,
-				5547836B2303F9D500D87BDD /* BaseKit */,
 				5547836C2303F9D500D87BDD /* CategoryTool */,
 				554783642303F9D500D87BDD /* Modules */,
 				5547836A2303F9D500D87BDD /* Public */,
@@ -434,6 +430,15 @@
 				19F5B485915CA8EEFB4D60BE /* libPods-JSDGuardCay.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		606D69DE230595CF00C06C39 /* BaseKit */ = {
+			isa = PBXGroup;
+			children = (
+				606D69DF230595D600C06C39 /* JSDSnackbarManager.h */,
+				606D69E0230595D600C06C39 /* JSDSnackbarManager.m */,
+			);
+			path = BaseKit;
 			sourceTree = "<group>";
 		};
 		B212512411B78EDB32F71C8C /* Pods */ = {
@@ -631,6 +636,7 @@
 				5547842C230568DF00D87BDD /* JSDCollectViewModel.m in Sources */,
 				554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */,
 				554783902304091300D87BDD /* JSDCayTypeViewTextCell.m in Sources */,
+				606D69E1230595D600C06C39 /* JSDSnackbarManager.m in Sources */,
 				5547841B230538F400D87BDD /* JSDTextFieldView.m in Sources */,
 				55478424230545A300D87BDD /* JSDHomeViewModel.m in Sources */,
 			);

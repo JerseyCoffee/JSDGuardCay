@@ -9,6 +9,7 @@
 #import "JSDCayDetailswViewController.h"
 
 #import "JSDCayDetailssView.h"
+#import "JSDCollectViewModel.h"
 
 @interface JSDCayDetailswViewController ()
 
@@ -97,9 +98,20 @@
 
 - (void)onTouchCollect:(UIButton* )sender {
     
+    if (self.viewModel) { //收藏页,详情无取消收藏功能
+        JSDCollectViewModel* collectManager = [[JSDCollectViewModel alloc] init];
+        [self.viewModel collectModel:self.detailsModel];
+        if (sender.isSelected) {
+            //收藏
+            [collectManager cancelCollect:self.detailsModel];
+            [JSDSnackbarManager showSnackMessage:@"已取消收藏"];
+        } else {
+            //收藏
+            [collectManager addCollect:self.detailsModel];
+            [JSDSnackbarManager showSnackMessage:@"已加入收藏"];
+        }
+    }
     sender.selected = !sender.isSelected;
-    //收藏
-    [self.viewModel collectModel:self.detailsModel];
 }
 
 #pragma mark - 6.Private Methods

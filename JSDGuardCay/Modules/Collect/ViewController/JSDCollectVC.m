@@ -8,10 +8,15 @@
 
 #import "JSDCollectVC.h"
 #import "JSDCollectionCell.h"
+#import "JSDCollectViewModel.h"
+#import "JSDCayDetailswViewController.h"
 
+NSString* const kCollectionNotification = @"CollectionNotification";
 static NSString* const kCell = @"cell";
 
 @interface JSDCollectVC ()
+
+@property (strong, nonatomic) JSDCollectViewModel *viewModel;
 
 @end
 
@@ -86,13 +91,14 @@ static NSString* const kCell = @"cell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 5;
+    return self.viewModel.dataSource.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     JSDCollectionCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCell forIndexPath:indexPath];
-    
+    JSDCayTypeDetailsModel* detailsModel = self.viewModel.dataSource[indexPath.item];
+    [cell setModel:detailsModel];
     
     return cell;
 }
@@ -120,15 +126,41 @@ static NSString* const kCell = @"cell";
     return 10;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
+    
+    JSDCayDetailswViewController* cayDetailsVC = JSDCayDetailswViewController.new;
+    [cayDetailsVC setDetailsModel:self.viewModel.dataSource[indexPath.item]];
+    
+    [self.navigationController pushViewController:cayDetailsVC animated:YES];
+}
+
 #pragma mark - 5.Event Response
 
 #pragma mark - 6.Private Methods
 
 - (void)setupNotification {
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collectionNotification:) name:kCollectionNotification object:nil];
+}
+
+- (void)collectionNotification:(id)notification {
+    
+    [self.viewModel update];
+    
+    [self.collectionView reloadData];
 }
 
 #pragma mark - 7.GET & SET
+
+- (JSDCollectViewModel *)viewModel {
+    
+    if (!_viewModel) {
+        _viewModel = [[JSDCollectViewModel alloc] init];
+    }
+    return _viewModel;
+}
 
 @end
 
