@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger typeIndex;
 @property (nonatomic, strong) NSMutableArray<JSDCayTypeDetailsModel* >* dataSource;
 
+- (instancetype)initWithTypeIndex:(NSInteger)typeIndex;
 - (void)addDetailsModel:(JSDCayTypeDetailsModel* )model;
 - (void)collectModel:(JSDCayTypeDetailsModel* )model;
 

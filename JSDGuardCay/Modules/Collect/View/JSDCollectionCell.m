@@ -26,6 +26,7 @@
     
     self.cayImageView.layer.cornerRadius = 37.5;
     self.cayImageView.layer.masksToBounds = YES;
+    self.cayImageView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     
     self.cayCNLabel.font = [UIFont jsd_fontSize:20 fontName:@"STHeitiSC-Medium"];
     self.cayCNLabel.textColor = [UIColor jsd_mainTextColor];
@@ -43,7 +44,18 @@
 
 - (void)setModel:(JSDCayTypeDetailsModel *)model {
     
-    self.cayImageView.image = [UIImage imageNamed:model.imageName];
+//    self.cayImageView.image = [UIImage imageNamed:model.imageName];
+    if (JSDIsString(model.imageName)) {
+        if ([model.imageName containsString:kJSDPhotoImageFiles]) {
+            
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            NSString* imageFile = [NSString stringWithFormat:@"%@/%@", documentsDirectory,model.imageName];
+            self.cayImageView.image = [UIImage imageWithContentsOfFile:imageFile];
+            
+        } else {
+            self.cayImageView.image = [UIImage imageNamed:model.imageName];
+        }
+    }
     self.cayCNLabel.text = model.cnName;
     self.cayENLabel.text = model.enName;
     self.cayNameLabel.text = model.cnNameTitle;

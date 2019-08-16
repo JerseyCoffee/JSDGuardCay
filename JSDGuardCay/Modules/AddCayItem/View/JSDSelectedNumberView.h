@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JSDSelectedNumberView : JSDBaseView
 
+@property (nonatomic, assign) NSInteger number;
+@property (nonatomic, strong) UILabel* subtitleLabel;
+
+- (void)setTitle:(NSString* )title number:(NSInteger)number;
+
 @end
 
 NS_ASSUME_NONNULL_END

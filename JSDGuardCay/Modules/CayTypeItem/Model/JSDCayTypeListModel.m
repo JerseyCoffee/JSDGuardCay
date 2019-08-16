@@ -10,6 +10,15 @@
 
 @implementation JSDCayTypeListModel
 
+- (instancetype)initWithTypeIndex:(NSInteger)typeIndex {
+    
+    self = [super init];
+    if (self) {
+        _typeIndex = typeIndex;
+    }
+    return self;
+}
+
 - (NSMutableArray<JSDCayTypeDetailsModel *> *)dataSource {
     
     if (!_dataSource) {
@@ -67,6 +76,14 @@
         NSLog(@"创建成功%d", status);
     }
     [data writeToFile:path atomically:YES];
+}
+
+- (NSString *)typeTitle {
+    
+    if (!_typeTitle) {
+        _typeTitle = [NSString stringWithFormat:@"cay%ld", self.typeIndex + 1];
+    }
+    return _typeTitle;
 }
 
 @end

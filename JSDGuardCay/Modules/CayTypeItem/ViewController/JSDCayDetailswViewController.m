@@ -50,7 +50,7 @@
 
 - (void)setupNavBar {
     
-    self.title = @"鹿角珊瑚（紫色）";
+    self.title = self.detailsModel.cnName;
     
     UIButton* collectButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [collectButton setImage:[UIImage imageNamed:@"collect_normal"] forState:UIControlStateNormal];

@@ -8,6 +8,9 @@
 
 #import "JSDAddItemViewController.h"
 #import "JSDTextFieldView.h"
+#import "JSDSelectedNumberView.h"
+#import "JSDTypeSelectedView.h"
+#import "JSDCayTypeListModel.h"
 
 @interface JSDAddItemViewController ()
 
@@ -16,8 +19,22 @@
 @property (weak, nonatomic) IBOutlet UIView *scrollContentview;
 @property (weak, nonatomic) IBOutlet UIImageView *cayImageView;
 @property (weak, nonatomic) IBOutlet UIView *namContentView;
-@property (weak, nonatomic) IBOutlet UIView *typeContentView;
+@property (weak, nonatomic) IBOutlet JSDTextFieldView *cnTextFieldView;
+@property (weak, nonatomic) IBOutlet JSDTextFieldView *enTextFieldView;
+@property (weak, nonatomic) IBOutlet JSDTextFieldView *CNNameTextField;
+
+@property (weak, nonatomic) IBOutlet JSDTypeSelectedView *typeContentView;
 @property (weak, nonatomic) IBOutlet UIView *parameterContenView;
+@property (weak, nonatomic) IBOutlet JSDSelectedNumberView *siyangNumberView;
+@property (weak, nonatomic) IBOutlet JSDSelectedNumberView *guangzhaoNumberView;
+@property (weak, nonatomic) IBOutlet JSDSelectedNumberView *shuiliuNumberView;
+@property (weak, nonatomic) IBOutlet JSDSelectedNumberView *yanduNumberView;
+@property (weak, nonatomic) IBOutlet JSDSelectedNumberView *suanduNumberView;
+@property (weak, nonatomic) IBOutlet JSDTextFieldView *xingqingTextFieldView;
+@property (weak, nonatomic) IBOutlet JSDTextFieldView *chandiTextFieldView;
+@property (weak, nonatomic) IBOutlet JSDTextFieldView *zhongshuTextFieldView;
+
+@property (nonatomic, assign) BOOL havaImageView;
 @property (weak, nonatomic) IBOutlet UIView *infoContentView;
 @property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
@@ -40,6 +57,8 @@
     [self setupData];
     //4.设置通知
     [self setupNotification];
+    
+    [self reloadView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -117,15 +136,39 @@
     [self.saveButton.titleLabel setFont:[UIFont jsd_fontSize:17]];
     [self.saveButton.titleLabel setTextColor:[UIColor whiteColor]];
     [self.saveButton setTitle:@"保存" forState:UIControlStateNormal];
+    [self.saveButton addTarget:self action:@selector(onTouchSave:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)reloadView {
+ 
+    //刷新数据;
+    self.havaImageView = NO;
+    self.cayImageView.backgroundColor = [UIColor jsd_colorWithHexString:@"#5261DE"];
+    self.cayImageView.image = [UIImage imageNamed:@"selected_photo"];
+    self.cayImageView.contentMode = UIViewContentModeCenter;
     
+    [self.cnTextFieldView setTitle:@"名称" tipText:@"请输入名称(必填)"];
+    [self.enTextFieldView setTitle:@"英文" tipText:@"请输入英文名称(必填)"];
+    [self.CNNameTextField setTitle:@"学名" tipText:@"请输入学名(必填)"];
+    
+    [self.typeContentView setTitle:@"品种" number:0];
+    
+    [self.siyangNumberView setTitle:@"饲养难度" number:1];
+    [self.guangzhaoNumberView setTitle:@"光照" number:1];
+    [self.shuiliuNumberView setTitle:@"水流" number:1];
+    [self.yanduNumberView setTitle:@"盐度" number:1];
+    [self.suanduNumberView setTitle:@"酸碱度" number:1];
+    
+    [self.xingqingTextFieldView setTitle:@"性情" tipText:@"请输入性情(选填)"];
+    [self.chandiTextFieldView setTitle:@"主要产地" tipText:@"请输入主要产地(选填)"];
+    [self.zhongshuTextFieldView setTitle:@"种属" tipText:@"请输入种属(选填)"];
 }
+
 
 #pragma mark - 3.Request Data
 
 - (void)setupData {
+    
     
 }
 
@@ -133,9 +176,69 @@
 
 #pragma mark - 5.Event Response
 
+- (void)onTouchSave:(id)sender {
+    
+    BOOL havaCNTitle = JSDIsString(self.cnTextFieldView.textField.text); //
+    BOOL havaENTitle = JSDIsString(self.enTextFieldView.textField.text);
+    BOOL havaCNNameTitle = JSDIsString(self.CNNameTextField.textField.text);
+    if (havaCNTitle && havaENTitle && havaCNNameTitle) {
+        [self performSave];
+    } else {
+        [JSDSnackbarManager showSnackMessage:@"请填写必填字段()"];
+    }
+}
+
+- (void)performSave {
+    
+    //先判断选择品种;
+    JSDCayTypeListModel* cayTypeListModel = [[JSDCayTypeListModel alloc] initWithTypeIndex:self.typeContentView.selectedType]; // 品种下标; 从 0 算起. 默认是 0
+    JSDCayTypeDetailsModel* detailsModel = [[JSDCayTypeDetailsModel alloc] init];
+    if (self.havaImageView) {
+        
+        //TODO: 未计算首次设置时间
+        NSDate* date = [NSDate date];
+        NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"MM-dd HH:ss"];
+        NSString* dateString = [formatter stringFromDate:date];
+        [JSDPhotoManage savaImageView:self.cayImageView fileName:dateString];
+        detailsModel.imageName = [NSString stringWithFormat:@"%@%@", kJSDPhotoImageFiles, dateString];
+    }
+    detailsModel.cnName = self.CNNameTextField.textField.text;
+    detailsModel.enName = [NSString stringWithFormat:@"英文: %@", self.enTextFieldView.textField.text];
+    detailsModel.cnNameTitle = [NSString stringWithFormat:@"学名: %@", self.CNNameTextField.textField.text];
+    detailsModel.siyang = self.siyangNumberView.subtitleLabel.text;
+    detailsModel.guangzhao = self.guangzhaoNumberView.subtitleLabel.text;
+    detailsModel.shuiliu = self.shuiliuNumberView.subtitleLabel.text;
+    detailsModel.yaoqiu = [NSString stringWithFormat:@"盐度 1.020-1.025; 酸碱度 8.1-8.4 "];
+//    detailsModel.yaoqiu = [NSString stringWithFormat:@"盐度 %@;%@", self.yanduNumberView.subtitleLabel.text, self.suanduNumberView.subtitleLabel.text];
+    detailsModel.yanse = @"紫色";
+    detailsModel.xingqing = self.xingqingTextFieldView.textField.text;
+    detailsModel.chandi = self.chandiTextFieldView.textField.text;
+    detailsModel.zhongshu = self.zhongshuTextFieldView.textField.text;
+    detailsModel.info = self.infoTextView.text;
+    
+    [cayTypeListModel addDetailsModel:detailsModel];
+    
+    [self addComplete];
+}
+
+- (void)addComplete {
+    
+    [JSDSnackbarManager showSnackMessage:@"成功添加珊瑚, 你可以到指定的品种中查看它"];
+    //返回
+    [self didTapBack:nil];
+    
+    //刷新数据
+    [self reloadView];
+}
+
 - (IBAction)selectedPhoto:(UIButton *)sender {
     
-    
+    [JSDPhotoManage presentWithViewController:self sourceType:JSDImagePickerSourceTypePhotoLibrary finishPicking:^(UIImage * _Nonnull image) {
+        self.cayImageView.contentMode = UIViewContentModeScaleToFill;
+        self.cayImageView.image = image;
+        self.havaImageView = YES;
+    }];
 }
 
 - (void)onTouchTap:(id)sender {

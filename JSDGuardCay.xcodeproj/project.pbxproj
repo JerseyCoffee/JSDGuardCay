@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5527069E2306830500BC1EE7 /* JSDPhotoManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5527069C2306830400BC1EE7 /* JSDPhotoManage.m */; };
+		5527070123069B3300BC1EE7 /* cay4.json in Resources */ = {isa = PBXBuildFile; fileRef = 552706FC23069B3100BC1EE7 /* cay4.json */; };
+		5527070223069B3300BC1EE7 /* cay5.json in Resources */ = {isa = PBXBuildFile; fileRef = 552706FD23069B3200BC1EE7 /* cay5.json */; };
+		5527070323069B3300BC1EE7 /* cay3.json in Resources */ = {isa = PBXBuildFile; fileRef = 552706FE23069B3200BC1EE7 /* cay3.json */; };
+		5527070423069B3300BC1EE7 /* cay2.json in Resources */ = {isa = PBXBuildFile; fileRef = 552706FF23069B3200BC1EE7 /* cay2.json */; };
+		5527070523069B3300BC1EE7 /* cay6.json in Resources */ = {isa = PBXBuildFile; fileRef = 5527070023069B3300BC1EE7 /* cay6.json */; };
 		554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783762303FB1200D87BDD /* UIColor+JSDTool.m */; };
 		5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783792303FB3700D87BDD /* UIFont+JSDTool.m */; };
 		554783812303FC1F00D87BDD /* JSDTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 554783802303FC1F00D87BDD /* JSDTabBarViewController.m */; };
@@ -46,6 +52,13 @@
 /* Begin PBXFileReference section */
 		19F5B485915CA8EEFB4D60BE /* libPods-JSDGuardCay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSDGuardCay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AFFF2822732B44C482ACD29 /* Pods-JSDGuardCay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSDGuardCay.release.xcconfig"; path = "Target Support Files/Pods-JSDGuardCay/Pods-JSDGuardCay.release.xcconfig"; sourceTree = "<group>"; };
+		5527069C2306830400BC1EE7 /* JSDPhotoManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDPhotoManage.m; sourceTree = "<group>"; };
+		5527069D2306830500BC1EE7 /* JSDPhotoManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPhotoManage.h; sourceTree = "<group>"; };
+		552706FC23069B3100BC1EE7 /* cay4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay4.json; sourceTree = "<group>"; };
+		552706FD23069B3200BC1EE7 /* cay5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay5.json; sourceTree = "<group>"; };
+		552706FE23069B3200BC1EE7 /* cay3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay3.json; sourceTree = "<group>"; };
+		552706FF23069B3200BC1EE7 /* cay2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay2.json; sourceTree = "<group>"; };
+		5527070023069B3300BC1EE7 /* cay6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay6.json; sourceTree = "<group>"; };
 		554783722303FA1800D87BDD /* JSDPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDPrefixHeader.pch; sourceTree = "<group>"; };
 		554783732303FA4100D87BDD /* JSDPublicMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDPublicMacro.h; sourceTree = "<group>"; };
 		554783742303FA8F00D87BDD /* JSDNormal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDNormal.h; sourceTree = "<group>"; };
@@ -297,6 +310,11 @@
 			isa = PBXGroup;
 			children = (
 				5547842823054E9D00D87BDD /* cay1.json */,
+				552706FF23069B3200BC1EE7 /* cay2.json */,
+				552706FE23069B3200BC1EE7 /* cay3.json */,
+				552706FC23069B3100BC1EE7 /* cay4.json */,
+				552706FD23069B3200BC1EE7 /* cay5.json */,
+				5527070023069B3300BC1EE7 /* cay6.json */,
 				55478425230548B800D87BDD /* JSDCayTypeListModel.h */,
 				55478426230548B800D87BDD /* JSDCayTypeListModel.m */,
 			);
@@ -437,6 +455,8 @@
 			children = (
 				606D69DF230595D600C06C39 /* JSDSnackbarManager.h */,
 				606D69E0230595D600C06C39 /* JSDSnackbarManager.m */,
+				5527069D2306830500BC1EE7 /* JSDPhotoManage.h */,
+				5527069C2306830400BC1EE7 /* JSDPhotoManage.m */,
 			);
 			path = BaseKit;
 			sourceTree = "<group>";
@@ -511,11 +531,16 @@
 			files = (
 				557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */,
 				5547842923054E9D00D87BDD /* cay1.json in Resources */,
+				5527070323069B3300BC1EE7 /* cay3.json in Resources */,
 				5547840C230513B800D87BDD /* JSDCollectionCell.xib in Resources */,
+				5527070423069B3300BC1EE7 /* cay2.json in Resources */,
 				557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */,
 				554783A62304F0E100D87BDD /* JSDCayDetailsView.xib in Resources */,
 				55478415230525B000D87BDD /* JSDAddItemViewController.xib in Resources */,
 				554783922304092100D87BDD /* JSDCayTypeViewTextCell.xib in Resources */,
+				5527070223069B3300BC1EE7 /* cay5.json in Resources */,
+				5527070523069B3300BC1EE7 /* cay6.json in Resources */,
+				5527070123069B3300BC1EE7 /* cay4.json in Resources */,
 				5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,6 +658,7 @@
 				5547840B230513B800D87BDD /* JSDCollectionCell.m in Sources */,
 				554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */,
 				5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */,
+				5527069E2306830500BC1EE7 /* JSDPhotoManage.m in Sources */,
 				5547842C230568DF00D87BDD /* JSDCollectViewModel.m in Sources */,
 				554783772303FB1200D87BDD /* UIColor+JSDTool.m in Sources */,
 				554783902304091300D87BDD /* JSDCayTypeViewTextCell.m in Sources */,
@@ -784,7 +810,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JerseyCafe.JSDGuardCay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -804,7 +830,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.JerseyCafe.JSDGuardCay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

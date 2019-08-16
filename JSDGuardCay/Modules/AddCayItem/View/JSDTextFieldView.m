@@ -11,7 +11,6 @@
 @interface JSDTextFieldView ()
 
 @property (nonatomic, strong) UILabel* titleLabel;
-@property (nonatomic, strong) UITextField* textField;
 
 @end
 
@@ -51,5 +50,11 @@
     }];
 }
 
+- (void)setTitle:(NSString *)title tipText:(NSString *)tipText {
+    
+    self.titleLabel.text = title;
+    self.textField.placeholder = tipText;
+    self.textField.text = nil;
+}
 
 @end

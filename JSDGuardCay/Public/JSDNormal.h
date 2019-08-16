@@ -12,7 +12,7 @@
 #import "UIColor+JSDTool.h"
 #import "UIFont+JSDTool.h"
 #import "JSDSnackbarManager.h"
-//#import "JSDPhotoManage.h"
+#import "JSDPhotoManage.h"
 
 #import <MaterialComponents/MaterialButtons.h>
 #import <MDCCollectionViewCell.h>

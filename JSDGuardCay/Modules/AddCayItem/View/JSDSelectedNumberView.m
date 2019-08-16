@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) UILabel* titleLabel;
 @property (nonatomic, strong) NSArray<UIButton *>* btnS;
-@property (nonatomic, strong) UILabel* subtitleLabel;
 
 @end
 
@@ -32,6 +31,7 @@
         [self addSubview:_subtitleLabel];
         
         [self configuration];
+        [self setNumber:0];
     }
     return self;
 }
@@ -87,6 +87,7 @@
 
 - (void)onTouchSelectedCollect:(UIButton* )sender {
     
+    [self setNumber:sender.tag + 1];
     for (NSInteger i = 0; i < self.btnS.count; i++) {
         UIButton* btn = self.btnS[i];
         if (i <= sender.tag) {
@@ -97,5 +98,31 @@
     }
 }
 
+- (void)setNumber:(NSInteger)number {
+    
+    _number = number;
+    if (_number <= 2) {
+        self.subtitleLabel.text = @"弱";
+    } else if (_number <= 4) {
+        self.subtitleLabel.text = @"中";
+    } else {
+        self.subtitleLabel.text = @"强";
+    }
+    for (NSInteger i = 0; i < self.btnS.count; i++) {
+        UIButton* btn = self.btnS[i];
+        if (i <= number) {
+            btn.selected = YES;
+        } else {
+            btn.selected = NO;
+        }
+    }
+}
+
+- (void)setTitle:(NSString* )title number:(NSInteger)number {
+    
+    self.titleLabel.text = title;
+    [self setNumber:number];
+    
+}
 
 @end

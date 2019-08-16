@@ -26,8 +26,7 @@
     
     self.itemImageView.layer.cornerRadius = 40;
     self.itemImageView.layer.masksToBounds = YES;
-//    self.itemImageView.image = [UIImage imageNamed:nil];
-    self.itemImageView.backgroundColor = [UIColor jsd_grayColor];
+    self.itemImageView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     
     self.titlelabel.font = [UIFont jsd_fontSize:16];
     self.titlelabel.textColor = [UIColor jsd_mainTextColor];
@@ -42,7 +41,15 @@
 - (void)setModel:(JSDCayTypeDetailsModel *)model {
     
     if (JSDIsString(model.imageName)) {
-        self.itemImageView.image = [UIImage imageNamed:model.imageName];
+        if ([model.imageName containsString:kJSDPhotoImageFiles]) {
+            
+            NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+            NSString* imageFile = [NSString stringWithFormat:@"%@/%@", documentsDirectory,model.imageName];
+            self.itemImageView.image = [UIImage imageWithContentsOfFile:imageFile];
+            
+        } else {
+            self.itemImageView.image = [UIImage imageNamed:model.imageName];
+        }
     }
     
     if (JSDIsString(model.cnName)) {

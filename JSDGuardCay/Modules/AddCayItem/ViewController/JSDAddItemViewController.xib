@@ -12,7 +12,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JSDAddItemViewController">
             <connections>
+                <outlet property="CNNameTextField" destination="XGI-Yp-dFU" id="LQc-2x-DC2"/>
                 <outlet property="cayImageView" destination="W8R-M1-zBB" id="Vkr-I3-ceZ"/>
+                <outlet property="chandiTextFieldView" destination="lUx-dK-vJr" id="2LU-JG-O5h"/>
+                <outlet property="cnTextFieldView" destination="OkY-Un-Qng" id="Fih-cX-z6f"/>
+                <outlet property="enTextFieldView" destination="nhK-oe-VgV" id="u90-eJ-l8I"/>
+                <outlet property="guangzhaoNumberView" destination="STl-z1-706" id="34U-9g-JLn"/>
                 <outlet property="infoContentView" destination="ue4-oG-PoP" id="Kog-nm-zUo"/>
                 <outlet property="infoTextView" destination="Owz-ZL-NtT" id="fOB-LB-CoR"/>
                 <outlet property="namContentView" destination="rYM-Qr-fz9" id="kte-JZ-4hy"/>
@@ -21,17 +26,23 @@
                 <outlet property="scrollContentview" destination="7xQ-6J-oxG" id="Cv5-8h-R1S"/>
                 <outlet property="scrollView" destination="vKS-dB-DSm" id="LMi-kC-y7z"/>
                 <outlet property="selectedPhotoButton" destination="YHC-kd-C07" id="RWL-oB-ikN"/>
+                <outlet property="shuiliuNumberView" destination="ADz-rI-IaA" id="6iR-gB-EZB"/>
+                <outlet property="siyangNumberView" destination="lb0-90-YwV" id="ebK-1T-9us"/>
+                <outlet property="suanduNumberView" destination="tJE-kv-d82" id="WLz-QU-Qd6"/>
                 <outlet property="typeContentView" destination="icB-kp-dnv" id="gUr-IK-g3a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="xingqingTextFieldView" destination="UXs-Jk-3tE" id="aHW-xd-1Df"/>
+                <outlet property="yanduNumberView" destination="tyX-Qo-e4y" id="4fi-au-8OU"/>
+                <outlet property="zhongshuTextFieldView" destination="6yC-j0-mHy" id="8Q8-va-BmV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="1272"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKS-dB-DSm">
-                    <rect key="frame" x="0.0" y="44" width="414" height="1194"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xQ-6J-oxG">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="1780"/>
