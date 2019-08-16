@@ -12,7 +12,7 @@
 #import "JSDTypeSelectedView.h"
 #import "JSDCayTypeListModel.h"
 
-@interface JSDAddItemViewController ()
+@interface JSDAddItemViewController () <UITextViewDelegate, UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *selectedPhotoButton;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -38,6 +38,7 @@
 @property (weak, nonatomic) IBOutlet UIView *infoContentView;
 @property (weak, nonatomic) IBOutlet UITextView *infoTextView;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
+@property (weak, nonatomic) IBOutlet UILabel *infoTipLabel;
 
 @end
 
@@ -91,6 +92,8 @@
 - (void)setupNavBar {
     
     self.title = @"添加珊瑚";
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchSave:)];
 }
 
 - (void)setupView {
@@ -98,6 +101,7 @@
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     
     self.scrollView.backgroundColor = [UIColor jsd_maiBackgroundColor];
+    self.scrollView.delegate = self;
     self.scrollContentview.backgroundColor = [UIColor jsd_maiBackgroundColor];
     UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTouchTap:)];
     [self.scrollContentview addGestureRecognizer:tapGesture];
@@ -129,6 +133,11 @@
     
     self.infoTextView.font = [UIFont jsd_fontSize:18];
     self.infoTextView.text = nil;
+    self.infoTextView.delegate = self;
+    
+    self.infoTipLabel.text = @"简介";
+    self.infoTipLabel.font = [UIFont jsd_fontSize:18];
+    self.infoTipLabel.textColor = [UIColor jsd_detailTextColor];
     
     self.saveButton.backgroundColor = [UIColor jsd_colorWithHexString:@"#5261DE"];
     self.saveButton.layer.cornerRadius = 24;
@@ -162,8 +171,9 @@
     [self.xingqingTextFieldView setTitle:@"性情" tipText:@"请输入性情(选填)"];
     [self.chandiTextFieldView setTitle:@"主要产地" tipText:@"请输入主要产地(选填)"];
     [self.zhongshuTextFieldView setTitle:@"种属" tipText:@"请输入种属(选填)"];
+    
+    [self.scrollView setScrollsToTop:YES];
 }
-
 
 #pragma mark - 3.Request Data
 
@@ -173,6 +183,20 @@
 }
 
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView {
+    
+    if (textView.text.length) {
+        self.infoTipLabel.text = nil;
+    } else {
+        self.infoTipLabel.text = @"简介:";
+    }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+    [self.scrollContentview endEditing:YES];
+}
 
 #pragma mark - 5.Event Response
 
@@ -184,7 +208,7 @@
     if (havaCNTitle && havaENTitle && havaCNNameTitle) {
         [self performSave];
     } else {
-        [JSDSnackbarManager showSnackMessage:@"请填写必填字段()"];
+        [JSDSnackbarManager showSnackMessage:@"请填写必填字段(名称,英文,学名)"];
     }
 }
 
