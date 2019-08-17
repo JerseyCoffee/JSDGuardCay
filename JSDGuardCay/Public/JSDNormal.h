@@ -40,6 +40,7 @@
 #import "JSDCayListViewController.h"
 #import "JSDCollectVC.h"
 #import "JSDAddItemViewController.h"
+#import "JSDMyCenterVC.h"
 
 #pragma View
 

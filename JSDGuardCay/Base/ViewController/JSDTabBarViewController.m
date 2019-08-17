@@ -81,9 +81,9 @@
     [addItemVCNaivVC cyl_setHideNavigationBarSeparator:NO];
     
     [materialVCNaiVC cyl_setHideNavigationBarSeparator:NO];
-    UIViewController *collectionVC = [[JSDCollectVC alloc] init];
+    UIViewController *myCenterVC = [[JSDMyCenterVC alloc] init];
     JSDBaseNavigationController *collectionNaviVC = [[JSDBaseNavigationController alloc]
-                                                  initWithRootViewController:collectionVC];
+                                                  initWithRootViewController:myCenterVC];
     [collectionNaviVC cyl_setHideNavigationBarSeparator:NO];
     
     NSArray *viewControllers = @[
