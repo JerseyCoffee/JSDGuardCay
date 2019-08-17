@@ -14,7 +14,7 @@
 #import "JSDMyResource.h"
 
 NSString *const kMyUserDataNotification = @"MyUserDataNotification";
-NSString *const kJSDAppleID = @"123";
+NSString *const kJSDAppleID = @"1476904360";
 
 @interface JSDMyCenterVC ()
 

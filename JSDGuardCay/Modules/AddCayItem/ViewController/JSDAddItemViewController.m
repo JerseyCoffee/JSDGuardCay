@@ -72,6 +72,8 @@
     
     [super viewWillAppear:animated];
     
+    self.tabBarController.tabBar.hidden = YES;
+    
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStyleDone
                                                                   target:self
@@ -80,6 +82,13 @@
     backButton.image = backImage;
     backButton.tintColor = [UIColor jsd_colorWithHexString:@"#333333"];
     self.navigationItem.leftBarButtonItem = backButton;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)didTapBack:(id)button {

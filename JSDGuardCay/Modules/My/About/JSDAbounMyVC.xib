@@ -29,8 +29,8 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="V 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhO-7V-IaM">
-                    <rect key="frame" x="169" y="284" width="76.5" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <rect key="frame" x="167.5" y="284" width="79.5" height="31.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -40,8 +40,8 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共同保护珊瑚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-KA-LPO">
-                    <rect key="frame" x="131" y="692" width="152" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一起共同保护珊瑚" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIM-KA-LPO">
+                    <rect key="frame" x="105.5" y="692" width="203" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

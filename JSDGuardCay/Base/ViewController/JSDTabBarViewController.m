@@ -71,25 +71,19 @@
     
     [homeNaviVC cyl_setHideNavigationBarSeparator:YES];
     [homeNaviVC cyl_setNavigationBarHidden:YES];
-    [homeNaviVC cyl_setNavigationBarHidden:YES];
-    UIViewController *materialVC = [[JSDHomeViewController alloc] init];
-    JSDBaseNavigationController *materialVCNaiVC = [[JSDBaseNavigationController alloc]
-                                                    initWithRootViewController:materialVC];
     UIViewController *addItemVC = [[JSDAddItemViewController alloc] init];
     JSDBaseNavigationController *addItemVCNaivVC = [[JSDBaseNavigationController alloc]
                                                  initWithRootViewController:addItemVC];
     [addItemVCNaivVC cyl_setHideNavigationBarSeparator:NO];
-    
-    [materialVCNaiVC cyl_setHideNavigationBarSeparator:NO];
     UIViewController *myCenterVC = [[JSDMyCenterVC alloc] init];
-    JSDBaseNavigationController *collectionNaviVC = [[JSDBaseNavigationController alloc]
+    JSDBaseNavigationController *myCenterNaviVC = [[JSDBaseNavigationController alloc]
                                                   initWithRootViewController:myCenterVC];
-    [collectionNaviVC cyl_setHideNavigationBarSeparator:NO];
+    [myCenterNaviVC cyl_setHideNavigationBarSeparator:NO];
     
     NSArray *viewControllers = @[
                                  homeNaviVC,
                                  addItemVCNaivVC,
-                                 collectionNaviVC,
+                                 myCenterNaviVC,
                                  ];
     return viewControllers;
 }
