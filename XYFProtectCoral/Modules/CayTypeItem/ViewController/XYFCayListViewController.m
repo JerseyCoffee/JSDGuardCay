@@ -26,8 +26,8 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 - (void)setupNavBar {
 }
 - (void)setupView {
-    self.view.backgroundColor = [UIColor jsd_mainGrayColor];
-    self.collectionView.backgroundColor = [UIColor jsd_mainGrayColor];
+    self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
+    self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"XYFCayItemViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kItemCellreuseIdentifier];
     [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.mas_offset(0);

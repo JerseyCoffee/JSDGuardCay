@@ -4,7 +4,7 @@
 #import "XYFMyCenterHeaderView.h"
 #import "XYFMyResource.h"
 NSString *const kMyUserDataNotification = @"MyUserDataNotification";
-NSString *const kJSDAppleID = @"123";
+NSString *const kJSDAppleID = @"1476971058";
 @interface XYFMyCenterVC ()
 @property (strong, nonatomic) XYFMyCenterViewModel *viewModel;
 @property (nonatomic, strong) XYFMyCenterHeaderView* headerView;

@@ -15,6 +15,7 @@
     self.titlelabel.textColor = [UIColor jsd_mainTextColor];
     self.titlelabel.text = @"鹿角珊瑚（紫色）";
     self.titlelabel.textAlignment = NSTextAlignmentCenter;
+    self.titlelabel.numberOfLines = 0;
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
 }

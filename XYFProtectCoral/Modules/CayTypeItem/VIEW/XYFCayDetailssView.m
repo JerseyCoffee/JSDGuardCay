@@ -41,6 +41,7 @@
     self.cayImageView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.cayCNLabel.textColor = [UIColor jsd_mainTextColor];
     self.cayCNLabel.font = [UIFont jsd_fontSize:20 fontName:@"STHeitiSC-Medium"];
+    self.cayCNLabel.numberOfLines = 2;
     self.cayENLabel.textColor = [UIColor jsd_detailTextColor];
     self.cayENLabel.font = [UIFont jsd_fontSize:12];
     self.cayNameLabel.textColor = [UIColor jsd_detailTextColor];
@@ -55,17 +56,17 @@
         label.font = [UIFont jsd_fontSize:14];
         label.textColor = [UIColor jsd_mainTextColor];
     }
-    self.siyangTitleLabel.text = @"饲养难度:";
-    self.guangzhaoTitleLabel.text = @"光照:";
-    self.shuiliuTitleLabel.text = @"水流:";
-    self.didianTitleLbael.text = @"放置地点:";
-    self.yaoqiuTitleLabel.text = @"要求:";
-    self.yanseTitleLabel.text = @"颜色:";
-    self.xingqingTitleLabel.text = @"性情:";
-    self.chandiTitleLabel.text = @"主要产地:";
-    self.zhongshuTitlelLabel.text = @"种属:";
+    self.siyangTitleLabel.text = @"Dificultad creciente:";
+    self.guangzhaoTitleLabel.text = @"Iluminación:";
+    self.shuiliuTitleLabel.text = @"Flujo de agua:";
+    self.didianTitleLbael.text = @"Lugar de colocación:";
+    self.yaoqiuTitleLabel.text = @"Solicitud:";
+    self.yanseTitleLabel.text = @"Color:";
+    self.xingqingTitleLabel.text = @"Temperamento:";
+    self.chandiTitleLabel.text = @"Área de producción principal:";
+    self.zhongshuTitlelLabel.text = @"Especie:";
     self.infoTitleLabel.font = [UIFont jsd_fontSize:20 fontName:@"STHeitiSC-Medium"];
-    self.infoTitleLabel.text = @"简介:";
+    self.infoTitleLabel.text = @"Introduccion:";
     self.infoTitleLabel.textColor = [UIColor jsd_mainTextColor];
     self.infoLabel.numberOfLines = 0;
 }

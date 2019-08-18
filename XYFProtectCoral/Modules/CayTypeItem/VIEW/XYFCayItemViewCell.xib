@@ -27,10 +27,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="32h-Qf-cFk">
-                        <rect key="frame" x="0.0" y="120" width="117" height="15"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="15" id="FYJ-oo-MZQ"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="115" width="117" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,7 +35,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="32h-Qf-cFk" firstAttribute="top" secondItem="RCo-xe-bmd" secondAttribute="bottom" constant="20" id="8dh-70-Vq8"/>
+                <constraint firstItem="32h-Qf-cFk" firstAttribute="top" secondItem="RCo-xe-bmd" secondAttribute="bottom" constant="15" id="8dh-70-Vq8"/>
                 <constraint firstItem="32h-Qf-cFk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XB6-5G-Oiv"/>
                 <constraint firstAttribute="trailing" secondItem="32h-Qf-cFk" secondAttribute="trailing" id="c8x-Ca-v4p"/>
                 <constraint firstItem="RCo-xe-bmd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="20" id="mFo-Rr-nBZ"/>
