@@ -13,22 +13,22 @@
 - (NSArray<JSDHomeModel *> *)dataSource {
     
     if (!_dataSource) {
-        _dataSource = [JSDHomeModel mj_objectArrayWithKeyValuesArray:@[@{@"title": @"小水螅体硬珊瑚（SPS)",
+        _dataSource = [JSDHomeModel mj_objectArrayWithKeyValuesArray:@[@{@"title": @"Pequeño coral duro",
                                                                          @"imageName": @"home_cay1",
                                                                             },
-                                                                       @{@"title": @"大水螅体硬珊瑚（LPS)",
+                                                                       @{@"title": @"Coral duro grande",
                                                                          @"imageName": @"home_cay2",
                                                                          },
-                                                                       @{@"title": @"菇珊瑚",
+                                                                       @{@"title": @"Coral de setas",
                                                                          @"imageName": @"home_cay3",
                                                                          },
-                                                                       @{@"title": @"软珊瑚",
+                                                                       @{@"title": @"Coral blando",
                                                                          @"imageName": @"home_cay4",
                                                                          },
-                                                                       @{@"title": @"水螅珊瑚",
+                                                                       @{@"title": @"Nutria coral",
                                                                          @"imageName": @"home_cay5",
                                                                          },
-                                                                       @{@"title": @"海扇",
+                                                                       @{@"title": @"Abanico de mar",
                                                                          @"imageName": @"home_cay6",
                                                                          },
                                                                        

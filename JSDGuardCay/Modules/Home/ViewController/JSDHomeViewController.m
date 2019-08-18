@@ -154,9 +154,10 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     [super collectionView:collectionView didSelectItemAtIndexPath:indexPath];
-    
+    JSDHomeModel* model = self.viewModel.dataSource[indexPath.item];
     JSDCayListViewController* cayListVC = [[JSDCayListViewController alloc] init];
     cayListVC.typeIndex = indexPath.item + 1;
+    cayListVC.title = model.title;
     [self.navigationController pushViewController:cayListVC animated:YES];
 }
 

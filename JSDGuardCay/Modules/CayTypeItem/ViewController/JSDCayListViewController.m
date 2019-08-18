@@ -53,7 +53,7 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 
 - (void)setupNavBar {
     
-    self.title = @"小水螅体硬珊瑚（SPS）";
+//    self.title = @"小水螅体硬珊瑚（SPS）"; 
     
 }
 
