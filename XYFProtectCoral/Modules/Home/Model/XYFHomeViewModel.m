@@ -1,17 +1,6 @@
-//
-//  XYFHomeViewModel.m
-//  JSDGuardCay
-//
-//  Created by Jersey on 2019/8/15.
-//  Copyright © 2019 JerseyCafe. All rights reserved.
-//
-
 #import "XYFHomeViewModel.h"
-
 @implementation XYFHomeViewModel
-
 - (NSArray<JSDHomeModel *> *)dataSource {
-    
     if (!_dataSource) {
         _dataSource = [JSDHomeModel mj_objectArrayWithKeyValuesArray:@[@{@"title": @"Pequeño coral duro",
                                                                          @"imageName": @"home_cay1",
@@ -31,16 +20,11 @@
                                                                        @{@"title": @"Abanico de mar",
                                                                          @"imageName": @"home_cay6",
                                                                          },
-                                                                       
                                                                             ]
                         ];
-        
     }
     return _dataSource;
 }
-
 @end
-
 @implementation JSDHomeModel
-
 @end

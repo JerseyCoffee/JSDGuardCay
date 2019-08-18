@@ -1,31 +1,14 @@
-
-//
-//  XYFCollectViewModel.m
-//  JSDGuardCay
-//
-//  Created by Jersey on 2019/8/15.
-//  Copyright © 2019 JerseyCafe. All rights reserved.
-//
-
 #import "XYFCollectViewModel.h"
-
 static NSString* const kCollectionFilePath = @"collectFile.json";
-
 @implementation XYFCollectViewModel
-
 - (NSMutableArray<JSDCayTypeDetailsModel *> *)dataSource {
-    
     if (!_dataSource) {
-        
         NSFileManager* fileManager = [NSFileManager defaultManager];
-        //指向文件目录
         NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
         NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kCollectionFilePath];
         NSString* dataPath = path;
         if ([fileManager fileExistsAtPath:path]) {
-            
         } else {
-            
         }
         NSData* data = [NSData dataWithContentsOfFile:dataPath];
         NSArray* array;
@@ -38,20 +21,14 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
         } else {
             _dataSource = [[NSMutableArray alloc] init];
         }
-        
     }
     return _dataSource;
 }
-
 - (void)addCollect:(JSDCayTypeDetailsModel *)model {
-    
     [self.dataSource addObject:model];
-    
     [self saveDate];
 }
-
 - (void)cancelCollect:(JSDCayTypeDetailsModel *)model {
-    
     for (NSInteger i = 0; i < self.dataSource.count; i++) {
         JSDCayTypeDetailsModel* searchModel = self.dataSource[i];
         if ([searchModel.cnName isEqualToString:model.cnName] && [searchModel.enName isEqualToString:model.enName]) {
@@ -61,9 +38,7 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
         }
     }
 }
-
 - (void)saveDate {
-    
     NSFileManager* fileManager = [NSFileManager defaultManager];
     NSMutableArray* dataArray = [JSDCayTypeDetailsModel mj_keyValuesArrayWithObjectArray:self.dataSource];
     NSData* data = [dataArray mj_JSONData];
@@ -75,21 +50,15 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
         NSLog(@"创建成功%d", status);
     }
     [data writeToFile:path atomically:YES];
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:kCollectionNotification object:nil];
 }
-
 - (void)update {
-    
     NSFileManager* fileManager = [NSFileManager defaultManager];
-    //指向文件目录
     NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSString* path = [NSString stringWithFormat:@"%@/%@", documentsDirectory, kCollectionFilePath];
     NSString* dataPath = path;
     if ([fileManager fileExistsAtPath:path]) {
-        
     } else {
-        
     }
     NSData* data = [NSData dataWithContentsOfFile:dataPath];
     NSArray* array;
@@ -99,5 +68,4 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
     _dataSource = [JSDCayTypeDetailsModel mj_objectArrayWithKeyValuesArray:array
                    ];
 }
-
 @end
