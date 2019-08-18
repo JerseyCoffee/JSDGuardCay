@@ -33,21 +33,24 @@
     
     self.titleLabel.font = [UIFont jsd_fontSize:18];
     self.titleLabel.textColor = [UIColor jsd_minorTextColor];
-    self.titleLabel.text = @"名称:";
+    self.titleLabel.text = @"Nombre:";
     
     self.textField.font = [UIFont jsd_fontSize:18];
-    self.textField.placeholder = @"请输入名称";
+    self.textField.placeholder = @"Por favor ingrese un nombre";
     
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(18);
         make.centerY.mas_equalTo(0);
+        make.width.mas_equalTo(80);
     }];
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
     
     [self.textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(106);
         make.centerY.mas_equalTo(0);
         make.right.mas_equalTo(-15);
     }];
+    self.textField.adjustsFontSizeToFitWidth = YES;
 }
 
 - (void)setTitle:(NSString *)title tipText:(NSString *)tipText {

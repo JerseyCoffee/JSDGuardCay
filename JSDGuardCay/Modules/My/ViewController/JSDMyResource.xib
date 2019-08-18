@@ -32,8 +32,8 @@
                         <constraint firstAttribute="height" constant="100" id="hdC-jP-A5o"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-ge-OXi">
-                    <rect key="frame" x="20" y="387" width="69.5" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modificar apodo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBe-ge-OXi">
+                    <rect key="frame" x="20" y="387" width="124.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="qZn-oy-gSt"/>
                     </constraints>
-                    <state key="normal" title="保存"/>
+                    <state key="normal" title="Guardar"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9t-wr-RH3">
                     <rect key="frame" x="157" y="253" width="100" height="100"/>

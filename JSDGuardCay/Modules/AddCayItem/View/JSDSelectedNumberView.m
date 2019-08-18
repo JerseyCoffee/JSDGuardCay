@@ -40,7 +40,7 @@
     
     self.titleLabel.font = [UIFont jsd_fontSize:18];
     self.titleLabel.textColor = [UIColor jsd_minorTextColor];
-    self.titleLabel.text = @"饲养难度";
+    self.titleLabel.text = @"Dificultad creciente";
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(18);
         make.centerY.mas_equalTo(0);
@@ -48,7 +48,7 @@
     
     self.subtitleLabel.font = [UIFont jsd_fontSize:18];
     self.subtitleLabel.textColor = [UIColor jsd_mainTextColor];
-    self.subtitleLabel.text = @"弱";
+    self.subtitleLabel.text = @"Débil";
 
     
     NSMutableArray* tempBtns = [NSMutableArray new];
@@ -70,7 +70,7 @@
             }];
         } else {
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.mas_equalTo(106);
+                make.left.mas_equalTo(165);
                 make.centerY.mas_equalTo(0);
                 make.height.with.mas_equalTo(18);
             }];
@@ -102,11 +102,11 @@
     
     _number = number;
     if (_number <= 2) {
-        self.subtitleLabel.text = @"弱";
+        self.subtitleLabel.text = @"Débil";
     } else if (_number <= 4) {
-        self.subtitleLabel.text = @"中";
+        self.subtitleLabel.text = @"Medio";
     } else {
-        self.subtitleLabel.text = @"强";
+        self.subtitleLabel.text = @"Fuerte";
     }
     for (NSInteger i = 0; i < self.btnS.count; i++) {
         UIButton* btn = self.btnS[i];

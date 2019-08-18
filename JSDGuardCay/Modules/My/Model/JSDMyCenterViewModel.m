@@ -16,25 +16,25 @@
     if (!_listArray) {
         NSArray *array = @[@{
                                @"imageName": @"collet",
-                               @"title": @"我的收藏",
+                               @"title": @"Mi coleccion",
                                @"detail": @"",
                                @"route": @"JSDCollectVC",
                                },
                           @{
                                @"imageName": @"about_us",
-                               @"title": @"关于我们",
+                               @"title": @"Acerca de nosotros",
                                @"detail": @"",
                                @"route": @"JSDAbounMyVC",
                                },
                            @{
                                @"imageName": @"feedback",
-                               @"title": @"意见反馈",
+                               @"title": @"Retroalimentación",
                                @"detail": @"",
                                @"route": @"JSDFeedBacksVC",
                                },
                            @{
                                @"imageName": @"grade",
-                               @"title": @"评价鼓励",
+                               @"title": @"Fomento de la evaluación",
                                @"detail": @"",
                                @"route": @"App",
                                @"subTitle": @""
@@ -94,7 +94,7 @@
 - (NSString *)userName {
     
     if (!_userName) {
-        _userName = @"小珊瑚";
+        _userName = @"Pequeño coral";
     }
     return _userName;
 }

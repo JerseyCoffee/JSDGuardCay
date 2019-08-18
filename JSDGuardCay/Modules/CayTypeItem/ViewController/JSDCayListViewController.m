@@ -60,7 +60,7 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 - (void)setupView {
     
     self.view.backgroundColor = [UIColor jsd_mainGrayColor];
-    
+    self.collectionView.backgroundColor = [UIColor jsd_mainGrayColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"JSDCayItemViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kItemCellreuseIdentifier];
     
 //    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout *)self.collectionViewLayout;

@@ -53,7 +53,7 @@ static NSString* const kCell = @"cell";
 
 - (void)setupNavBar {
     
-    self.title = @"我的收藏";
+    self.title = @"Mi coleccion";
 }
 
 - (void)setupView {

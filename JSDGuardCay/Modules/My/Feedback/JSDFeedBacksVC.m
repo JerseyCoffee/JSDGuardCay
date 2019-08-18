@@ -9,14 +9,14 @@
 #import <MessageUI/MessageUI.h>
 #import "JSDFeedBacksVC.h"
 
-static NSString* const kFeedBackSussessTip = @"非常感谢您使用保护珊珊, 我们会认真查看您反馈的信息, 并且去尝试改进!";
-static NSString* const kFeedBackTip = @"非常感谢您的使用保护珊珊, 欢迎您给我们提供任何建议!";
+static NSString* const kFeedBackSussessTip = @"¡Muchas gracias por usar Shanshan, revisaremos cuidadosamente la información que tenga y trataremos de mejorarla!";
+static NSString* const kFeedBackTip = @"Muchas gracias por su uso de Protect Shanshan, bienvenido a darnos cualquier sugerencia.";
 static NSString* const kFeedBackEmail = @"jerseycafesupport@163.com";
-static NSString* const kFeedBackEmailTitle = @"App 使用反馈";
-static NSString* const kFeedBackEmailSubTitle = @"Hi. Jersey \n 我在使用 App 过程有发现了问题.";
+static NSString* const kFeedBackEmailTitle = @"Comentarios sobre el uso de la aplicación";
+static NSString* const kFeedBackEmailSubTitle = @"Hi";
 
-static NSString* const kFeedBackErrorTipTitle = @"温馨提示";
-static NSString* const kFeedBackErrorTipSubTitle = @"请打开\"(邮件App)\"设置你的邮箱账号";
+static NSString* const kFeedBackErrorTipTitle = @"Consejos";
+static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de correo) \" para configurar su cuenta de correo electrónico";
 
 
 @interface JSDFeedBacksVC () <MFMailComposeViewControllerDelegate>
@@ -55,7 +55,7 @@ static NSString* const kFeedBackErrorTipSubTitle = @"请打开\"(邮件App)\"设
 #pragma mark - 2.SettingView and Style
 
 - (void)setupNavBar {
-    self.navigationItem.title = @"意见反馈";
+    self.navigationItem.title = @"Retroalimentación";
 }
 
 - (void)setupView {
@@ -78,7 +78,7 @@ static NSString* const kFeedBackErrorTipSubTitle = @"请打开\"(邮件App)\"设
     
     
     self.senderEmail = [[MDCRaisedButton alloc] init];
-    [self.senderEmail setTitle:@"发送邮件" forState:UIControlStateNormal];
+    [self.senderEmail setTitle:@"Enviar correo" forState:UIControlStateNormal];
     [self.senderEmail addTarget:self action:@selector(onTouchSendEmail:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:self.senderEmail];

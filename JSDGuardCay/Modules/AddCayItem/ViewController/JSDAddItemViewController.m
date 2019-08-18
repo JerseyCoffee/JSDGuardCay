@@ -91,9 +91,9 @@
 
 - (void)setupNavBar {
     
-    self.title = @"添加珊瑚";
+    self.title = @"Añadir coral";
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchSave:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Guardar" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchSave:)];
 }
 
 - (void)setupView {
@@ -135,7 +135,7 @@
     self.infoTextView.text = nil;
     self.infoTextView.delegate = self;
     
-    self.infoTipLabel.text = @"简介";
+    self.infoTipLabel.text = @"Introduccion";
     self.infoTipLabel.font = [UIFont jsd_fontSize:18];
     self.infoTipLabel.textColor = [UIColor jsd_detailTextColor];
     
@@ -144,7 +144,7 @@
     self.saveButton.layer.masksToBounds = YES;
     [self.saveButton.titleLabel setFont:[UIFont jsd_fontSize:17]];
     [self.saveButton.titleLabel setTextColor:[UIColor whiteColor]];
-    [self.saveButton setTitle:@"保存" forState:UIControlStateNormal];
+    [self.saveButton setTitle:@"Guardar" forState:UIControlStateNormal];
     [self.saveButton addTarget:self action:@selector(onTouchSave:) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -156,21 +156,21 @@
     self.cayImageView.image = [UIImage imageNamed:@"selected_photo"];
     self.cayImageView.contentMode = UIViewContentModeCenter;
     
-    [self.cnTextFieldView setTitle:@"名称" tipText:@"请输入名称(必填)"];
-    [self.enTextFieldView setTitle:@"英文" tipText:@"请输入英文名称(必填)"];
-    [self.CNNameTextField setTitle:@"学名" tipText:@"请输入学名(必填)"];
+    [self.cnTextFieldView setTitle:@"Nombre" tipText:@"Nombre (requerido)"];
+    [self.enTextFieldView setTitle:@"Ingles" tipText:@"Nombre (requerido)"];
+    [self.CNNameTextField setTitle:@"Nombre científico" tipText:@"Nombre científico (requerido)"];
     
-    [self.typeContentView setTitle:@"品种" number:0];
+    [self.typeContentView setTitle:@"Variedad" number:0];
     
-    [self.siyangNumberView setTitle:@"饲养难度" number:1];
-    [self.guangzhaoNumberView setTitle:@"光照" number:1];
-    [self.shuiliuNumberView setTitle:@"水流" number:1];
-    [self.yanduNumberView setTitle:@"盐度" number:1];
-    [self.suanduNumberView setTitle:@"酸碱度" number:1];
+    [self.siyangNumberView setTitle:@"Dificultad creciente" number:1];
+    [self.guangzhaoNumberView setTitle:@"Iluminación" number:1];
+    [self.shuiliuNumberView setTitle:@"Flujo de agua" number:1];
+    [self.yanduNumberView setTitle:@"Salinidad" number:1];
+    [self.suanduNumberView setTitle:@"PH" number:1];
     
-    [self.xingqingTextFieldView setTitle:@"性情" tipText:@"请输入性情(选填)"];
-    [self.chandiTextFieldView setTitle:@"主要产地" tipText:@"请输入主要产地(选填)"];
-    [self.zhongshuTextFieldView setTitle:@"种属" tipText:@"请输入种属(选填)"];
+    [self.xingqingTextFieldView setTitle:@"Temperamento" tipText:@"Por favor ingrese el temperamento"];
+    [self.chandiTextFieldView setTitle:@"Área de producción principal" tipText:@"introduzca el origen principal"];
+    [self.zhongshuTextFieldView setTitle:@"Especie" tipText:@"introduzca la especie"];
     
     [self.scrollView setScrollsToTop:YES];
 }
@@ -189,7 +189,7 @@
     if (textView.text.length) {
         self.infoTipLabel.text = nil;
     } else {
-        self.infoTipLabel.text = @"简介:";
+        self.infoTipLabel.text = @"Introducción:";
     }
 }
 
@@ -208,7 +208,7 @@
     if (havaCNTitle && havaENTitle && havaCNNameTitle) {
         [self performSave];
     } else {
-        [JSDSnackbarManager showSnackMessage:@"请填写必填字段(名称,英文,学名)"];
+        [JSDSnackbarManager showSnackMessage:@"Complete los campos obligatorios (nombre, inglés, nombre científico)"];
     }
 }
 
@@ -228,14 +228,14 @@
         detailsModel.imageName = [NSString stringWithFormat:@"%@%@", kJSDPhotoImageFiles, dateString];
     }
     detailsModel.cnName = self.CNNameTextField.textField.text;
-    detailsModel.enName = [NSString stringWithFormat:@"英文: %@", self.enTextFieldView.textField.text];
-    detailsModel.cnNameTitle = [NSString stringWithFormat:@"学名: %@", self.CNNameTextField.textField.text];
+    detailsModel.enName = [NSString stringWithFormat:@"Inglés: %@", self.enTextFieldView.textField.text];
+    detailsModel.cnNameTitle = [NSString stringWithFormat:@"Nombre cientifico: %@", self.CNNameTextField.textField.text];
     detailsModel.siyang = self.siyangNumberView.subtitleLabel.text;
     detailsModel.guangzhao = self.guangzhaoNumberView.subtitleLabel.text;
     detailsModel.shuiliu = self.shuiliuNumberView.subtitleLabel.text;
-    detailsModel.yaoqiu = [NSString stringWithFormat:@"盐度 1.020-1.025; 酸碱度 8.1-8.4 "];
+    detailsModel.yaoqiu = [NSString stringWithFormat:@"Salinidad 1.020-1.025; PH 8.1-8.4 "];
 //    detailsModel.yaoqiu = [NSString stringWithFormat:@"盐度 %@;%@", self.yanduNumberView.subtitleLabel.text, self.suanduNumberView.subtitleLabel.text];
-    detailsModel.yanse = @"紫色";
+    detailsModel.yanse = @"Púrpura";
     detailsModel.xingqing = self.xingqingTextFieldView.textField.text;
     detailsModel.chandi = self.chandiTextFieldView.textField.text;
     detailsModel.zhongshu = self.zhongshuTextFieldView.textField.text;
@@ -248,7 +248,7 @@
 
 - (void)addComplete {
     
-    [JSDSnackbarManager showSnackMessage:@"成功添加珊瑚, 你可以到指定的品种中查看它"];
+    [JSDSnackbarManager showSnackMessage:@"Coral agregado con éxito, puede verlo en la variedad especificada"];
     //返回
     [self didTapBack:nil];
     

@@ -104,11 +104,11 @@
         if (sender.isSelected) {
             //收藏
             [collectManager cancelCollect:self.detailsModel];
-            [JSDSnackbarManager showSnackMessage:@"已取消收藏"];
+            [JSDSnackbarManager showSnackMessage:@"Colección cancelada"];
         } else {
             //收藏
             [collectManager addCollect:self.detailsModel];
-            [JSDSnackbarManager showSnackMessage:@"已加入收藏"];
+            [JSDSnackbarManager showSnackMessage:@"Agregado a favoritos"];
         }
     }
     sender.selected = !sender.isSelected;

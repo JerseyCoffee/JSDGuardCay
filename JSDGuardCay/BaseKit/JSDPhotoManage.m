@@ -58,7 +58,7 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
             if (self.isCameraAvailable && [self doesCameraSupportTakingPhotos]) {
                 controller.sourceType = UIImagePickerControllerSourceTypeCamera;
             } else {
-                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"本设备不支持拍照" delegate:nil cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Consejos" message:@"Este dispositivo no admite tomar fotografías." delegate:nil cancelButtonTitle:@"Yo se" otherButtonTitles:nil];
                 [alertView show];
                 return;
             }
@@ -93,9 +93,9 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
             [controller.navigationBar setTintColor:[UIColor jsd_mainGrayColor]];
             [viewController presentViewController:controller animated:YES completion:nil];
         } else {
-            UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请点击前往设置开启应用相册读取权限, 否则无法正常选取相片" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            UIAlertAction* gotoAction = [UIAlertAction actionWithTitle:@"前往" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"Consejos" message:@"Haga clic para ir a Configuración para abrir el permiso de lectura del álbum de la aplicación; de lo contrario, la foto no se seleccionará correctamente." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction* gotoAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
             }];
             [alertVC addAction:cancelAction];
@@ -124,9 +124,9 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
         } else {
 //            UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
 //            self.finishPicking ? self.finishPicking(image) : NULL;
-            UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"请点击前往设置开启相册读取权限, 否则无法正常选取相片" preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
-            UIAlertAction* gotoAction = [UIAlertAction actionWithTitle:@"前往" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"Consejos" message:@"Haga clic para ir a Configuración para abrir el permiso de lectura del álbum de la aplicación; de lo contrario, la foto no se seleccionará correctamente." preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+            UIAlertAction* gotoAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString: UIApplicationOpenSettingsURLString]];
             }];
             [alertVC addAction:cancelAction];

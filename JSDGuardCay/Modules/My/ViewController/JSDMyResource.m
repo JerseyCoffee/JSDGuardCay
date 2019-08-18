@@ -48,7 +48,7 @@
 
 - (void)setupNavBar {
     
-    self.title = @"个人信息";
+    self.title = @"Información personal";
 }
 
 - (void)setupView {
@@ -119,12 +119,12 @@
         [viewmodel saveUserData];
         [self.navigationController popViewControllerAnimated:YES];
         MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
-        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"个人资料修改成功"];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"Perfil personal modificado con éxito"];
         [manager showMessage:message];
         
     } else {
         MDCSnackbarManager* manager = [MDCSnackbarManager defaultManager];
-        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"请输入昵称"];
+        MDCSnackbarMessage* message = [MDCSnackbarMessage messageWithText:@"Por favor ingrese un apodo"];
         [manager showMessage:message];
     }
 }
@@ -156,7 +156,7 @@
         _nameTextController.normalColor = ColorWithFROMRGB(0xdddddd, 1);
         _nameTextController.activeColor = [UIColor blueColor];
         _nameTextController.borderFillColor = [UIColor whiteColor];
-        _nameTextController.placeholderText = @"请输入新的昵称";
+        _nameTextController.placeholderText = @"Por favor ingrese un nuevo apodo";
     }
     return _nameTextController;
 }

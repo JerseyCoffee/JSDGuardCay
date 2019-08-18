@@ -56,7 +56,7 @@
     
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
-        make.left.mas_equalTo(106);
+        make.left.mas_equalTo(135);
         make.right.mas_equalTo(self.guideImageView.mas_left).mas_equalTo(-10);
     }];
     
@@ -70,11 +70,11 @@
 
 - (void)onTouchTap:(UIButton* )sender {
     
-    UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"选择品种" message:@"请选择添加的珊瑚品种类型" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"Variedad de selección" message:@"Por favor seleccione el tipo de especies de coral agregadas" preferredStyle:UIAlertControllerStyleActionSheet];
     for (NSInteger i = 0; i < self.titleArray.count + 1; i++) {
         UIAlertAction* action;
         if (i == self.titleArray.count) {
-            action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            action = [UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
                 
             }];
         } else {
@@ -93,12 +93,12 @@
 - (NSArray *)titleArray {
     
     if (!_titleArray) {
-        _titleArray = @[@"小水螅体硬珊瑚（SPS)",
-                        @"大水螅体硬珊瑚（LPS)",
-                        @"菇珊瑚",
-                        @"软珊瑚",
-                        @"水螅珊瑚",
-                        @"海扇",
+        _titleArray = @[@"Pequeño coral duro",
+                        @"Coral duro grande",
+                        @"Coral de setas",
+                        @"Coral blando",
+                        @"Nutria coral",
+                        @"Abanico de mar",
                         ];
     }
     return _titleArray;

@@ -179,7 +179,7 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
         UILabel* label = [[UILabel alloc] init];
         label.font = [UIFont jsd_fontSize:27 fontName:@"STHeitiSC-Medium"];
         label.textColor = [UIColor jsd_mainTextColor];
-        label.text = @"保护珊瑚";
+        label.text = @"Protegiendo corales";
         [_headerView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(40);

@@ -40,7 +40,7 @@
 
 - (void)setupNavBar {
     
-    self.title = @"关于我们";
+    self.title = @"Acerca de nosotros";
 }
 
 - (void)setupView {
