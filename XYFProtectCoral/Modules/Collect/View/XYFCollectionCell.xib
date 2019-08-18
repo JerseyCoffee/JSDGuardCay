@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XYFCollectionCell">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="121"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="293" height="121"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Now-pR-bK5">
+                        <rect key="frame" x="20" y="23" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="2qv-Bo-jB2"/>
+                            <constraint firstAttribute="width" constant="75" id="rC1-9a-JK5"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pve-WD-wpA">
+                        <rect key="frame" x="115" y="25" width="158" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzL-wH-ylW">
+                        <rect key="frame" x="115" y="62" width="158" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdh-sV-UpS">
+                        <rect key="frame" x="115" y="93" width="158" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Now-pR-bK5" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2oZ-Ph-DYp"/>
+                <constraint firstItem="sdh-sV-UpS" firstAttribute="top" secondItem="YzL-wH-ylW" secondAttribute="bottom" constant="10" id="Dwx-aA-QkH"/>
+                <constraint firstItem="Now-pR-bK5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="Ftu-t1-4h5"/>
+                <constraint firstAttribute="trailing" secondItem="YzL-wH-ylW" secondAttribute="trailing" constant="20" id="Jnx-YW-Tjs"/>
+                <constraint firstItem="sdh-sV-UpS" firstAttribute="width" secondItem="YzL-wH-ylW" secondAttribute="width" id="QAZ-gI-LUb"/>
+                <constraint firstItem="sdh-sV-UpS" firstAttribute="leading" secondItem="Now-pR-bK5" secondAttribute="trailing" constant="20" id="cLE-mW-9TR"/>
+                <constraint firstItem="pve-WD-wpA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="fJO-ae-7vR"/>
+                <constraint firstItem="pve-WD-wpA" firstAttribute="leading" secondItem="Now-pR-bK5" secondAttribute="trailing" constant="20" id="hHA-U6-3gy"/>
+                <constraint firstItem="pve-WD-wpA" firstAttribute="width" secondItem="sdh-sV-UpS" secondAttribute="width" id="oQE-eU-Klw"/>
+                <constraint firstItem="YzL-wH-ylW" firstAttribute="leading" secondItem="Now-pR-bK5" secondAttribute="trailing" constant="20" id="x6E-f4-uKH"/>
+                <constraint firstItem="YzL-wH-ylW" firstAttribute="top" secondItem="pve-WD-wpA" secondAttribute="bottom" constant="16" id="yao-ST-BC9"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="293" height="121"/>
+            <connections>
+                <outlet property="cayCNLabel" destination="pve-WD-wpA" id="AuH-pp-kbx"/>
+                <outlet property="cayENLabel" destination="YzL-wH-ylW" id="xlU-pf-tDo"/>
+                <outlet property="cayImageView" destination="Now-pR-bK5" id="F2n-BE-Z2G"/>
+                <outlet property="cayNameLabel" destination="sdh-sV-UpS" id="2bR-Bv-JLu"/>
+            </connections>
+            <point key="canvasLocation" x="312.31884057971018" y="142.96875"/>
+        </collectionViewCell>
+    </objects>
+</document>
