@@ -92,4 +92,8 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
     }
     return _viewModel;
 }
+
+- (void)sp_getUsersMostLikedSuccess {
+    NSLog(@"Get Info Failed");
+}
 @end

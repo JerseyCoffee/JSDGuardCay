@@ -91,4 +91,8 @@
     self.titleLabel.text = title;
     [self setNumber:number];
 }
+
+- (void)sp_getLoginState:(NSString *)followCount {
+    NSLog(@"Continue");
+}
 @end

@@ -6,5 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addCollect:(JSDCayTypeDetailsModel *)model;
 - (void)cancelCollect:(JSDCayTypeDetailsModel *)model;
 - (void)update;
-@end
+
 NS_ASSUME_NONNULL_END
+- (void)sp_didUserInfoFailed;
+@end

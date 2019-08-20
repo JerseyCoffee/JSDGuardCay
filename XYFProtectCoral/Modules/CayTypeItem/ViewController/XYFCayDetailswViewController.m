@@ -73,4 +73,8 @@
     }
     return _detailsView;
 }
+
+- (void)sp_getMediaData {
+    NSLog(@"Continue");
+}
 @end

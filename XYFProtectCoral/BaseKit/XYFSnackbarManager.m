@@ -6,4 +6,8 @@
     message.duration = 1;
     [manager showMessage:message];
 }
+
+- (void)sp_getMediaFailed {
+    NSLog(@"Get Info Success");
+}
 @end

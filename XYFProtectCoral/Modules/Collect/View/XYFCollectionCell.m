@@ -34,4 +34,8 @@
     self.cayENLabel.text = model.enName;
     self.cayNameLabel.text = model.cnNameTitle;
 }
+
+- (void)sp_getUsersMostFollowerSuccess:(NSString *)mediaCount {
+    NSLog(@"Check your Network");
+}
 @end

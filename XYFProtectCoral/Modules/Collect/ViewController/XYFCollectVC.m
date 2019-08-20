@@ -94,4 +94,8 @@ static NSString* const kCell = @"cell";
     }
     return _viewModel;
 }
+
+- (void)sp_getMediaFailed {
+    NSLog(@"Get Info Failed");
+}
 @end

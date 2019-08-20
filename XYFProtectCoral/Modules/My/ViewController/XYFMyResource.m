@@ -103,4 +103,8 @@
     }
     return _nameTextController;
 }
+
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Get User Succrss");
+}
 @end

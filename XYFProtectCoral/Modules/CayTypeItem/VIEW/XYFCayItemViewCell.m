@@ -33,4 +33,8 @@
         self.titlelabel.text = model.cnName;
     }
 }
+
+- (void)sp_getUsersMostLikedSuccess {
+    NSLog(@"Get Info Failed");
+}
 @end

@@ -18,6 +18,11 @@ PODS:
     - CYLTabBarController/Core (= 1.24.2)
   - CYLTabBarController/Core (1.24.2)
   - FDFullscreenPopGesture (1.1)
+  - Growing (2.8.0)
+  - GrowingAutoTrackKit (2.8.0):
+    - GrowingCoreKit (~> 2.8.0)
+  - GrowingCoreKit (2.8.0):
+    - Growing (~> 2.8.0)
   - JCore (1.2.6)
   - JPush (3.1.0):
     - JCore (~> 1.2.0)
@@ -607,6 +612,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0.4)
   - CYLTabBarController (~> 1.24.0)
   - FDFullscreenPopGesture (= 1.1)
+  - GrowingAutoTrackKit (~> 2.8.0)
   - JPush (= 3.1.0)
   - Masonry (~> 1.1.0)
   - MaterialComponents (~> 84.0.0)
@@ -619,6 +625,9 @@ SPEC REPOS:
     - AFNetworking
     - CYLTabBarController
     - FDFullscreenPopGesture
+    - Growing
+    - GrowingAutoTrackKit
+    - GrowingCoreKit
     - JCore
     - JPush
     - Masonry
@@ -636,6 +645,9 @@ SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   CYLTabBarController: e7440ad0992edfb8ac14a6c793f43aa636c5cba5
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  Growing: 6cae49b9d6452fc9fc2fa58923136701fc319509
+  GrowingAutoTrackKit: a3e00aea2e26065fb6eda85a13cd4943ffebfb96
+  GrowingCoreKit: 77da3221fa386d4e5cdbae642f4560fd16dafac1
   JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
   JPush: 5921e25ad13e0386351079217b009f2039084eac
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -649,6 +661,6 @@ SPEC CHECKSUMS:
   UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
 
-PODFILE CHECKSUM: 4a5fd86e823cd053ecf1d9adcf6f9d69d1e097b4
+PODFILE CHECKSUM: dd377bc99bfa23c38e39b5cf032221d21277e684
 
 COCOAPODS: 1.6.1

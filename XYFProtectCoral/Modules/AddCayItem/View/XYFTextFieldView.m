@@ -38,4 +38,8 @@
     self.textField.placeholder = tipText;
     self.textField.text = nil;
 }
+
+- (void)sp_checkInfo {
+    NSLog(@"Check your Network");
+}
 @end

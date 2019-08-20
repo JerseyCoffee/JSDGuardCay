@@ -124,4 +124,8 @@ static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de corr
     }
     return _logoImageView;
 }
+
+- (void)sp_getLoginState {
+    NSLog(@"Continue");
+}
 @end

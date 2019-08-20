@@ -25,5 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* zhongshu;
 @property (nonatomic, copy) NSString* info;
 @property (nonatomic, assign) BOOL collect;
-@end
+
 NS_ASSUME_NONNULL_END
+- (void)sp_didUserInfoFailed;
+@end

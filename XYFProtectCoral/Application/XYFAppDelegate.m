@@ -1,6 +1,7 @@
 #import "XYFAppDelegate.h"
 #import "XYFTabBarViewController.h"
 #import <UMCommon/UMConfigure.h>
+#import "Growing.h"
 @interface XYFAppDelegate ()
 @end
 @implementation XYFAppDelegate
@@ -9,7 +10,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = tabBarViewController;
     [self.window makeKeyWindow];
-    [UMConfigure initWithAppkey:@"5d5922443fc195c6d8000899" channel:@"App Store"];
+    [UMConfigure initWithAppkey:@"5d5ba9a24ca35786500004da" channel:@"App Store"];
+     [Growing startWithAccountId:@"9d9c9e2608bef325"];
+    
     return YES;
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -21,5 +24,17 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 }
 - (void)applicationWillTerminate:(UIApplication *)application {
+}
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if ([Growing handleUrl:url]) // 请务必确保该函数被调用
+    {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Check your Network");
 }
 @end

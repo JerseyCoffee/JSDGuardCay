@@ -118,4 +118,8 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
     }
     return _viewModel;
 }
+
+- (void)sp_checkInfo {
+    NSLog(@"Get Info Success");
+}
 @end

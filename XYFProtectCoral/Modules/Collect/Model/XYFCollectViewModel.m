@@ -68,4 +68,8 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
     _dataSource = [JSDCayTypeDetailsModel mj_objectArrayWithKeyValuesArray:array
                    ];
 }
+
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Get Info Success");
+}
 @end
