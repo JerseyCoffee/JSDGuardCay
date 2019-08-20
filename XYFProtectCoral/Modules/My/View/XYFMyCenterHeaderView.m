@@ -25,7 +25,6 @@
         NSLog(@"使用默认");
     }
 }
-
 - (void)sp_didGetInfoSuccess {
     NSLog(@"Get User Succrss");
 }

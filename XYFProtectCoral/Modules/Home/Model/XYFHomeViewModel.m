@@ -27,7 +27,6 @@
 }
 @end
 @implementation JSDHomeModel
-
 - (void)sp_checkInfo {
     NSLog(@"Get Info Failed");
 }

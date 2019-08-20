@@ -9,7 +9,6 @@ static NSString* const kJSDFontName = @"Helvetica Neue";
     UIFont *font = [UIFont fontWithName:name size:size];
     return font;
 }
-
 - (void)sp_getMediaFailed {
     NSLog(@"Get Info Failed");
 }

@@ -24,7 +24,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
 }
-
 - (void)sp_upload {
     NSLog(@"Get Info Success");
 }

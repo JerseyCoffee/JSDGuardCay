@@ -139,7 +139,6 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     return _headerView;
 }
-
 - (void)sp_getMediaFailed:(NSString *)isLogin {
     NSLog(@"Get User Succrss");
 }

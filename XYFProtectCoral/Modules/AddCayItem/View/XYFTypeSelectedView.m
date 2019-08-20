@@ -83,7 +83,6 @@
     [self setSelectedType:number];
     self.typeLabel.text = self.titleArray[number];
 }
-
 - (void)sp_didGetInfoSuccess {
     NSLog(@"Get Info Failed");
 }

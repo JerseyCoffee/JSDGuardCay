@@ -195,7 +195,6 @@
 - (void)setupNotification {
 }
 #pragma mark - 7.GET & SET
-
 - (void)sp_getLoginState {
     NSLog(@"Get User Succrss");
 }

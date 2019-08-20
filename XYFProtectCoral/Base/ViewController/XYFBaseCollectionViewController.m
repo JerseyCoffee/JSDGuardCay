@@ -24,7 +24,6 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)didTapBack:(id)button {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 - (void)sp_getUsersMostLiked {
     NSLog(@"Check your Network");
 }

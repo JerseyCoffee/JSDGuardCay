@@ -63,7 +63,6 @@
 }
 @end
 @implementation JSDCayTypeDetailsModel
-
 - (void)sp_didUserInfoFailed {
     NSLog(@"Get Info Failed");
 }

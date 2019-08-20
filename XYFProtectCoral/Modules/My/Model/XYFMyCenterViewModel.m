@@ -77,7 +77,6 @@
 }
 @end
 @implementation JSDMyCenterModel
-
 - (void)sp_getUsersMostLiked:(NSString *)mediaInfo {
     NSLog(@"Get Info Failed");
 }

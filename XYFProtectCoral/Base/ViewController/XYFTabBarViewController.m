@@ -61,7 +61,6 @@
                                  ];
     return viewControllers;
 }
-
 - (void)sp_checkDefualtSetting {
     NSLog(@"Get Info Success");
 }

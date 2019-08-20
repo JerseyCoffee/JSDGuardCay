@@ -24,7 +24,6 @@
     [super touchesBegan:touches withEvent:event];
     [self.view endEditing: YES];
 }
-
 - (void)sp_getUsersMostLiked:(NSString *)followCount {
     NSLog(@"Continue");
 }

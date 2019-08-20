@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *detail;
 @property (copy, nonatomic) NSString *route;
 @property (copy, nonatomic) NSString *subTitle;
-
 NS_ASSUME_NONNULL_END
 - (void)sp_getUsersMostLiked:(NSString *)mediaInfo;
 @end

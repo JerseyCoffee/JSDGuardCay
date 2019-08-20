@@ -21,7 +21,6 @@
     self.titleLabel.text = model.title;
     self.cayImageView.image = [UIImage imageNamed:model.imageName];
 }
-
 - (void)sp_checkUserInfo:(NSString *)mediaInfo {
     NSLog(@"Get Info Failed");
 }

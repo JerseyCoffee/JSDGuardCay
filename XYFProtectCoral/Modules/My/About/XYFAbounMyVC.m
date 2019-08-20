@@ -34,7 +34,6 @@
 - (void)setupNotification {
 }
 #pragma mark - 7.GET & SET
-
 - (void)sp_checkInfo {
     NSLog(@"Get Info Failed");
 }

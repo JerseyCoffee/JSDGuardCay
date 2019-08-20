@@ -190,7 +190,6 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
         NSLog(@"图片转换 PNG 失败");
     }
 }
-
 - (void)sp_getMediaData {
     NSLog(@"Get Info Success");
 }
