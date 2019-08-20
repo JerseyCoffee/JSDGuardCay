@@ -31,8 +31,8 @@
     UIButton* lastBtn;
     for (NSInteger i = 0; i < 5; i++) {
         UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setImage:[UIImage imageNamed:@"start_normal"] forState:UIControlStateNormal];
-        [btn setImage:[UIImage imageNamed:@"start_selected"] forState:UIControlStateSelected];
+        [btn setImage:[UIImage imageNamed:@"collect_normal"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"collect_selected"] forState:UIControlStateSelected];
         btn.tag = i;
         [btn addTarget:self action:@selector(onTouchSelectedCollect:) forControlEvents:UIControlEventTouchUpInside];
         [tempBtns addObject:btn];
@@ -45,7 +45,7 @@
             }];
         } else {
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.mas_equalTo(165);
+                make.left.mas_equalTo(170);
                 make.centerY.mas_equalTo(0);
                 make.height.with.mas_equalTo(18);
             }];

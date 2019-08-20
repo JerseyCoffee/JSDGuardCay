@@ -10,7 +10,7 @@
     return [UIColor jsd_colorWithHexString:@"#1AAA8C"];
 }
 + (UIColor *)jsd_maiBackgroundColor {
-    return [UIColor jsd_colorWithHexString:@"#DEE7F4"];
+    return [UIColor jsd_colorWithHexString:@"#FBEEE7"];
 }
 #pragma mark -- Text Color
 + (UIColor *)jsd_mainTextColor {
