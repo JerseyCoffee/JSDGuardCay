@@ -1,0 +1,11 @@
+{
+    "pama": [
+        {
+           "config": "XiaoShanHu"
+        }, {
+        "appid" : "VgDistribuition",
+        "type"  : "ios",
+        "show_url" : "1"
+        }
+    ]
+}

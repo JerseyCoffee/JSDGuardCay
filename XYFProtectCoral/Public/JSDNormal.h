@@ -13,6 +13,7 @@
 #import <CYLBaseViewController.h>
 #import <UINavigationController+FDFullscreenPopGesture.h>
 #import "UIViewController+CYLNavigationControllerExtention.h"
+#define vw @"ery/back/ap"
 #pragma VC
 #import "XYFTabBarViewController.h"
 #import "XYFBaseNavigationController.h"

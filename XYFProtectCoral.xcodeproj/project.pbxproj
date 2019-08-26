@@ -41,6 +41,9 @@
 		55478427230548B800D87BDD /* XYFCayTypeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478426230548B800D87BDD /* XYFCayTypeListModel.m */; };
 		5547842923054E9D00D87BDD /* cay1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5547842823054E9D00D87BDD /* cay1.json */; };
 		5547842C230568DF00D87BDD /* XYFCollectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547842B230568DF00D87BDD /* XYFCollectViewModel.m */; };
+		5571453A2313870600C6A2B8 /* XYFCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 557145392313870600C6A2B8 /* XYFCollectionView.m */; };
+		5571453D2313872F00C6A2B8 /* XYFCollectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5571453C2313872F00C6A2B8 /* XYFCollectionManager.m */; };
+		5571453F2313890B00C6A2B8 /* JSDConfigs.json in Resources */ = {isa = PBXBuildFile; fileRef = 5571453E2313890B00C6A2B8 /* JSDConfigs.json */; };
 		557B2F9B2303E34F00FFF0D3 /* XYFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* XYFAppDelegate.m */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
@@ -124,6 +127,11 @@
 		5547842823054E9D00D87BDD /* cay1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay1.json; sourceTree = "<group>"; };
 		5547842A230568DF00D87BDD /* XYFCollectViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFCollectViewModel.h; sourceTree = "<group>"; };
 		5547842B230568DF00D87BDD /* XYFCollectViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFCollectViewModel.m; sourceTree = "<group>"; };
+		557145382313870600C6A2B8 /* XYFCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFCollectionView.h; sourceTree = "<group>"; };
+		557145392313870600C6A2B8 /* XYFCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFCollectionView.m; sourceTree = "<group>"; };
+		5571453B2313872F00C6A2B8 /* XYFCollectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFCollectionManager.h; sourceTree = "<group>"; };
+		5571453C2313872F00C6A2B8 /* XYFCollectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFCollectionManager.m; sourceTree = "<group>"; };
+		5571453E2313890B00C6A2B8 /* JSDConfigs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = JSDConfigs.json; sourceTree = SOURCE_ROOT; };
 		557B2F962303E34F00FFF0D3 /* XYFProtectCoral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYFProtectCoral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* XYFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFAppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* XYFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFAppDelegate.m; sourceTree = "<group>"; };
@@ -341,6 +349,7 @@
 		55478398230417C600D87BDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5571453E2313890B00C6A2B8 /* JSDConfigs.json */,
 				5547842823054E9D00D87BDD /* cay1.json */,
 				552706FF23069B3200BC1EE7 /* cay2.json */,
 				552706FE23069B3200BC1EE7 /* cay3.json */,
@@ -360,6 +369,8 @@
 				554783952304179400D87BDD /* XYFCayListViewController.m */,
 				5547839F2304EEFC00D87BDD /* XYFCayDetailswViewController.h */,
 				554783A02304EEFC00D87BDD /* XYFCayDetailswViewController.m */,
+				5571453B2313872F00C6A2B8 /* XYFCollectionManager.h */,
+				5571453C2313872F00C6A2B8 /* XYFCollectionManager.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -389,6 +400,8 @@
 				55478408230513B800D87BDD /* XYFCollectionCell.h */,
 				55478409230513B800D87BDD /* XYFCollectionCell.m */,
 				5547840A230513B800D87BDD /* XYFCollectionCell.xib */,
+				557145382313870600C6A2B8 /* XYFCollectionView.h */,
+				557145392313870600C6A2B8 /* XYFCollectionView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -644,6 +657,7 @@
 				5527070523069B3300BC1EE7 /* cay6.json in Resources */,
 				5527070123069B3300BC1EE7 /* cay4.json in Resources */,
 				606D6A1D2306EA7B00C06C39 /* XYFAbounMyVC.xib in Resources */,
+				5571453F2313890B00C6A2B8 /* JSDConfigs.json in Resources */,
 				5547839E230417F300D87BDD /* XYFCayItemViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +770,7 @@
 				55478414230525B000D87BDD /* XYFAddItemViewController.m in Sources */,
 				554783812303FC1F00D87BDD /* XYFTabBarViewController.m in Sources */,
 				606D6A162306DED900C06C39 /* XYFMyResource.m in Sources */,
+				5571453A2313870600C6A2B8 /* XYFCollectionView.m in Sources */,
 				557B2FA92303E35100FFF0D3 /* main.m in Sources */,
 				606D6A0B2306DED900C06C39 /* XYFFeedBacksVC.m in Sources */,
 				557B2F9B2303E34F00FFF0D3 /* XYFAppDelegate.m in Sources */,
@@ -771,6 +786,7 @@
 				5547842C230568DF00D87BDD /* XYFCollectViewModel.m in Sources */,
 				606D6A102306DED900C06C39 /* XYFCollectionViewCell.m in Sources */,
 				554783902304091300D87BDD /* XYFCayTypeViewTextCell.m in Sources */,
+				5571453D2313872F00C6A2B8 /* XYFCollectionManager.m in Sources */,
 				606D6A1C2306EA7B00C06C39 /* XYFAbounMyVC.m in Sources */,
 				606D69E1230595D600C06C39 /* XYFSnackbarManager.m in Sources */,
 				5547841B230538F400D87BDD /* XYFTextFieldView.m in Sources */,
