@@ -13,19 +13,19 @@
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.title = @"Información personal";
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.imageTitleLabel.textColor = [UIColor jsd_detailTextColor];
     self.imageTitleLabel.font = [UIFont jsd_fontSize:16];
@@ -43,7 +43,7 @@
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
     self.nameTextField.text = self.model.userName;
     if (self.model.userImageView) {
         NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
@@ -90,7 +90,7 @@
     }];
 }
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
 }
 #pragma mark - 7.GET & SET
 - (MDCTextInputControllerUnderline *)nameTextController {
@@ -106,4 +106,17 @@
 - (void)sp_checkDefualtSetting {
     NSLog(@"Get User Succrss");
 }
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getLoginState {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_checkInfo {
+    NSLog(@"Continue");
+}
+
 @end

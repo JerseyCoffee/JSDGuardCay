@@ -7,7 +7,7 @@
     if (!self) {
         return nil;
     }
-    CYLTabBarController* tabBarController = [CYLTabBarController tabBarControllerWithViewControllers:self.viewControllers  tabBarItemsAttributes:[self setupTabbarItem] imageInsets:UIEdgeInsetsZero titlePositionAdjustment:UIOffsetZero];
+    CYLTabBarController* tabBarController = [CYLTabBarController tabBarControllerWithViewControllers:self.viewControllers  tabBarItemsAttributes:[self xyf_setupTabbarItem] imageInsets:UIEdgeInsetsZero titlePositionAdjustment:UIOffsetZero];
     [self customizeTabBarAppearance:tabBarController];
     self.navigationController.navigationBar.hidden = YES;
     return (self = (XYFTabBarViewController *)tabBarController);
@@ -15,7 +15,7 @@
 }
 - (void)customizeTabBarAppearance:(CYLTabBarController *)tabBarController {
 }
-- (NSArray *)setupTabbarItem {
+- (NSArray *)xyf_setupTabbarItem {
     NSDictionary *cayAttributes = @{
                                             CYLTabBarItemImage : @"cay_normal",
                                             CYLTabBarItemSelectedImage : @"cay_selected",  
@@ -63,5 +63,17 @@
 }
 - (void)sp_checkDefualtSetting {
     NSLog(@"Get Info Success");
+}
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Check your Network");
+}
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Check your Network");
 }
 @end

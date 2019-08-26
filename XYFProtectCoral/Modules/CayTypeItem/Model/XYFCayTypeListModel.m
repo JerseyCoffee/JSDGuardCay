@@ -66,4 +66,17 @@
 - (void)sp_didUserInfoFailed {
     NSLog(@"Get Info Failed");
 }
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Continue");
+}
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Get Info Success");
+}
+
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_getUserName {
+    NSLog(@"Check your Network");
+}
 @end

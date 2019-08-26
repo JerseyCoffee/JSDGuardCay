@@ -6,4 +6,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) JSDUserModel *model;
 NS_ASSUME_NONNULL_END
 - (void)sp_checkDefualtSetting;
+- (void)sp_getUserFollowSuccess;
+- (void)sp_getUsersMostLiked;
+- (void)sp_getLoginState;
+- (void)sp_checkInfo;
+
 @end

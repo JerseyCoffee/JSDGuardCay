@@ -94,4 +94,15 @@
 - (void)sp_getLoginState:(NSString *)followCount {
     NSLog(@"Continue");
 }
+- (void)sp_getUsersMostFollowerSuccess:(NSString *)isLogin {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getMediaFailed:(NSString *)isLogin {
+    NSLog(@"Get User Succrss");
+}
+
+- (void)sp_checkInfo:(NSString *)isLogin {
+    NSLog(@"Get User Succrss");
+}
+
 @end

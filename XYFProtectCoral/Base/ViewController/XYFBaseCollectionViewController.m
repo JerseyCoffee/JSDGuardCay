@@ -7,10 +7,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     if (self.navigationController.viewControllers.count > 1) {
-        [self setupNavigation];
+        [self xyf_setupNavigation];
     }
 }
-- (void)setupNavigation {
+- (void)xyf_setupNavigation {
     self.fd_interactivePopDisabled = NO;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStyleDone
@@ -27,4 +27,17 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)sp_getUsersMostLiked {
     NSLog(@"Check your Network");
 }
+- (void)sp_checkInfo {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get Info Success");
+}
+
 @end

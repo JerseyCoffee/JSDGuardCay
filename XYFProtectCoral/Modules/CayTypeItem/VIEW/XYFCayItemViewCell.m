@@ -36,4 +36,17 @@
 - (void)sp_getUsersMostLikedSuccess {
     NSLog(@"Get Info Failed");
 }
+- (void)sp_checkUserInfo {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get User Succrss");
+}
+
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Continue");
+}
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Continue");
+}
 @end

@@ -11,10 +11,10 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -23,9 +23,9 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
     [super viewWillAppear:animated];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"XYFCayItemViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kItemCellreuseIdentifier];
@@ -41,7 +41,7 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -82,7 +82,7 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 }
 #pragma mark - 5.Event Response
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
 }
 #pragma mark - 7.GET & SET
 - (XYFCayTypeListModel *)viewModel {
@@ -94,5 +94,18 @@ static NSString * const kItemCellreuseIdentifier = @"Cell";
 }
 - (void)sp_getUsersMostLikedSuccess {
     NSLog(@"Get Info Failed");
+}
+- (void)sp_checkInfo {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Check your Network");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Get Info Failed");
+}
+
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get User Succrss");
 }
 @end

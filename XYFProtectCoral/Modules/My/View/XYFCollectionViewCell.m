@@ -27,4 +27,17 @@
 - (void)sp_upload {
     NSLog(@"Get Info Success");
 }
+- (void)sp_checkNetWorking {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getMediaFailed {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Get Info Success");
+}
+
+- (void)sp_checkInfo {
+    NSLog(@"Continue");
+}
 @end

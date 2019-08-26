@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface XYFMyCenterViewModel : NSObject
 @property (strong, nonatomic) NSArray<JSDMyCenterModel* > *listArray;
 @property (strong, nonatomic) JSDUserModel *userData;
-- (void)setupUserData;
+- (void)xyf_setupUserData;
 - (void)saveUserData;
 @end
 @interface JSDUserModel : NSObject
@@ -20,4 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *subTitle;
 NS_ASSUME_NONNULL_END
 - (void)sp_getUsersMostLiked:(NSString *)mediaInfo;
+- (void)sp_upload:(NSString *)string;
+- (void)sp_didUserInfoFailed:(NSString *)followCount;
+- (void)sp_checkInfo:(NSString *)followCount;
+- (void)sp_checkInfo:(NSString *)mediaCount;
+- (void)sp_getMediaData:(NSString *)string;
 @end

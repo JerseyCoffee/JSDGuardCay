@@ -65,4 +65,13 @@
 - (void)sp_getUsersMostLikedSuccess:(NSString *)followCount {
     NSLog(@"Continue");
 }
+- (void)sp_checkNetWorking:(NSString *)mediaInfo {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_getLoginState:(NSString *)isLogin {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getUserFollowSuccess:(NSString *)string {
+    NSLog(@"Get Info Success");
+}
 @end

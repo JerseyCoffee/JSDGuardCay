@@ -6,4 +6,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) JSDUserModel *model;
 NS_ASSUME_NONNULL_END
 - (void)sp_didGetInfoSuccess;
+- (void)sp_checkNetWorking;
+- (void)sp_checkInfo;
+- (void)sp_checkUserInfo;
+- (void)sp_checkDefualtSetting;
 @end

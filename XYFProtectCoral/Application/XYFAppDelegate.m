@@ -35,4 +35,19 @@
 - (void)sp_checkDefualtSetting {
     NSLog(@"Check your Network");
 }
+- (void)sp_getMediaFailed {
+    NSLog(@"Continue");
+}
+- (void)sp_getUsersMostLikedSuccess {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getMediaData {
+    NSLog(@"Get Info Failed");
+}
 @end

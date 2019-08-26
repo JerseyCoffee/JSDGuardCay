@@ -15,4 +15,9 @@ typedef NS_ENUM(NSInteger, JSDImagePickerSourceType) {
 + (void)savaKitImageView:(UIImageView *)imageView fileName:(nonnull NSString *)fileName;
 NS_ASSUME_NONNULL_END
 - (void)sp_getMediaData;
+- (void)sp_getUserName;
+- (void)sp_checkUserInfo;
+- (void)sp_didGetInfoSuccess;
+- (void)sp_getUserFollowSuccess;
+- (void)sp_checkInfo;
 @end

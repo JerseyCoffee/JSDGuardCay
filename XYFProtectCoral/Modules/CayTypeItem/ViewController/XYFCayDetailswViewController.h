@@ -6,4 +6,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) XYFCayTypeListModel* viewModel;
 NS_ASSUME_NONNULL_END
 - (void)sp_getMediaData;
+- (void)sp_getUserName;
+- (void)sp_getUsersMostLiked;
+- (void)sp_didGetInfoSuccess;
+- (void)sp_checkDefualtSetting;
+- (void)sp_upload;
 @end

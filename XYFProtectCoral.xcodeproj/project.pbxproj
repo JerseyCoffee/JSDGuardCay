@@ -910,7 +910,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S82582RWX7;
+				DEVELOPMENT_TEAM = 3RQ2L8D2MW;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYFProtectCoral/Public/JSDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/XYFProtectCoral/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -918,7 +918,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.JerseyCafe.XYFProtectCoral;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JerseyCafe.KeAiXiaoShanhu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -930,7 +930,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S82582RWX7;
+				DEVELOPMENT_TEAM = 3RQ2L8D2MW;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYFProtectCoral/Public/JSDPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/XYFProtectCoral/Application/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -938,7 +938,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.JerseyCafe.XYFProtectCoral;
+				PRODUCT_BUNDLE_IDENTIFIER = com.JerseyCafe.KeAiXiaoShanhu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

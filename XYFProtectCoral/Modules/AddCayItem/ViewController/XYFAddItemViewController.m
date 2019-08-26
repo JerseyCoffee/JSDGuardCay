@@ -32,10 +32,10 @@
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
     [self reloadView];
 }
 - (void)didReceiveMemoryWarning {
@@ -61,11 +61,11 @@
     self.tabBarController.selectedIndex = 0;
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.title = @"Añadir coral";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Guardar" style:UIBarButtonItemStyleDone target:self action:@selector(onTouchSave:)];
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.scrollView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.scrollView.delegate = self;
@@ -126,7 +126,7 @@
     [self.scrollView setScrollsToTop:YES];
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 - (void)textViewDidChange:(UITextView *)textView {
@@ -192,10 +192,22 @@
     [self.scrollContentview endEditing:YES];
 }
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
 }
 #pragma mark - 7.GET & SET
 - (void)sp_getLoginState {
     NSLog(@"Get User Succrss");
+}
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Continue");
+}
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_upload {
+    NSLog(@"Continue");
+}
+- (void)sp_checkNetWorking {
+    NSLog(@"Get Info Success");
 }
 @end

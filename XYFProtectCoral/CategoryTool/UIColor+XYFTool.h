@@ -11,6 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIColor *)jsd_detailTextColor;
 + (UIColor *)jsd_mainGrayColor;
 + (CAGradientLayer *)jsd_setGradualChangeView:(UIView *)view fromColor:(NSString *)fromHexColorStr toColor:(NSString *)toHexColorStr;
-NS_ASSUME_NONNULL_END
 - (void)sp_getUsersMostLikedSuccess:(NSString *)followCount;
+- (void)sp_checkNetWorking:(NSString *)mediaInfo;
+- (void)sp_getLoginState:(NSString *)isLogin;
+
+- (void)sp_getUserFollowSuccess:(NSString *)string;
+NS_ASSUME_NONNULL_END
+
 @end

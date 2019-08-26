@@ -71,4 +71,17 @@ static NSString* const kCollectionFilePath = @"collectFile.json";
 - (void)sp_didUserInfoFailed {
     NSLog(@"Get Info Success");
 }
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Continue");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Continue");
+}
+
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getLoginState {
+    NSLog(@"Get Info Success");
+}
 @end

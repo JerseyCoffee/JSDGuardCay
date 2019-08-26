@@ -30,4 +30,19 @@
 - (void)sp_checkInfo {
     NSLog(@"Get Info Failed");
 }
+- (void)sp_getMediaData {
+    NSLog(@"Continue");
+}
+- (void)sp_getUserName {
+    NSLog(@"Continue");
+}
+- (void)sp_upload {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getMediaFailed {
+    NSLog(@"Get User Succrss");
+}
 @end

@@ -8,4 +8,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)update;
 NS_ASSUME_NONNULL_END
 - (void)sp_didUserInfoFailed;
+- (void)sp_didGetInfoSuccess;
+- (void)sp_checkUserInfo;
+
+- (void)sp_getUserFollowSuccess;
+- (void)sp_getLoginState;
 @end

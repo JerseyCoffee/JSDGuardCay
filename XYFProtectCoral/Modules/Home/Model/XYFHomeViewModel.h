@@ -9,4 +9,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* imageName;
 NS_ASSUME_NONNULL_END
 - (void)sp_checkInfo;
+- (void)sp_getMediaData;
+- (void)sp_getUserName;
+- (void)sp_upload;
+- (void)sp_getUsersMostFollowerSuccess;
+- (void)sp_getMediaFailed;
 @end

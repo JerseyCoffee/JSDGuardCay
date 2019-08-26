@@ -24,4 +24,14 @@
 - (void)sp_checkUserInfo:(NSString *)mediaInfo {
     NSLog(@"Get Info Failed");
 }
+- (void)sp_getUsersMostLiked:(NSString *)mediaCount {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getMediaFailed:(NSString *)mediaCount {
+    NSLog(@"Check your Network");
+}
+- (void)sp_didGetInfoSuccess:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+
 @end

@@ -17,19 +17,19 @@ static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de corr
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.navigationItem.title = @"Retroalimentación";
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     [self.view addSubview:self.logoImageView];
     [self.logoImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,13 +49,13 @@ static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de corr
         make.top.mas_equalTo(self.logoImageView.mas_bottom).mas_equalTo(30);
     }];
     if ([MFMailComposeViewController canSendMail]) {
-        [self setupEmailAction]; 
+        [self xyf_setupEmailAction]; 
     }else{
         UIAlertView* alerView = [[UIAlertView alloc] initWithTitle:kFeedBackErrorTipTitle message:kFeedBackErrorTipSubTitle delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alerView show];
     }
 }
--(void)setupEmailAction{
+-(void)xyf_setupEmailAction{
     MFMailComposeViewController *mailCompose = [[MFMailComposeViewController alloc] init];
     [mailCompose setMailComposeDelegate:self];
     [mailCompose setToRecipients:@[kFeedBackEmail]];
@@ -67,7 +67,7 @@ static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de corr
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 #pragma mark - MFMailComposeViewControllerDelegate的代理方法：
@@ -99,14 +99,14 @@ static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de corr
 #pragma mark - 5.Event Response
 - (void)onTouchSendEmail:(id) sender {
     if ([MFMailComposeViewController canSendMail]) {
-        [self setupEmailAction]; 
+        [self xyf_setupEmailAction]; 
     }else{
         UIAlertView* alerView = [[UIAlertView alloc] initWithTitle:kFeedBackErrorTipTitle message:kFeedBackErrorTipSubTitle delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alerView show];
     }
 }
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
 }
 #pragma mark - 7.GET & SET
 - (UILabel *)tipLabel {
@@ -125,6 +125,19 @@ static NSString* const kFeedBackErrorTipSubTitle = @"Abra \"(Aplicación de corr
     return _logoImageView;
 }
 - (void)sp_getLoginState {
+    NSLog(@"Continue");
+}
+
+- (void)sp_getMediaFailed {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Check your Network");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_didGetInfoSuccess {
     NSLog(@"Continue");
 }
 @end

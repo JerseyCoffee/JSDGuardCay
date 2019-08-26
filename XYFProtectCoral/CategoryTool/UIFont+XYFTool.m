@@ -12,4 +12,19 @@ static NSString* const kJSDFontName = @"Helvetica Neue";
 - (void)sp_getMediaFailed {
     NSLog(@"Get Info Failed");
 }
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Continue");
+}
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getLoginState {
+    NSLog(@"Continue");
+}
 @end

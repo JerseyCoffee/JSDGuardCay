@@ -3,10 +3,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (self.navigationController.viewControllers.count > 1) {
-        [self setupNavigation];
+        [self xyf_setupNavigation];
     }
 }
-- (void)setupNavigation {
+- (void)xyf_setupNavigation {
     self.fd_interactivePopDisabled = NO;
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
                                                                    style:UIBarButtonItemStyleDone
@@ -26,5 +26,20 @@
 }
 - (void)sp_getUsersMostLiked:(NSString *)followCount {
     NSLog(@"Continue");
+}
+- (void)sp_getUserFollowSuccess:(NSString *)string {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUserName:(NSString *)mediaInfo {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_checkDefualtSetting:(NSString *)string {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUsersMostFollowerSuccess:(NSString *)mediaCount {
+    NSLog(@"Check your Network");
+}
+- (void)sp_upload:(NSString *)string {
+    NSLog(@"Get Info Success");
 }
 @end

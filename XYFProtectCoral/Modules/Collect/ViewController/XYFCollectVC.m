@@ -11,10 +11,10 @@ static NSString* const kCell = @"cell";
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -23,10 +23,10 @@ static NSString* const kCell = @"cell";
     [super viewWillAppear:animated];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.title = @"Mi coleccion";
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"XYFCollectionCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:kCell];
     self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
@@ -42,7 +42,7 @@ static NSString* const kCell = @"cell";
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -80,7 +80,7 @@ static NSString* const kCell = @"cell";
 }
 #pragma mark - 5.Event Response
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(collectionNotification:) name:kCollectionNotification object:nil];
 }
 - (void)collectionNotification:(id)notification {
@@ -96,5 +96,20 @@ static NSString* const kCell = @"cell";
 }
 - (void)sp_getMediaFailed {
     NSLog(@"Get Info Failed");
+}
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_getUsersMostLikedSuccess {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_getUserName {
+    NSLog(@"Check your Network");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_checkInfo {
+    NSLog(@"Check your Network");
 }
 @end

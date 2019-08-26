@@ -86,4 +86,16 @@
 - (void)sp_didGetInfoSuccess {
     NSLog(@"Get Info Failed");
 }
+- (void)sp_getUsersMostLikedSuccess {
+    NSLog(@"Continue");
+}
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_checkInfo {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_upload {
+    NSLog(@"Get Info Failed");
+}
 @end

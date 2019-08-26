@@ -41,4 +41,19 @@
 - (void)sp_checkInfo {
     NSLog(@"Check your Network");
 }
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Check your Network");
+}
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Check your Network");
+}
+- (void)sp_upload {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUserName {
+    NSLog(@"Get Info Success");
+}
 @end

@@ -193,4 +193,19 @@ NSString* const kJSDKitImageFiles = @"PhotoImage/kit_";
 - (void)sp_getMediaData {
     NSLog(@"Get Info Success");
 }
+- (void)sp_getUserName {
+    NSLog(@"Get User Succrss");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Check your Network");
+}
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUserFollowSuccess {
+    NSLog(@"Continue");
+}
+- (void)sp_checkInfo {
+    NSLog(@"Check your Network");
+}
 @end

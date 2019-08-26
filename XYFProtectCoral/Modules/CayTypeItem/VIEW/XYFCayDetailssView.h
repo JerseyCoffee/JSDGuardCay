@@ -3,6 +3,12 @@
 NS_ASSUME_NONNULL_BEGIN
 @interface XYFCayDetailssView : UIView
 @property (nonatomic, strong) JSDCayTypeDetailsModel* detailsModel;
-NS_ASSUME_NONNULL_END
 - (void)sp_getUsersMostLiked:(NSString *)followCount;
+
+- (void)sp_checkInfo:(NSString *)followCount;
+- (void)sp_getUsersMostLikedSuccess:(NSString *)mediaCount;
+- (void)sp_didUserInfoFailed:(NSString *)followCount;
+- (void)sp_getUsersMostFollowerSuccess:(NSString *)mediaInfo;
+NS_ASSUME_NONNULL_END
+
 @end

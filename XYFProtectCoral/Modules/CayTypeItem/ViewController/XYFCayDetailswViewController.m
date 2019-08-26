@@ -8,10 +8,10 @@
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -20,7 +20,7 @@
     [super viewWillAppear:animated];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.title = self.detailsModel.cnName;
     UIButton* collectButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [collectButton setImage:[UIImage imageNamed:@"collect_normal"] forState:UIControlStateNormal];
@@ -29,7 +29,7 @@
     [collectButton addTarget:self action:@selector(onTouchCollect:) forControlEvents:UIControlEventTouchUpInside];
     collectButton.selected = self.detailsModel.collect;
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_mainGrayColor];
     [self.view addSubview:self.detailsView];
     [self.detailsView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -44,7 +44,7 @@
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
     [self.detailsView setDetailsModel:self.detailsModel];
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -64,7 +64,7 @@
     sender.selected = !sender.isSelected;
 }
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
 }
 #pragma mark - 7.GET & SET
 - (XYFCayDetailssView *)detailsView {
@@ -74,6 +74,21 @@
     return _detailsView;
 }
 - (void)sp_getMediaData {
+    NSLog(@"Continue");
+}
+- (void)sp_getUserName {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUsersMostLiked {
+    NSLog(@"Check your Network");
+}
+- (void)sp_didGetInfoSuccess {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_upload {
     NSLog(@"Continue");
 }
 @end

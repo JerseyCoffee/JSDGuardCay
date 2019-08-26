@@ -28,4 +28,16 @@
 - (void)sp_didGetInfoSuccess {
     NSLog(@"Get User Succrss");
 }
+- (void)sp_checkNetWorking {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_checkInfo {
+    NSLog(@"Check your Network");
+}
+- (void)sp_checkUserInfo {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_checkDefualtSetting {
+    NSLog(@"Get User Succrss");
+}
 @end

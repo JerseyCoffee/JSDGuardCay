@@ -102,4 +102,17 @@
 - (void)sp_getUsersMostLiked:(NSString *)followCount {
     NSLog(@"Continue");
 }
+
+- (void)sp_checkInfo:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+- (void)sp_getUsersMostLikedSuccess:(NSString *)mediaCount {
+    NSLog(@"Check your Network");
+}
+- (void)sp_didUserInfoFailed:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+- (void)sp_getUsersMostFollowerSuccess:(NSString *)mediaInfo {
+    NSLog(@"Get Info Failed");
+}
 @end

@@ -33,7 +33,7 @@
     }
     return _listArray;
 }
-- (void)setupUserData {
+- (void)xyf_setupUserData {
     NSFileManager* fileManager = [NSFileManager defaultManager];
     NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSString* userPath = [documentsDirectory stringByAppendingPathComponent:@"user"];
@@ -63,7 +63,7 @@
 }
 - (JSDUserModel *)userData {
     if (!_userData) {
-        [self setupUserData];
+        [self xyf_setupUserData];
     }
     return _userData;
 }
@@ -79,5 +79,18 @@
 @implementation JSDMyCenterModel
 - (void)sp_getUsersMostLiked:(NSString *)mediaInfo {
     NSLog(@"Get Info Failed");
+}
+- (void)sp_upload:(NSString *)string {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_didUserInfoFailed:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+- (void)sp_checkInfo:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+
+- (void)sp_getMediaData:(NSString *)string {
+    NSLog(@"Get Info Success");
 }
 @end

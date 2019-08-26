@@ -10,10 +10,10 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -27,10 +27,10 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
     [super viewWillDisappear:animated];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.title = @"Cay";
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor jsd_maiBackgroundColor];
     self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"XYFCayTypeViewTextCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier: kJSDreuseIdentifier];
@@ -53,7 +53,7 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -93,7 +93,7 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 }
 #pragma mark - 5.Event Response
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
 }
 #pragma mark - 7.GET & SET
 - (UIView *)headerView {
@@ -103,7 +103,7 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
         UILabel* label = [[UILabel alloc] init];
         label.font = [UIFont jsd_fontSize:27 fontName:@"STHeitiSC-Medium"];
         label.textColor = [UIColor jsd_mainTextColor];
-        label.text = @"Protegiendo corales";
+        label.text = @"Pequeño coral lindo";
         [_headerView addSubview:label];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(40);
@@ -120,5 +120,18 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
 }
 - (void)sp_checkInfo {
     NSLog(@"Get Info Success");
+}
+- (void)sp_getUsersMostFollowerSuccess {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_didUserInfoFailed {
+    NSLog(@"Continue");
+}
+- (void)sp_upload {
+    NSLog(@"Get Info Failed");
+}
+
+- (void)sp_checkNetWorking {
+    NSLog(@"Check your Network");
 }
 @end

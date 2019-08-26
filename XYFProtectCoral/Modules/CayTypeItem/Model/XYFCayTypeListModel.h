@@ -27,4 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL collect;
 NS_ASSUME_NONNULL_END
 - (void)sp_didUserInfoFailed;
+- (void)sp_getUsersMostLiked;
+- (void)sp_getUserFollowSuccess;
+
+- (void)sp_getUsersMostFollowerSuccess;
+- (void)sp_getUserName;
 @end

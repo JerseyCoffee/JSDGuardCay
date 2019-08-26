@@ -14,10 +14,10 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark - 1.View Controller Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupNavBar];
-    [self setupView];
-    [self setupData];
-    [self setupNotification];
+    [self xyf_setupNavBar];
+    [self xyf_setupView];
+    [self xyf_setupData];
+    [self xyf_setupNotification];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -31,10 +31,10 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 #pragma mark - 2.SettingView and Style
-- (void)setupNavBar {
+- (void)xyf_setupNavBar {
     self.navigationItem.title = @"My Center";
 }
-- (void)setupView {
+- (void)xyf_setupView {
     self.view.backgroundColor = [UIColor whiteColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"XYFCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
     self.collectionView.backgroundColor = [UIColor jsd_maiBackgroundColor];
@@ -56,7 +56,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)reloadView {
 }
 #pragma mark - 3.Request Data
-- (void)setupData {
+- (void)xyf_setupData {
     [self.headerView setModel: self.viewModel.userData];
 }
 #pragma mark - 4.UITableViewDataSource and UITableViewDelegate
@@ -118,11 +118,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.navigationController pushViewController:myresourceVC animated:YES];
 }
 #pragma mark - 6.Private Methods
-- (void)setupNotification {
+- (void)xyf_setupNotification {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myUserDataNotification:) name:kMyUserDataNotification object:nil];
 }
 - (void)myUserDataNotification:(NSNotification*)notification {
-    [self.viewModel setupUserData];
+    [self.viewModel xyf_setupUserData];
     [self.headerView setModel: self.viewModel.userData];
 }
 #pragma mark - 7.GET & SET
@@ -141,5 +141,18 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)sp_getMediaFailed:(NSString *)isLogin {
     NSLog(@"Get User Succrss");
+}
+- (void)sp_upload:(NSString *)mediaInfo {
+    NSLog(@"Get Info Failed");
+}
+- (void)sp_checkUserInfo:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+
+- (void)sp_getMediaData:(NSString *)followCount {
+    NSLog(@"Continue");
+}
+- (void)sp_checkNetWorking:(NSString *)followCount {
+    NSLog(@"Continue");
 }
 @end

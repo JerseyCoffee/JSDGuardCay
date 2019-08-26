@@ -37,4 +37,17 @@
 - (void)sp_getUsersMostFollowerSuccess:(NSString *)mediaCount {
     NSLog(@"Check your Network");
 }
+- (void)sp_getLoginState:(NSString *)string {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUserFollowSuccess:(NSString *)mediaCount {
+    NSLog(@"Check your Network");
+}
+
+- (void)sp_getUserName:(NSString *)string {
+    NSLog(@"Get Info Success");
+}
+- (void)sp_getUsersMostLiked:(NSString *)isLogin {
+    NSLog(@"Get User Succrss");
+}
 @end
