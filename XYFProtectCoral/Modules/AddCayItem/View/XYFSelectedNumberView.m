@@ -45,7 +45,7 @@
             }];
         } else {
             [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.mas_equalTo(170);
+                make.left.mas_equalTo(130);
                 make.centerY.mas_equalTo(0);
                 make.height.with.mas_equalTo(18);
             }];

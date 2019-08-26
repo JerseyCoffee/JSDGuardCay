@@ -115,7 +115,7 @@
     [self.enTextFieldView setTitle:@"Ingles" tipText:@"Nombre (requerido)"];
     [self.CNNameTextField setTitle:@"Nombre científico" tipText:@"Nombre científico (requerido)"];
     [self.typeContentView setTitle:@"Variedad" number:0];
-    [self.siyangNumberView setTitle:@"Dificultad creciente" number:1];
+    [self.siyangNumberView setTitle:@"Dificil" number:1];
     [self.guangzhaoNumberView setTitle:@"Iluminación" number:1];
     [self.shuiliuNumberView setTitle:@"Flujo de agua" number:1];
     [self.yanduNumberView setTitle:@"Salinidad" number:1];
