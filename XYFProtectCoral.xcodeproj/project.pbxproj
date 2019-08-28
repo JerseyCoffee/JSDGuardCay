@@ -139,6 +139,7 @@
 		557B2FA52303E35100FFF0D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		557B2FA72303E35100FFF0D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		557B2FA82303E35100FFF0D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		55D55A6E23167E530006F4FF /* XYFProtectCoral.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XYFProtectCoral.entitlements; sourceTree = "<group>"; };
 		606D69DF230595D600C06C39 /* XYFSnackbarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYFSnackbarManager.h; sourceTree = "<group>"; };
 		606D69E0230595D600C06C39 /* XYFSnackbarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYFSnackbarManager.m; sourceTree = "<group>"; };
 		606D69E92306DED900C06C39 /* XYFFeedBacksVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFFeedBacksVC.h; sourceTree = "<group>"; };
@@ -476,6 +477,7 @@
 		557B2F982303E34F00FFF0D3 /* XYFProtectCoral */ = {
 			isa = PBXGroup;
 			children = (
+				55D55A6E23167E530006F4FF /* XYFProtectCoral.entitlements */,
 				606D69DE230595CF00C06C39 /* BaseKit */,
 				5547837B2303FBE500D87BDD /* Base */,
 				554783632303F9D500D87BDD /* Application */,
@@ -614,6 +616,11 @@
 				TargetAttributes = {
 					557B2F952303E34F00FFF0D3 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -925,6 +932,7 @@
 			baseConfigurationReference = 864FFC80101621CA389B55CE /* Pods-XYFProtectCoral.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XYFProtectCoral/XYFProtectCoral.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RQ2L8D2MW;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYFProtectCoral/Public/JSDPrefixHeader.pch";
@@ -945,6 +953,7 @@
 			baseConfigurationReference = 2AFFF2822732B44C482ACD29 /* Pods-XYFProtectCoral.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = XYFProtectCoral/XYFProtectCoral.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3RQ2L8D2MW;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYFProtectCoral/Public/JSDPrefixHeader.pch";
