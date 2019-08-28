@@ -37,7 +37,7 @@
     self.typeLabel.text = @"小水螅体硬珊瑚（SPS)";
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
-        make.left.mas_equalTo(135);
+        make.left.mas_equalTo(106);
         make.right.mas_equalTo(self.guideImageView.mas_left).mas_equalTo(-10);
     }];
     self.tapButton = [UIButton buttonWithType:UIButtonTypeCustom];
