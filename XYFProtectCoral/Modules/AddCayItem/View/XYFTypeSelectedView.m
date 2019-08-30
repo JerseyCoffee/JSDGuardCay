@@ -1,4 +1,5 @@
 #import "XYFTypeSelectedView.h"
+
 @interface XYFTypeSelectedView ()
 @property (nonatomic, strong) UILabel* titleLabel;
 @property (nonatomic, strong) UIImageView* guideImageView;
@@ -28,16 +29,17 @@
         make.left.mas_equalTo(18);
         make.centerY.mas_equalTo(0);
     }];
+    self.guideImageView.image = [MDCIcons imageFor_ic_chevron_right];
     [self.guideImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
         make.right.mas_equalTo(-20);
-        make.width.mas_equalTo(8);
-        make.height.mas_equalTo(14);
+        make.width.mas_equalTo(30);
+        make.height.mas_equalTo(30);
     }];
     self.typeLabel.text = @"小水螅体硬珊瑚（SPS)";
     [self.typeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(0);
-        make.left.mas_equalTo(106);
+        make.left.mas_equalTo(120);
         make.right.mas_equalTo(self.guideImageView.mas_left).mas_equalTo(-10);
     }];
     self.tapButton = [UIButton buttonWithType:UIButtonTypeCustom];

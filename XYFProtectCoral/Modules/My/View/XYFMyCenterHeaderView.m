@@ -1,6 +1,8 @@
 #import "XYFMyCenterHeaderView.h"
 @interface XYFMyCenterHeaderView ()
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *guideImageView;
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @end
 @implementation XYFMyCenterHeaderView
@@ -13,6 +15,8 @@
     self.nameLabel.font = [UIFont jsd_fontSize:21];
     self.nameLabel.textColor = [UIColor jsd_mainTextColor];
     self.nameLabel.text = @"小珊瑚";
+    
+    self.guideImageView.image = [MDCIcons imageFor_ic_chevron_right];
 }
 - (void)setModel:(JSDUserModel *)model {
     self.nameLabel.text = model.userName;

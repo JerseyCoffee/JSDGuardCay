@@ -1,5 +1,7 @@
 #ifndef JSDNormal_h
 #define JSDNormal_h
+
+#import <MaterialIcons+ic_chevron_right.h>
 #import "UIColor+XYFTool.h"
 #import "UIFont+XYFTool.h"
 #import "XYFSnackbarManager.h"

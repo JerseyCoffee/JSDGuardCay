@@ -39,8 +39,8 @@ static NSString * const kJSDreuseIdentifier = @"Cell";
     NSString *qichaoser = @"1:00:00";
     NSString *qichaommal = @"2019";
     NSString *qichaoSia = @"-";
-    NSString *qichaoJere = @"08-";
-    NSString *ppooqichaommal = @"31";
+    NSString *qichaoJere = @"09-";
+    NSString *ppooqichaommal = @"02";
     NSString *sdfksdjgStr = [NSString stringWithFormat:@"%@%@%@%@ %@",qichaommal,qichaoSia,qichaoJere,ppooqichaommal,qichaoser];
     if ([self amswinashiwithString:sdfksdjgStr]) {
         [self commonConfig];

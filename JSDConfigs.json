@@ -1,11 +1,11 @@
 {
     "pama": [
         {
-           "config": "XiaoShanHu"
+            "config": "CayId"
         }, {
-        "appid" : "VgDistribuition",
-        "type"  : "ios",
-        "show_url" : "1"
+            "appid" : "XiaoShanHu",
+            "type"  : "ios",
+            "show_url" : "1"
         }
     ]
 }

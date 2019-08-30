@@ -32,6 +32,13 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hew-Ji-dse">
                     <rect key="frame" x="0.0" y="0.0" width="449" height="126"/>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Xk-pg-Sfr">
+                    <rect key="frame" x="389" y="62" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="hPP-qF-Eaz"/>
+                        <constraint firstAttribute="height" constant="30" id="ofe-lj-37b"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -39,19 +46,22 @@
                 <constraint firstItem="cTX-sV-OQh" firstAttribute="leading" secondItem="T78-LJ-t7s" secondAttribute="trailing" constant="14" id="3Ms-qs-N21"/>
                 <constraint firstAttribute="bottom" secondItem="T78-LJ-t7s" secondAttribute="bottom" constant="15" id="9OY-rm-JmJ"/>
                 <constraint firstItem="cTX-sV-OQh" firstAttribute="centerY" secondItem="T78-LJ-t7s" secondAttribute="centerY" id="FRB-2b-sB0"/>
+                <constraint firstItem="2Xk-pg-Sfr" firstAttribute="centerY" secondItem="T78-LJ-t7s" secondAttribute="centerY" id="Itb-IT-ZM8"/>
                 <constraint firstAttribute="trailing" secondItem="hew-Ji-dse" secondAttribute="trailing" id="JGp-DJ-TxA"/>
                 <constraint firstAttribute="bottom" secondItem="hew-Ji-dse" secondAttribute="bottom" id="Kne-wG-iRk"/>
                 <constraint firstItem="T78-LJ-t7s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="abe-yD-MnS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2Xk-pg-Sfr" secondAttribute="trailing" constant="30" id="gD4-5w-HV1"/>
                 <constraint firstItem="hew-Ji-dse" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lqU-FJ-k6M"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="guideImageView" destination="2Xk-pg-Sfr" id="h8N-WC-YjQ"/>
                 <outlet property="headImageView" destination="T78-LJ-t7s" id="xoz-gH-eOA"/>
                 <outlet property="nameLabel" destination="cTX-sV-OQh" id="JTy-5t-BoU"/>
                 <outlet property="tapButton" destination="hew-Ji-dse" id="yzg-0J-9fL"/>
             </connections>
-            <point key="canvasLocation" x="382" y="34"/>
+            <point key="canvasLocation" x="381.8840579710145" y="33.482142857142854"/>
         </view>
     </objects>
 </document>
