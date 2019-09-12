@@ -7,7 +7,7 @@ target 'JSDGuardCay' do
 
   # Pods for JSDGuardCay
 
-
+    inherit! :search_paths
 	  pod 'MJExtension', '~> 3.1.0'
 	  pod 'Masonry',  '~> 1.1.0'
 	  pod 'AFNetworking' , '~> 3.0.4'
