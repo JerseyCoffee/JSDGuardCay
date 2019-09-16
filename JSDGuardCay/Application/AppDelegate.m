@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "JSDTabBarViewController.h"
+#import "JSDStartBannerView.h"
+#import "JSDStartVC.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    JSDTabBarViewController* tabBarViewController = [[JSDTabBarViewController alloc] init];
+    JSDStartVC* startVC = [[JSDStartVC alloc] init];
+//    JSDTabBarViewController* tabBarViewController = [[JSDTabBarViewController alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = tabBarViewController;
+    self.window.rootViewController = startVC;
     [self.window makeKeyWindow];
     
     return YES;
@@ -53,7 +56,7 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [JSDStartBannerView cleanCacheAndCookie];
 }
-
 
 @end

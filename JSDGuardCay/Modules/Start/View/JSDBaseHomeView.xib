@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JSDBaseHomeView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-99-QHU" customClass="MDCButton">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="64"/>
+                    <state key="normal" image="code_codeHome"/>
+                    <connections>
+                        <action selector="JSD_gotoHome:" destination="iN0-l3-epB" eventType="touchUpInside" id="u8c-Wl-NoN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-SQ-HPV" customClass="MDCButton">
+                    <rect key="frame" x="75" y="0.0" width="75" height="64"/>
+                    <state key="normal" image="code_codeback"/>
+                    <connections>
+                        <action selector="JSD_goBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="5T9-s9-h5W"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-ZN-dCR" customClass="MDCButton">
+                    <rect key="frame" x="150" y="0.0" width="75" height="64"/>
+                    <state key="normal" image="code_codeforwad"/>
+                    <connections>
+                        <action selector="JSD_goNext:" destination="iN0-l3-epB" eventType="touchUpInside" id="7KV-VH-aZS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-i9-SRL" customClass="MDCButton">
+                    <rect key="frame" x="225" y="0.0" width="75" height="64"/>
+                    <state key="normal" image="code_reloadView"/>
+                    <connections>
+                        <action selector="jsd_reloadView:" destination="iN0-l3-epB" eventType="touchUpInside" id="rhe-zi-Qma"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pus-y6-bU1" customClass="MDCButton">
+                    <rect key="frame" x="300" y="0.0" width="75" height="64"/>
+                    <state key="normal" image="code_cleanHistory"/>
+                    <connections>
+                        <action selector="JSD_CleanMemory:" destination="iN0-l3-epB" eventType="touchUpInside" id="QOX-0s-ACO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dLr-ZN-dCR" firstAttribute="bottom" secondItem="mI6-99-QHU" secondAttribute="bottom" id="2IJ-Gk-3hG"/>
+                <constraint firstItem="pus-y6-bU1" firstAttribute="top" secondItem="mI6-99-QHU" secondAttribute="top" id="2n5-FJ-GWY"/>
+                <constraint firstAttribute="bottom" secondItem="mI6-99-QHU" secondAttribute="bottom" id="5wa-nw-iHW"/>
+                <constraint firstItem="dLr-ZN-dCR" firstAttribute="leading" secondItem="DAk-SQ-HPV" secondAttribute="trailing" id="EEJ-h4-QsV"/>
+                <constraint firstItem="DAk-SQ-HPV" firstAttribute="leading" secondItem="mI6-99-QHU" secondAttribute="trailing" id="Ju8-bT-VlH"/>
+                <constraint firstItem="mGw-i9-SRL" firstAttribute="bottom" secondItem="mI6-99-QHU" secondAttribute="bottom" id="KGS-f5-I8F"/>
+                <constraint firstItem="DAk-SQ-HPV" firstAttribute="top" secondItem="mI6-99-QHU" secondAttribute="top" id="L4v-UU-7xI"/>
+                <constraint firstItem="dLr-ZN-dCR" firstAttribute="top" secondItem="mI6-99-QHU" secondAttribute="top" id="LJP-tc-RaX"/>
+                <constraint firstItem="DAk-SQ-HPV" firstAttribute="width" secondItem="mI6-99-QHU" secondAttribute="width" id="P2O-XA-9fY"/>
+                <constraint firstItem="DAk-SQ-HPV" firstAttribute="bottom" secondItem="mI6-99-QHU" secondAttribute="bottom" id="PAF-Ve-mJx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="pus-y6-bU1" secondAttribute="trailing" id="RE9-ED-J9A"/>
+                <constraint firstItem="pus-y6-bU1" firstAttribute="width" secondItem="mI6-99-QHU" secondAttribute="width" id="TZl-c2-EIa"/>
+                <constraint firstItem="mGw-i9-SRL" firstAttribute="leading" secondItem="dLr-ZN-dCR" secondAttribute="trailing" id="UM9-5a-yFy"/>
+                <constraint firstItem="mGw-i9-SRL" firstAttribute="width" secondItem="mI6-99-QHU" secondAttribute="width" id="XSw-uE-D6w"/>
+                <constraint firstItem="mGw-i9-SRL" firstAttribute="top" secondItem="mI6-99-QHU" secondAttribute="top" id="a1h-v2-Tws"/>
+                <constraint firstItem="mI6-99-QHU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aXB-oq-2fW"/>
+                <constraint firstItem="pus-y6-bU1" firstAttribute="leading" secondItem="mGw-i9-SRL" secondAttribute="trailing" id="cNe-Df-S9f"/>
+                <constraint firstItem="mI6-99-QHU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="idR-5Z-KYw"/>
+                <constraint firstItem="pus-y6-bU1" firstAttribute="bottom" secondItem="mI6-99-QHU" secondAttribute="bottom" id="u7Z-eg-SbJ"/>
+                <constraint firstItem="dLr-ZN-dCR" firstAttribute="width" secondItem="mI6-99-QHU" secondAttribute="width" id="uqP-ED-ETT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="code_cleanHistory" width="24" height="24"/>
+        <image name="code_codeHome" width="24" height="21.5"/>
+        <image name="code_codeback" width="24" height="24"/>
+        <image name="code_codeforwad" width="24" height="24"/>
+        <image name="code_reloadView" width="24" height="24"/>
+    </resources>
+</document>

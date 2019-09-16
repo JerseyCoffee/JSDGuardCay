@@ -599,6 +599,7 @@ PODS:
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
   - MotionTransitioning (5.0.0)
+  - SVProgressHUD (2.2.5)
   - UMCAnalytics (6.0.5):
     - UMCCommon
   - UMCCommon (2.1.1)
@@ -611,6 +612,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MaterialComponents (~> 84.0.0)
   - MJExtension (~> 3.1.0)
+  - SVProgressHUD
   - UMCAnalytics (~> 6.0.5)
   - UMCCommon (~> 2.1.1)
 
@@ -629,6 +631,7 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - MotionTransitioning
+    - SVProgressHUD
     - UMCAnalytics
     - UMCCommon
 
@@ -646,9 +649,10 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   MotionTransitioning: 23d25edc2f4606efb922403cbac6d81af37aa33a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   UMCAnalytics: 045be2cd1ec05aa95ad62405a850757f932e2d59
   UMCCommon: 971f324a5a99c9d662ae040a815e7e3d7ef8b2a8
 
-PODFILE CHECKSUM: f22f73607b330383c8d5f64c114f3432d24caf3f
+PODFILE CHECKSUM: 12faeff94096d7f54bc4ac43b95440fab2b8e07b
 
 COCOAPODS: 1.6.1

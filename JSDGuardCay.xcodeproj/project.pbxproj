@@ -41,6 +41,11 @@
 		55478427230548B800D87BDD /* JSDCayTypeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 55478426230548B800D87BDD /* JSDCayTypeListModel.m */; };
 		5547842923054E9D00D87BDD /* cay1.json in Resources */ = {isa = PBXBuildFile; fileRef = 5547842823054E9D00D87BDD /* cay1.json */; };
 		5547842C230568DF00D87BDD /* JSDCollectViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5547842B230568DF00D87BDD /* JSDCollectViewModel.m */; };
+		5557D48D232F3EB3007C5A60 /* JSDStartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D48C232F3EB3007C5A60 /* JSDStartVC.m */; };
+		5557D491232F43BD007C5A60 /* JSDBaseHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D48E232F43BC007C5A60 /* JSDBaseHomeView.m */; };
+		5557D492232F43BD007C5A60 /* JSDBaseHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5557D490232F43BC007C5A60 /* JSDBaseHomeView.xib */; };
+		5557D495232F4465007C5A60 /* JSDStartBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D494232F4465007C5A60 /* JSDStartBannerView.m */; };
+		5557D49B232F44A5007C5A60 /* JSDBannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D49A232F44A5007C5A60 /* JSDBannerManager.m */; };
 		557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
@@ -124,6 +129,15 @@
 		5547842823054E9D00D87BDD /* cay1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cay1.json; sourceTree = "<group>"; };
 		5547842A230568DF00D87BDD /* JSDCollectViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDCollectViewModel.h; sourceTree = "<group>"; };
 		5547842B230568DF00D87BDD /* JSDCollectViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDCollectViewModel.m; sourceTree = "<group>"; };
+		5557D48B232F3EB3007C5A60 /* JSDStartVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDStartVC.h; sourceTree = "<group>"; };
+		5557D48C232F3EB3007C5A60 /* JSDStartVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDStartVC.m; sourceTree = "<group>"; };
+		5557D48E232F43BC007C5A60 /* JSDBaseHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSDBaseHomeView.m; sourceTree = "<group>"; };
+		5557D48F232F43BC007C5A60 /* JSDBaseHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSDBaseHomeView.h; sourceTree = "<group>"; };
+		5557D490232F43BC007C5A60 /* JSDBaseHomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSDBaseHomeView.xib; sourceTree = "<group>"; };
+		5557D493232F4465007C5A60 /* JSDStartBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDStartBannerView.h; sourceTree = "<group>"; };
+		5557D494232F4465007C5A60 /* JSDStartBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDStartBannerView.m; sourceTree = "<group>"; };
+		5557D499232F44A5007C5A60 /* JSDBannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBannerManager.h; sourceTree = "<group>"; };
+		5557D49A232F44A5007C5A60 /* JSDBannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBannerManager.m; sourceTree = "<group>"; };
 		557B2F962303E34F00FFF0D3 /* JSDGuardCay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDGuardCay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -183,6 +197,7 @@
 		554783642303F9D500D87BDD /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5557D485232F3DFF007C5A60 /* Start */,
 				606D69E22306DED900C06C39 /* My */,
 				5547840D2305258200D87BDD /* AddCayItem */,
 				55478401230512A100D87BDD /* Collect */,
@@ -442,6 +457,46 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5557D485232F3DFF007C5A60 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				5557D48A232F3E4A007C5A60 /* View */,
+				5557D489232F3E3F007C5A60 /* ViewController */,
+				5557D487232F3E10007C5A60 /* Model */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		5557D487232F3E10007C5A60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5557D493232F4465007C5A60 /* JSDStartBannerView.h */,
+				5557D494232F4465007C5A60 /* JSDStartBannerView.m */,
+				5557D499232F44A5007C5A60 /* JSDBannerManager.h */,
+				5557D49A232F44A5007C5A60 /* JSDBannerManager.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5557D489232F3E3F007C5A60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5557D48B232F3EB3007C5A60 /* JSDStartVC.h */,
+				5557D48C232F3EB3007C5A60 /* JSDStartVC.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5557D48A232F3E4A007C5A60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5557D48F232F43BC007C5A60 /* JSDBaseHomeView.h */,
+				5557D48E232F43BC007C5A60 /* JSDBaseHomeView.m */,
+				5557D490232F43BC007C5A60 /* JSDBaseHomeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		557B2F8D2303E34F00FFF0D3 = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */,
+				5557D492232F43BD007C5A60 /* JSDBaseHomeView.xib in Resources */,
 				5547842923054E9D00D87BDD /* cay1.json in Resources */,
 				606D6A0E2306DED900C06C39 /* JSDCollectionViewCell.xib in Resources */,
 				606D6A172306DED900C06C39 /* JSDMyResource.xib in Resources */,
@@ -681,6 +737,7 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_radio_button_unchecked.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_reorder.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/MaterialComponents/MaterialIcons_ic_settings.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -707,6 +764,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_radio_button_unchecked.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_reorder.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons_ic_settings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -745,6 +803,7 @@
 				554783842303FC9600D87BDD /* JSDBaseNavigationController.m in Sources */,
 				55478418230538C800D87BDD /* JSDBaseView.m in Sources */,
 				5547838A2303FCBF00D87BDD /* JSDBaseCollectionViewController.m in Sources */,
+				5557D495232F4465007C5A60 /* JSDStartBannerView.m in Sources */,
 				5547841E2305390900D87BDD /* JSDTypeSelectedView.m in Sources */,
 				55478427230548B800D87BDD /* JSDCayTypeListModel.m in Sources */,
 				5547838D2303FD8300D87BDD /* JSDHomeViewController.m in Sources */,
@@ -757,8 +816,10 @@
 				606D6A162306DED900C06C39 /* JSDMyResource.m in Sources */,
 				557B2FA92303E35100FFF0D3 /* main.m in Sources */,
 				606D6A0B2306DED900C06C39 /* JSDFeedBacksVC.m in Sources */,
+				5557D491232F43BD007C5A60 /* JSDBaseHomeView.m in Sources */,
 				557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */,
 				606D6A0F2306DED900C06C39 /* JSDMyCenterHeaderView.m in Sources */,
+				5557D49B232F44A5007C5A60 /* JSDBannerManager.m in Sources */,
 				554783A42304F0D900D87BDD /* JSDCayDetailssView.m in Sources */,
 				554784212305391D00D87BDD /* JSDSelectedNumberView.m in Sources */,
 				5547840B230513B800D87BDD /* JSDCollectionCell.m in Sources */,
@@ -775,6 +836,7 @@
 				606D69E1230595D600C06C39 /* JSDSnackbarManager.m in Sources */,
 				5547841B230538F400D87BDD /* JSDTextFieldView.m in Sources */,
 				55478424230545A300D87BDD /* JSDHomeViewModel.m in Sources */,
+				5557D48D232F3EB3007C5A60 /* JSDStartVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
