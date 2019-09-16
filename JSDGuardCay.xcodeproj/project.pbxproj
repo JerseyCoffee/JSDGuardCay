@@ -46,6 +46,11 @@
 		5557D492232F43BD007C5A60 /* JSDBaseHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5557D490232F43BC007C5A60 /* JSDBaseHomeView.xib */; };
 		5557D495232F4465007C5A60 /* JSDStartBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D494232F4465007C5A60 /* JSDStartBannerView.m */; };
 		5557D49B232F44A5007C5A60 /* JSDBannerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D49A232F44A5007C5A60 /* JSDBannerManager.m */; };
+		5557D49E232F6819007C5A60 /* JSDNetworkErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D49D232F6819007C5A60 /* JSDNetworkErrorView.m */; };
+		5557D4A0232F683F007C5A60 /* JSDNetworkErrorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5557D49F232F683F007C5A60 /* JSDNetworkErrorView.xib */; };
+		5557D4A3232F69D6007C5A60 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D4A2232F69D6007C5A60 /* Reachability.m */; };
+		5557D4A6232F8218007C5A60 /* JSDBannerObjManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D4A5232F8218007C5A60 /* JSDBannerObjManager.m */; };
+		5557D4A9232F8AA5007C5A60 /* JSDBaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5557D4A8232F8AA5007C5A60 /* JSDBaseButton.m */; };
 		557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */; };
 		557B2FA32303E35100FFF0D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA22303E35100FFF0D3 /* Assets.xcassets */; };
 		557B2FA62303E35100FFF0D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 557B2FA42303E35100FFF0D3 /* LaunchScreen.storyboard */; };
@@ -138,6 +143,15 @@
 		5557D494232F4465007C5A60 /* JSDStartBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDStartBannerView.m; sourceTree = "<group>"; };
 		5557D499232F44A5007C5A60 /* JSDBannerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBannerManager.h; sourceTree = "<group>"; };
 		5557D49A232F44A5007C5A60 /* JSDBannerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBannerManager.m; sourceTree = "<group>"; };
+		5557D49C232F6819007C5A60 /* JSDNetworkErrorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDNetworkErrorView.h; sourceTree = "<group>"; };
+		5557D49D232F6819007C5A60 /* JSDNetworkErrorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDNetworkErrorView.m; sourceTree = "<group>"; };
+		5557D49F232F683F007C5A60 /* JSDNetworkErrorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSDNetworkErrorView.xib; sourceTree = "<group>"; };
+		5557D4A1232F69D6007C5A60 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5557D4A2232F69D6007C5A60 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5557D4A4232F8218007C5A60 /* JSDBannerObjManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBannerObjManager.h; sourceTree = "<group>"; };
+		5557D4A5232F8218007C5A60 /* JSDBannerObjManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBannerObjManager.m; sourceTree = "<group>"; };
+		5557D4A7232F8AA5007C5A60 /* JSDBaseButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSDBaseButton.h; sourceTree = "<group>"; };
+		5557D4A8232F8AA5007C5A60 /* JSDBaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSDBaseButton.m; sourceTree = "<group>"; };
 		557B2F962303E34F00FFF0D3 /* JSDGuardCay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSDGuardCay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		557B2F992303E34F00FFF0D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		557B2F9A2303E34F00FFF0D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -311,6 +325,8 @@
 			children = (
 				55478416230538C700D87BDD /* JSDBaseView.h */,
 				55478417230538C700D87BDD /* JSDBaseView.m */,
+				5557D4A7232F8AA5007C5A60 /* JSDBaseButton.h */,
+				5557D4A8232F8AA5007C5A60 /* JSDBaseButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,6 +490,10 @@
 				5557D494232F4465007C5A60 /* JSDStartBannerView.m */,
 				5557D499232F44A5007C5A60 /* JSDBannerManager.h */,
 				5557D49A232F44A5007C5A60 /* JSDBannerManager.m */,
+				5557D4A1232F69D6007C5A60 /* Reachability.h */,
+				5557D4A2232F69D6007C5A60 /* Reachability.m */,
+				5557D4A4232F8218007C5A60 /* JSDBannerObjManager.h */,
+				5557D4A5232F8218007C5A60 /* JSDBannerObjManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -493,6 +513,9 @@
 				5557D48F232F43BC007C5A60 /* JSDBaseHomeView.h */,
 				5557D48E232F43BC007C5A60 /* JSDBaseHomeView.m */,
 				5557D490232F43BC007C5A60 /* JSDBaseHomeView.xib */,
+				5557D49C232F6819007C5A60 /* JSDNetworkErrorView.h */,
+				5557D49D232F6819007C5A60 /* JSDNetworkErrorView.m */,
+				5557D49F232F683F007C5A60 /* JSDNetworkErrorView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -698,6 +721,7 @@
 				606D6A0D2306DED900C06C39 /* JSDMyCenterHeaderView.xib in Resources */,
 				5527070223069B3300BC1EE7 /* cay5.json in Resources */,
 				5527070523069B3300BC1EE7 /* cay6.json in Resources */,
+				5557D4A0232F683F007C5A60 /* JSDNetworkErrorView.xib in Resources */,
 				5527070123069B3300BC1EE7 /* cay4.json in Resources */,
 				606D6A1D2306EA7B00C06C39 /* JSDAbounMyVC.xib in Resources */,
 				5547839E230417F300D87BDD /* JSDCayItemViewCell.xib in Resources */,
@@ -813,9 +837,11 @@
 				554783962304179400D87BDD /* JSDCayListViewController.m in Sources */,
 				55478414230525B000D87BDD /* JSDAddItemViewController.m in Sources */,
 				554783812303FC1F00D87BDD /* JSDTabBarViewController.m in Sources */,
+				5557D4A3232F69D6007C5A60 /* Reachability.m in Sources */,
 				606D6A162306DED900C06C39 /* JSDMyResource.m in Sources */,
 				557B2FA92303E35100FFF0D3 /* main.m in Sources */,
 				606D6A0B2306DED900C06C39 /* JSDFeedBacksVC.m in Sources */,
+				5557D4A9232F8AA5007C5A60 /* JSDBaseButton.m in Sources */,
 				5557D491232F43BD007C5A60 /* JSDBaseHomeView.m in Sources */,
 				557B2F9B2303E34F00FFF0D3 /* AppDelegate.m in Sources */,
 				606D6A0F2306DED900C06C39 /* JSDMyCenterHeaderView.m in Sources */,
@@ -824,9 +850,11 @@
 				554784212305391D00D87BDD /* JSDSelectedNumberView.m in Sources */,
 				5547840B230513B800D87BDD /* JSDCollectionCell.m in Sources */,
 				606D6A182306DED900C06C39 /* JSDMyCenterVC.m in Sources */,
+				5557D49E232F6819007C5A60 /* JSDNetworkErrorView.m in Sources */,
 				554783872303FCA600D87BDD /* JSDBaseViewController.m in Sources */,
 				606D6A0C2306DED900C06C39 /* JSDMyCenterViewModel.m in Sources */,
 				5547837A2303FB3700D87BDD /* UIFont+JSDTool.m in Sources */,
+				5557D4A6232F8218007C5A60 /* JSDBannerObjManager.m in Sources */,
 				5527069E2306830500BC1EE7 /* JSDPhotoManage.m in Sources */,
 				5547842C230568DF00D87BDD /* JSDCollectViewModel.m in Sources */,
 				606D6A102306DED900C06C39 /* JSDCollectionViewCell.m in Sources */,

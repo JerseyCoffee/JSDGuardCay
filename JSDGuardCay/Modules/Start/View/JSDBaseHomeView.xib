@@ -13,39 +13,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JSDBaseHomeView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-99-QHU" customClass="MDCButton">
-                    <rect key="frame" x="0.0" y="0.0" width="75" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mI6-99-QHU" customClass="JSDBaseButton">
+                    <rect key="frame" x="0.0" y="0.0" width="83" height="896"/>
                     <state key="normal" image="code_codeHome"/>
                     <connections>
                         <action selector="JSD_gotoHome:" destination="iN0-l3-epB" eventType="touchUpInside" id="u8c-Wl-NoN"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-SQ-HPV" customClass="MDCButton">
-                    <rect key="frame" x="75" y="0.0" width="75" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAk-SQ-HPV" customClass="JSDBaseButton">
+                    <rect key="frame" x="83" y="0.0" width="82.5" height="896"/>
                     <state key="normal" image="code_codeback"/>
                     <connections>
                         <action selector="JSD_goBack:" destination="iN0-l3-epB" eventType="touchUpInside" id="5T9-s9-h5W"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-ZN-dCR" customClass="MDCButton">
-                    <rect key="frame" x="150" y="0.0" width="75" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLr-ZN-dCR" customClass="JSDBaseButton">
+                    <rect key="frame" x="165.5" y="0.0" width="83" height="896"/>
                     <state key="normal" image="code_codeforwad"/>
                     <connections>
                         <action selector="JSD_goNext:" destination="iN0-l3-epB" eventType="touchUpInside" id="7KV-VH-aZS"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-i9-SRL" customClass="MDCButton">
-                    <rect key="frame" x="225" y="0.0" width="75" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-i9-SRL" customClass="JSDBaseButton">
+                    <rect key="frame" x="248.5" y="0.0" width="82.5" height="896"/>
                     <state key="normal" image="code_reloadView"/>
                     <connections>
                         <action selector="jsd_reloadView:" destination="iN0-l3-epB" eventType="touchUpInside" id="rhe-zi-Qma"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pus-y6-bU1" customClass="MDCButton">
-                    <rect key="frame" x="300" y="0.0" width="75" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pus-y6-bU1" customClass="JSDBaseButton">
+                    <rect key="frame" x="331" y="0.0" width="83" height="896"/>
                     <state key="normal" image="code_cleanHistory"/>
                     <connections>
                         <action selector="JSD_CleanMemory:" destination="iN0-l3-epB" eventType="touchUpInside" id="QOX-0s-ACO"/>
@@ -76,6 +76,7 @@
                 <constraint firstItem="dLr-ZN-dCR" firstAttribute="width" secondItem="mI6-99-QHU" secondAttribute="width" id="uqP-ED-ETT"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
         </view>
     </objects>
     <resources>

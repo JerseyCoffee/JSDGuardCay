@@ -36,19 +36,26 @@
 }
 - (void)jsd_onTouchCleanMemory:(id)sender {
     
-    NSSet *websiteDataTypes = [WKWebsiteDataStore allWebsiteDataTypes];
-    
-    NSDate *dateFrom = [NSDate dateWithTimeIntervalSince1970:0];
-    
-    [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:websiteDataTypes modifiedSince:dateFrom completionHandler:^{
+    UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"是否退出" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction* jsd_cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    UIAlertAction* jsd_affirmAction = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
-        UIAlertController* alertVC = [UIAlertController alertControllerWithTitle:@"缓存已清理" message:nil preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction* action = [UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [UIView animateWithDuration:1.0f animations:^{
+            JSDAppWindow.alpha = 0;
+            JSDAppWindow.frame = CGRectMake(0, JSDAppWindow.bounds.size.width, 0, 0);
+            
+        } completion:^(BOOL finished) {
+            
+            exit(0);
             
         }];
-        [alertVC addAction:action];
-        [JSDAppWindow.rootViewController presentViewController: alertVC animated:YES completion:nil];
     }];
+    [alertVC addAction:jsd_cancelAction];
+    [alertVC addAction:jsd_affirmAction];
+    [JSDAppWindow.rootViewController presentViewController: alertVC animated:YES completion:nil];
+    
+   
 }
 
 
